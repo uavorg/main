@@ -26,6 +26,7 @@ $(document).ready(function () {
 
     /**** Mobile Side Menu ****/
     if ($.fn.waypoint) {
+                    
         var $head = $('#ha-header');
         $('.ha-waypoint').each(function (i) {
             var $el = $(this),
