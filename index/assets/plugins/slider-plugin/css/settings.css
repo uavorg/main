@@ -999,7 +999,7 @@ border-style:none;
 .tpclear		{	clear:both;}
 
 
-.tp-bullets									{	z-index:1000; position:absolute;
+.tp-bullets									{	display:none;z-index:1000; position:absolute;
 												-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 												-moz-opacity: 1;
 												-khtml-opacity: 1;

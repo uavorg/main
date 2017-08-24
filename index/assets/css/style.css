@@ -439,7 +439,8 @@ hr {
 	padding-top:70px;
 }
 .p-t-80{
-	padding-top:80px;
+	padding-top:20px;
+	padding-bottom:20px;
 }
 /** Padding Bottom **/
 .p-b-10{
@@ -2861,7 +2862,7 @@ margin-bottom:0px;
   left: 0;
   padding: 30px;
   overflow: hidden;
-  width: 100%;
+  width: 180px;
   z-index: 2;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -2882,7 +2883,13 @@ margin-bottom:0px;
 .team-details span {
   font-size: 13px;
   font-family: "Roboto", Arial, sans-serif;
-  color: #9e9e9e;
+  color: black;
+}
+
+.team-details h5 {
+  font-size: 13px;
+  font-family: "Roboto", Arial, sans-serif;
+  color: black;
 }
 
 .socials a {
