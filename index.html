@@ -44,6 +44,9 @@
     font-size: 32px;
     color: #777;
 }
+.navbar{
+	margin-bottom: 0px;
+}
 .teamimg{
 	width:170px;
 	height:180px;
@@ -95,134 +98,38 @@ margin-top: 20px;
 	<a name="signTop"></a>
 	<div class="main-wrapper">
 
-		<header id="ha-header" class="ha-header ha-header-hide ">
+		<header id="ha-header" class="ha-header ha-header-color">
 			<div class="ha-header-perspective">
-				<div class="ha-header-front navbar navbar-default">
-					<div class="compressed">
-						<div class="navbar-header" style="margin-top: 8px;">
-							<span class="logoTextDown">uavstack</span>
-						</div>
-						<div class="navbar-collapse collapse" style="font-size:16px;">
-							<ul class="nav navbar-nav navbar-right"
-								style="margin-right: 20px;">
-								<li><a href="#signTop">HOME</a></li>
-								<li><a href="https://github.com/uavorg">GITHUB</a></li>
-								<li><a href="#signSupport">SUPPORT</a></li>
-								<li><a href="#signTeam">TEAM</a></li>
-								<li><a href="#signContact">CONTACT</a></li>
-								<li><a href="#">中文文档</a></li>
-							</ul>
-						</div>
-						<!--/.nav-collapse -->
-					</div>
+				<div role="navigation" class="navbar navbar-transparent " style="width: 100%;background-color: #179d82;height: 80px;">
+							<div class="container">
+								    <div class="compressed">
+								           <div class="navbar-header" style="margin-top: 20px;">
+															<span class="logoText">uavstack</span>
+															</a>
+											     </div>
+													 <div class="navbar-collapse collapse" style="font-size:16px;">
+														<ul class="nav navbar-nav navbar-right"
+															style="margin-right: -90px;margin-top: 10px;">
+															<li><a href="#signTop">HOME</a></li>
+															<li><a href="https://github.com/uavorg">GITHUB</a></li>
+															<li><a href="#signSupport">SUPPORT</a></li>
+															<li><a href="#signTeam">TEAM</a></li>
+															<li><a href="#signContact">CONTACT</a></li>
+															<li><a href="#">中文文档</a></li>
+														</ul>
+													 </div>
+								    </div>
+					    </div>
 				</div>
 			</div>
 		</header>
 
-	<div class="section ha-waypoint" data-animate-down="ha-header-hide"
-			data-animate-up="ha-header-hide">
+	<div class="section ha-waypoint" data-animate-down="ha-header-hide" style="display:block;">
 
-			<div role="navigation" class="navbar navbar-transparent navbar-top"
-				style="width: 91%">
-				<div class="container">
-					<div class="compressed">
-						<div class="navbar-header" style="margin-top: 20px;">
-							<span class="logoText">uavstack</span>
-							</a>
-						</div>
-						<div class="navbar-collapse collapse" style="font-size:16px;">
-							<ul class="nav navbar-nav navbar-right"
-								style="margin-right: -90px;margin-top: 10px;">
-								<li><a href="#signTop">HOME</a></li>
-								<li><a href="https://github.com/uavorg">GITHUB</a></li>
-								<li><a href="#signSupport">SUPPORT</a></li>
-								<li><a href="#signTeam">TEAM</a></li>
-								<li><a href="#signContact">CONTACT</a></li>
-								<li><a href="#">中文文档</a></li>
-							</ul>
-						</div>
-						<!--/.nav-collapse -->
-					</div>
-				</div>
-			</div>
+			<div style="height: 30px;"><!--头部顶出指定高度，让下面内容可以顺利接应到菜单--></div>
 
 
-			<!--BEGIN SLIDER -->
 		
-			<div class="tp-banner-container">
-				<div class="tp-banner" id="home">
-					<ul>
-						<!-- SLIDE  -->
-						<li data-transition="fade" data-slotamount="5"
-							data-masterspeed="700">
-							<!-- MAIN IMAGE -->
-							<div class="tp-bgimg defaultimg" data-lazyload="undefined"
-								data-bgfit="cover" data-bgposition="center center"
-								data-bgrepeat="no-repeat" data-lazydone="undefined"
-								data-src="index/img/bg/slide_one.jpg"
-								style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;index/img/bg/slide_one.jpg&quot;); background-size: cover; background-position: center center; width: 100%; height: 60%; opacity: 1; position: relative;"></div>
-							<a href="https://github.com/uavorg"><img
-								style="position: absolute; top: 0; right: 0; border: 0;"
-								src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67"
-								alt="Fork me on GitHub"
-								data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
-							<!-- LAYERS -->
-							<div
-								class="tp-caption mediumlarge_light_white_center sft tp-resizeme slider"
-								data-x="center" data-hoffset="0" data-y="80" data-speed="500"
-								data-start="800" data-easing="Power4.easeOut"
-								data-endspeed="300" data-endeasing="Power1.easeIn"
-								data-captionhidden="off" style="z-index: 6">
-								<h2 class="text-white custom-font title ">
-									We Create<br> Brands & Marketing <br /> Strategies for
-									Customers
-								</h2>
-							</div>
-						</li>
-						<li data-transition="fade" data-slotamount="5"
-							data-masterspeed="700">
-							<!-- MAIN IMAGE -->
-							<div class="tp-bgimg defaultimg" data-lazyload="undefined"
-								data-bgfit="cover" data-bgposition="center center"
-								data-bgrepeat="no-repeat" data-lazydone="undefined"
-								data-src="index/img/bg/picture-1.jpg"
-								style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;index/img/bg/picture-1.jpg&quot;); background-size: cover; background-position: center center; width: 100%; height: 60%; opacity: 1; position: relative;"></div>
-							<a href="https://github.com/uavorg"><img
-								style="position: absolute; top: 0; right: 0; border: 0;"
-								src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67"
-								alt="Fork me on GitHub"
-								data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
-							<!-- LAYERS -->
-							<div
-								class="tp-caption mediumlarge_light_white_center sft tp-resizeme slider"
-								data-x="center" data-hoffset="0" data-y="120" data-speed="500"
-								data-start="800" data-easing="Power4.easeOut"
-								data-endspeed="300" data-endeasing="Power1.easeIn"
-								data-captionhidden="off" style="z-index: 6">
-								<h2 class="text-white custom-font title ">
-									We Craft<br> Our Work to Last Perfection!
-								</h2>
-							</div>
-						</li>
-					</ul>
-				</div>
-
-			</div>
-			<!--END SLIDER-->
-
-		</div>
-		<div class="section ">
-			<div class="container">
-				<div class="p-t-40 p-b-40  text-center">
-					<h2 class="text-center">We Provide Awesome Digital Solutions
-						With a Great Attention to Details.</h2>
-					<a href="#" class="btn btn-primary btn-lg  btn-large m-r-10" style="background-color:#179d82;cursor:pointer;">DOWNLOAD
-						NOW</a>
-						<a name="signSupport"></a> <!--锚点位置要放高一点，因为头部有下拉菜单-->
-				</div>
-			</div>
-		</div>
-
 
 		<!--support begin-->
 		<div class="section white ha-waypoint"
@@ -580,7 +487,6 @@ margin-top: 20px;
 	<script type="text/javascript" src="index/plugins/pace/pace.min.js" ></script>
 	<script type="text/javascript" src="index/plugins/jquery-appear/jquery.appear.js"></script>
 	<script type="text/javascript" src="index/plugins/waypoints.min.js"></script>
-	<script type="text/javascript" src="index/js/core.js"></script>
 	<script type="text/javascript" src="index/js/scrollPic.js"></script>
 	<script>
 		window.onload = function () {
@@ -607,6 +513,9 @@ margin-top: 20px;
 
 		    scrollPic.initialize(); //初始化
 		}
+		
+		
+	
 	</script>
 </body>
 </html>
