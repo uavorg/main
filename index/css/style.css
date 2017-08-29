@@ -102,7 +102,7 @@ position:absolute;
 }
 .navbar-nav > li > a:hover,.navbar-nav > li > a:focus{
 	background-color:transparent;
-	border-bottom:#fff 2px solid;
+	border-bottom:#505458 2px solid;
 }
 .navbar-default  .navbar-nav> li > a:hover,.navbar-default .navbar-nav  > li > a:focus{
 	background-color:transparent;
@@ -115,7 +115,7 @@ position:absolute;
 	color:#22262e;
 }
 .navbar-transparent .navbar-nav > li > a{
-	color: #fff;
+	color: #505458;
 	font-family: "Open Sans","Helvetica","Arial";
 	text-transform:uppercase;
 	letter-spacing:0.8;
@@ -257,9 +257,6 @@ blockquote.pull-right small:after{
 blockquote small{
 	line-height: 29px;
 	color:#8b91a0;
-}
-.logo{
-	margin:18px 14px;
 }
 
 .normal{ 

@@ -25,13 +25,48 @@
 	padding: 0px 0 0;
 	height: 5px;
 }
-.logoText{
-    font-size: 32px;
-    color: white;
+
+.logo{ 
+	position: fixed;
+	margin-top: 5px;
+	width: 100px;
+	animation:logoMove 0.5s;
 }
-.logoTextDown{
-    font-size: 32px;
-    color: #777;
+@keyframes logoMove{
+from {width:60px;}
+to {width:100px;}
+}
+
+.logoZoom{ 
+	position: fixed;
+	margin-top: 5px;
+	width: 60px;
+	animation:logoZoomMove 0.5s;
+}
+@keyframes logoZoomMove{
+from {width:100px;}
+to {width:60px;}
+}
+
+.bannerCont{
+	  padding-top: 90px;
+    padding-left: 150px;
+    padding-right: 50px;
+		color:white;
+    height: 500px;
+}
+
+.bannerContTitle{
+		font-size:24px;
+}
+.bannerContText{
+    font-size: 15px;
+    padding: 20px;
+}
+.bannerContText span{
+		font-size:24px;
+		margin-right: 5px;
+	
 }
 .navbar{
 		margin-bottom: 0px;
@@ -96,11 +131,11 @@
 
 		<header id="ha-header" class="ha-header ha-header-color">
 			<div class="ha-header-perspective">
-				<div role="navigation" class="navbar navbar-transparent " style="width: 100%;background-color: #179d82;height: 80px;">
+				<div role="navigation" class="navbar navbar-transparent " style="width: 100%;height: 80px;border-bottom: 1px solid;">
 							<div class="container">
 								    <div class="compressed">
-								           <div class="navbar-header" style="margin-top: 20px;">
-															<span class="logoText">UAVStack</span>
+								           <div class="navbar-header" >
+																<img id="logoImg" class="logo" src="index/img/logo/logo.png"></img>
 															</a>
 											     </div>
 													 <div class="navbar-collapse collapse" style="font-size:16px;">
@@ -121,11 +156,18 @@
 		</header>
 
 	<div class="section ha-waypoint" data-animate-down="ha-header-hide" style="display:block;">
+		<div style="height: 80px;"><!--头部顶出指定高度，让下面内容可以顺利接应到菜单--></div>
+ 		<!--大图 begin-->
+ 		<div>
+ 					<div id="bannerCont" class="bannerCont">
+ 						<div id="bannerContTitle" class="bannerContTitle"><!--js动态填写--></div>
+ 						<div id="bannerContText" class="bannerContText">
+ 							<!--js动态填写-->
+ 						</div>
+ 					</div>
+ 		</div>
+		<!--大图 end-->
 
-			<div style="height: 30px;"><!--头部顶出指定高度，让下面内容可以顺利接应到菜单--></div>
-
-
-		
 
 		<!--support begin-->
 		<div class="section white ha-waypoint"
@@ -210,8 +252,6 @@
         </ul>
         </div>
         <div class="scroll_right" id="RightArr"><span class="glyphicon glyphicon-chevron-right"></span></div>
-
-
 		</div>
 		<!-- tean end-->
 
@@ -255,6 +295,11 @@
 		window.onload = function () {
 		    appendTeamUser();
 				scrollPic();
+				init();
+				setInterval("showBanner()","10000");
+		}
+		window.onscroll = function (){
+				logoChange();
 		}
 		/**
 		*图片滚动
@@ -282,10 +327,10 @@
 			var users = [
 								{'userName':'张真','imgName':'zhangzhen.png','githubId':'zxzxzczz','userDesc':'Focus on AIOps, APM, MicroService, Service-Governonce, Cloud Middleware Dev.Founder of UAVStack. International Patent Inventor. Opensource Commitor.'}
 								,{'userName':'梁鑫','imgName':'liangxin.png','githubId':'TedLiang81','userDesc':'宜信高级架构师<br/>曾任职神州数码，链家网'}
-								,{'userName':'王佩华','imgName':'wangpeihua.png','githubId':'peihuaw','userDesc':'UAV监控领域DSC，UAV推广，实施落地及提供解决方案<br/>多年电信行业工作经验，CrossRole As架构设计，项目管理，Solution工程师，软件研发on Java&C++<br/>座右铭: 大道至简'}
-								,{'userName':'杨宏壮','imgName':'yanghongzhuang.jpg','githubId':'yanghongzhuang','userDesc':'宜信技术研发中心<br/>PHP是最牛逼的语言'}
-								,{'userName':'肖龙','imgName':'xiaolong.jpg','githubId':'xxxllluuu','userDesc':'UAV应用虚拟化领域担任研发工作<br/>宜信技术研发中心<br/>2010年开始从事Java开发'}
-								,{'userName':'刘波安野','imgName':'lbay.png','githubId':'lbay2015','userDesc':'宜信技术研发中心'}
+								,{'userName':'王佩华','imgName':'wangpeihua.png','githubId':'peihuaw','userDesc':'宜信技术研发中心<br/>UAV监控领域DSC<br/>多年电信行业工作经验，CrossRole As架构设计，项目管理，Solution工程师，软件研发on Java&C++<br/>座右铭: 大道至简'}
+								,{'userName':'杨宏壮','imgName':'yanghongzhuang.jpg','githubId':'yanghongzhuang','userDesc':'宜信技术研发中心<br/>UAV APM领域DSC<br/>关注系统性能、高并发、高可用<br/>座右铭：知其然更要知其所以然'}
+								,{'userName':'肖龙','imgName':'xiaolong.jpg','githubId':'xxxllluuu','userDesc':'宜信技术研发中心<br/>UAV应用虚拟化领域DSC<br/>2010年开始从事Java开发'}
+								,{'userName':'刘波安野','imgName':'lbay.png','githubId':'lbay2015','userDesc':'宜信技术研发中心<br/>全栈'}
 								,{'userName':'杨明朗','imgName':'yangminglang.jpg','githubId':'noob-noob','userDesc':'宜信技术研发中心<br/>Java开发工程师'}
 								,{'userName':'李鹏飞','imgName':'pengfeili23.jpg','githubId':'EatApples','userDesc':'宜信技术研发中心<br/>Just Do IT'}
 								,{'userName':'白鑫','imgName':'baixin.png','githubId':'baixbaib','userDesc':'宜信技术研发中心<br/>肌肉型肥胖程序员一枚'}
@@ -297,12 +342,10 @@
 								,{'userName':'李兴胜','imgName':'lixingsheng.jpg','githubId':'BeliefYou8','userDesc':'宜信技术研发中心<br/>Java开发<br/>不断去尝试去争取'}
 								,{'userName':'朱文强','imgName':'zhuwenqiang.jpg','githubId':'zwq0317','userDesc':'宜信技术研发中心<br/>西安电子科技大学硕士学位'}
 								,{'userName':'鲁宁','imgName':'luning.jpg','githubId':'luning110','userDesc':'宜信技术研发中心<br/>JavaEE的Web开发及运维支持<br/>彪悍的人生不需要解释<br/>彪悍的代码不需要注释'}
-								
 			];
 			
 			
 			$.each(users,function(index,obj){
-				
 				var html='<li>'+
 										 '<div class="teamDiv">'+
 													'<div class="teamBodyDiv">'+
@@ -313,14 +356,77 @@
 													'<div><a href="https://github.com/'+obj.githubId+'"><img class="githubimg" src="index/img/logo/github.png"></img></a></div>'+
 											'</div>'+
 				            '</li>';
-				
 				$("#teamUserUl").append(html);	
-				
 			});
 			
 		}
 		
+		function logoChange(){
+			var stop = document.documentElement.scrollTop || document.body.scrollTop;
+			
+			
+			if(stop >= 300 ){
+				$("#logoImg").attr("class","logoZoom");
+			}else{
+				$("#logoImg").attr("class","logo ");
+			}
 	
+		}
+		
+		var bannerIndex=1,banners=[
+			{"urlName":"bg1.jpg"
+				,"title":"UAV.Monitor：是业务，应用/服务，基础三维一体的监控平台，同时支持单体架构，SOA架构，微服务架构。<br/>只需部署1个Agent即可采集全维度数据，支持物理机，虚拟机，Docker。"
+				,"text":"<p><span>●</span>基础监控：操作系统以及进程级性能指标（CPU，内存，连接数，网络流量，磁盘IO等）</p>"+
+							"<p><span>●</span>应用/服务性能监控：Java应用无需修改代码，即可采集应用/服务实例，应用服务器，JVM，客户端(http/dubbo/SQL/MQ/redis/mongoDB等)，数据库连接池等的性能指标</p>"+
+							"<p><span>●</span>日志监控：系统/应用日志自动归集和搜索，支持动态开关策略</p>"+
+							"<p><span>●</span>业务监控：支持自定义指标归集<p>"+
+							"<p><span>●</span>多技术栈支持：Java系列Tomcat/Jetty/SpringBoot/JSE/MSCP,其他JVM语言Scala，Groovy等</p>"+
+							"<p><span>●</span>全维报警：支持基础/应用/服务的性能指标，业务指标以及日志报警，报警条件支持多维表达式</p>"+
+							"<p><span>●</span>历史追踪：任意时间范围的不同指标组合的性能指标展示</p>"}
+			,{"urlName":"bg2.jpg"
+				,"title":"UAV.APM：是UAV.Monitor的增强扩展，实现对应用/服务性能全方位的管理。<br/>支持主流技术栈，与UAV.Monitor相同。"
+				,"text":"<p><span>●</span>代码无侵入性，JVM语言支持Java，Scala，Groovy等。</p>"+
+								"<p><span>●</span>应用/服务画像：自动化提取应用的技术栈和实例元数据，包括服务接口，客户端使用，实例URL，日志配置，类库等。</p>"+
+								"<p><span>●</span>服务图谱：自动绘制应用/服务之间的调用关联关系的可视化展示，支持代理穿透。描述服务与服务的静态拓扑和运行时特性的图谱。之所以称为服务“流”，是强调更加动态，涵盖应用拓扑的内容，比应用拓扑提供更深入的抽象粒度，也提供更丰富的运行时状态</p>"+
+								"<p><span>●</span>全量无侵入式调用链跟踪：支持主流技术栈服务，客户端，方法级的全量/采样跟踪；两种粒度动态调节：轻调用链，全量采集近乎无损；重调用链，包含所有请求/响应，方法入参/出参的内容</p>"+
+								"<p><span>●</span>一键式线程分析：一键收集目标JVM的线程Dump和线程性能数据，支持代码关联</p>"+
+								"<p><span>●</span>浏览器访问跟踪：自动追踪来自浏览器的访问来源，访问目标，访问时间。</p>"+
+								"<p><span>●</span>多维可视化看板：同视图多维度（业务指标，性能指标，日志，调用链等）数据对标分析</p>"}
+			,{"urlName":"bg3.jpg"
+				,"title":"UAV.ServiceGovern：是UAV.Monitor的增强扩展，同构/异构技术栈实现微服务架构的支持，特别是连接异构服务系统的利器。<br/>支持主流技术栈，与UAV.Monitor相同。<br/>UAV.ServiceGovern和UAV.Monitor，UAV.APM实现天然的一站式微服务治理/运维方案。"
+				,"text":"<p><span>●</span>服务生命周期管理：自动化实现同构或异构服务的注册，下线，集群管理等。</p>"+
+								"<p><span>●</span>统一服务发现机制：对同构/异构服务统一发现机制，支持负载均衡，自动切换，自动重试，自动隔离。</p>"+
+								"<p><span>●</span>服务授权管理：实现外部对服务集群，服务集群之间的权限与安全管控</p>"+
+								"<p><span>●</span>服务降级保护：对同构/异构服务实现统一的降级保护策略，支持客户端降级</p>"}
+			,{"urlName":"bg4.jpg"
+				,"title":"UAV.MSCP（Micro-Service Computing Platform）提供了一套基于微服务架构的计算平台。<br/>UAV系列软件包括任务机器人，全维监控，APM，服务治理等都是基于MSCP构建的。<br/>它使用Java语言，并提供了一系列特性来简化计算任务的开发工作。"
+				,"text":"<p><span>●</span>开发框架/组件支持：Http/RPC通信，定时调度任务，并行处理，异步化响应，资源限制器，配置管理中心，共享资源管理，流程处理等</p>"+
+								"<p><span>●</span>功能即服务：每个功能被定义为Feature，每个进程被定义为计算节点，计算节点支持多Feature运行，支持Feature热启停，热配置更新，Class/配置隔离，资源限制</p>"+
+								"<p><span>●</span>服务化支持：服务注册与发现，负载均衡，自动切换/重试，熔断隔离</p>"+
+								"<p><span>●</span>组件图谱：可自动生成组件图谱，清晰了解代码静态结构与动态关联关系</p>"+
+								"<p><span>●</span>动态服务编排：根据Feature语义自动协调具备符合业务能力的节点参与任务执行</p>"+
+								"<p><span>●</span>动态计算编排：根据计算资源自动协调合适的节点参与任务执行</p>"}
+		];
+		function showBanner(){
+			var bannerObj = banners[bannerIndex];
+			var urlName =  bannerObj.urlName;
+			$("#bannerCont").css("backgroundImage","url('index/img/bg/"+urlName+"')");
+			$("#bannerContTitle").html(bannerObj.title);
+			$("#bannerContText").html(bannerObj.text);
+			
+			bannerIndex++;
+			if(bannerIndex==banners.length){
+				bannerIndex=0;
+			}
+		}
+		
+		function init(){
+			var bannerObj = banners[0];
+			var urlName =  bannerObj.urlName;
+			$("#bannerCont").css("backgroundImage","url('index/img/bg/"+urlName+"')");
+			$("#bannerContTitle").html(bannerObj.title);
+			$("#bannerContText").html(bannerObj.text);
+		}
 	</script>
 </body>
 </html>
