@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
-<title>uavstack</title>
+<title>UAVStack</title>
 <link rel="Shortcut Icon" href="index/img/logo/uav.ico" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
@@ -100,7 +100,7 @@
 							<div class="container">
 								    <div class="compressed">
 								           <div class="navbar-header" style="margin-top: 20px;">
-															<span class="logoText">uavstack</span>
+															<span class="logoText">UAVStack</span>
 															</a>
 											     </div>
 													 <div class="navbar-collapse collapse" style="font-size:16px;">
@@ -223,7 +223,7 @@
 							contribution.</p>
 					</div>
 				<div style="display: inline-block;text-align: center;width:100%;margin-top:20px;">
-							<strong><span class="navy" style="color: #179d82; font-size: 16px;">uavstack Organization</span></strong>
+							<strong><span class="navy" style="color: #179d82; font-size: 16px;">UAVStack Organization</span></strong>
 							<p class="text-color">
 								xxxxxxxxxxxx这里是一段介绍xxxxxxxxxxxxxxxxxx<br>
 								xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
@@ -236,7 +236,7 @@
 							style="color: white; background-color: #179d82;">Send us mail</a>
 				</div>
 				<div  style="margin-top: 20px; margin-bottom: 30px;text-align:center;">
-							<strong>© 2016-2017 uavstack Organization </strong><br>
+							<strong>© 2016-2017 UAVStack Organization </strong><br>
 				</div>
 
 			<a name="signContact"></a>
@@ -254,7 +254,7 @@
 	<script>
 		window.onload = function () {
 		    appendTeamUser();
-		    scrollPic();
+				scrollPic();
 		}
 		/**
 		*图片滚动
@@ -273,7 +273,7 @@
 		    scrollPic.speed          = 10; //移动速度(单位毫秒，越小越快)
 		    scrollPic.space          = 10; //每次移动像素(单位px，越大越快)
 		    scrollPic.autoPlay       = false; //自动播放
-		    scrollPic.autoPlayTime   = 3; //自动播放间隔时间(秒)
+		    scrollPic.autoPlayTime   = 300; //自动播放间隔时间(秒)
 
 		    scrollPic.initialize(); //初始化
 		}
@@ -303,7 +303,6 @@
 			
 			$.each(users,function(index,obj){
 				
-				
 				var html='<li>'+
 										 '<div class="teamDiv">'+
 													'<div class="teamBodyDiv">'+
@@ -315,11 +314,9 @@
 											'</div>'+
 				            '</li>';
 				
-				$("#teamUserUl").append(html);		
+				$("#teamUserUl").append(html);	
+				
 			});
-
-
-			
 			
 		}
 		
