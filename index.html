@@ -5,326 +5,93 @@
 <meta charset="utf-8" />
 <title>UAVStack</title>
 <link rel="Shortcut Icon" href="index/img/logo/uav.ico" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<meta content="" name="description" />
-<meta content="" name="author" />
-<link rel="stylesheet" type="text/css" href="index/css/headereffects.component.css">
-<link rel="stylesheet" type="text/css" href="index/css/bootstrapv3.min.css"/>
-<link rel="stylesheet" type="text/css" href="index/css/style.css" />
-<!-- END CSS TEMPLATE -->
-<style>
-.contact-details h1 {
-	text-transform: none;
-	font-size: 26px !important;
-	color: #333;
-}
-
-.hrdiv1 {
-	background: #2ec574;
-	color: #ccc;
-	padding: 0px 0 0;
-	height: 5px;
-}
-
-.logo{ 
-	position: fixed;
-	margin-top: 5px;
-	width: 100px;
-	animation:logoMove 0.5s;
-}
-@keyframes logoMove{
-from {width:60px;}
-to {width:100px;}
-}
-
-.logoZoom{ 
-	position: fixed;
-	margin-top: 5px;
-	width: 60px;
-	animation:logoZoomMove 0.5s;
-}
-@keyframes logoZoomMove{
-from {width:100px;}
-to {width:60px;}
-}
-
-.bannerCont{
-	  padding-top: 90px;
-    padding-left: 150px;
-    padding-right: 50px;
-		color:white;
-    height: 500px;
-}
-
-.bannerContTitle{
-		font-size:24px;
-}
-.bannerContText{
-    font-size: 15px;
-    padding: 20px;
-}
-.bannerContText span{
-		font-size:24px;
-		margin-right: 5px;
-	
-}
-.navbar{
-		margin-bottom: 0px;
-}
-.teamimg{
-		width:170px;
-		height:180px;
-		border-radius: 20px;
-}
-.githubspan{
-    background-color: #a4abaf;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.scroll_left{
-	  font-size: 26px;
-	  margin-left: 50px;
-    margin-right: 50px;
-    padding-top: 160px;
-}
-.scroll_right{
-	  font-size: 26px;
-	  margin-left: 50px;
-    margin-right: 50px;
-    padding-top: 160px;
-}
-
-.scroll_left:hover,.scroll_right:hover{
-	cursor:pointer;color: black;
-}
-
-.pic{width:100%;float:left;}
-.pic ul{display:block;}
-.pic li{float:left;display:inline;text-align:center;}
-.teamDiv{
-	margin-top: 20px;
-}
-.teamBodyDiv{
-	text-align: center;width:210px;margin-left:10px;margin-right: 10px;height: 320px;
-}
-.teamUserName{
-		color:#505458;
-    font-size: 16px;
-    margin: 5px;
-}
-.teamUserDesc{
-	    font-family: monospace;
-}
-.githubimg{
-		margin-top:15px;
-		width:20px;
-		height:20px;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="index/index.css"/>
+<script type="text/javascript" src="index/jquery-1.8.3.min.js"></script>	
+<!--team 滚动js-->
+<script type="text/javascript" src="index/scrollPic.js"></script>
+<!--index js-->
+<script type="text/javascript" src="index/index.js"></script>
 </head>
-<!-- END HEAD -->
+
 <body>
-
-	<a name="signTop"></a>
-	<div class="main-wrapper">
-
-		<header id="ha-header" class="ha-header ha-header-color">
-			<div class="ha-header-perspective">
-				<div role="navigation" class="navbar navbar-transparent " style="width: 100%;height: 80px;border-bottom: 1px solid;">
-							<div class="container">
-								    <div class="compressed">
-								           <div class="navbar-header" >
-																<img id="logoImg" class="logo" src="index/img/logo/logo.png"></img>
-															</a>
-											     </div>
-													 <div class="navbar-collapse collapse" style="font-size:16px;">
-														<ul class="nav navbar-nav navbar-right"
-															style="margin-right: -90px;margin-top: 10px;">
-															<li><a href="#signTop">HOME</a></li>
-															<li><a href="https://github.com/uavorg">GITHUB</a></li>
-															<li><a href="#signSupport">SUPPORT</a></li>
-															<li><a href="#signTeam">TEAM</a></li>
-															<li><a href="#signContact">CONTACT</a></li>
-															<li><a href="#">中文文档</a></li>
-														</ul>
-													 </div>
-								    </div>
-					    </div>
-				</div>
+	
+		<!--默认菜单 begin-->
+		<div class="headDef">
+			<div class="logo">
+				<img src="index/img/logo/logo.png"></img>
 			</div>
-		</header>
-
-	<div class="section ha-waypoint" data-animate-down="ha-header-hide" style="display:block;">
-		<div style="height: 80px;"><!--头部顶出指定高度，让下面内容可以顺利接应到菜单--></div>
- 		<!--大图 begin-->
- 		<div>
- 					<div id="bannerCont" class="bannerCont">
- 						<div id="bannerContTitle" class="bannerContTitle"><!--js动态填写--></div>
- 						<div id="bannerContText" class="bannerContText">
- 							<!--js动态填写-->
- 						</div>
- 					</div>
- 		</div>
-		<!--大图 end-->
-
-
-		<!--support begin-->
-		<div class="section white ha-waypoint"
-			data-animate-down="ha-header-color" data-animate-up="ha-header-hide">
-			<div class="container">
-				<div class="p-t-60">
-					<div class="row">
-						<div class="col-md-12 feature-list ">
-							<div class="col-md-4 " data-ride="animated"
-								data-animation="fadeIn" data-delay="300">
-								<i class="fa fa-archive fa-4x"></i>
-								<h4 class="title">WEB DESIGN</h4>
-								<p>Intriguing web designs and fascinating results, makes you
-									happy and earns us a loyal customer – Always there, looking
-									after you!</p>
-							</div>
-							<div class="col-md-4" data-ride="animated"
-								data-animation="fadeIn" data-delay="600">
-								<i class="fa fa-cog fa-4x"></i>
-								<h4 class="title">CUSTOMIZATION</h4>
-								<p>We push. We make you nervous. We get results. Let's get
-									to work. Whenever you need, you will find always there, looking
-									after you!</p>
-							</div>
-							<div class="col-md-4" data-ride="animated"
-								data-animation="fadeIn" data-delay="900">
-								<i class="fa fa-share fa-4x"></i>
-								<h4 class="title">SOCIAL</h4>
-								<p>As your business flourishes, we grow as a business and so
-									our team makes sure that your growth is supported and we go
-									hand in hand.</p>
-							</div>
-						</div>
-					</div>
-					<br>
-						<a name="signTeam"></a><!--锚点位置要放高一点，因为头部有下拉菜单-->
-					<div class="row">
-						<div class="col-md-12 feature-list">
-							<div class="col-md-4 " data-ride="animated"
-								data-animation="fadeIn" data-delay="1200">
-								<i class="fa fa-code fa-4x"></i>
-								<h4 class="title">TEMPLATES</h4>
-								<p>We work to deliver results, celebrate entrepreneurship,
-									stand for justice, and believe in the progress of common good.
-								</p>
-							</div>
-							<div class="col-md-4" data-ride="animated"
-								data-animation="fadeIn" data-delay="1500">
-								<i class="fa fa-asterisk fa-4x"></i>
-								<h4 class="title">BASED ON BOOTSTRAP 3</h4>
-								<p>This free template is based on the popular Twitter
-									Bootstrap Frameowrk. You can easily customize if you have
-									little Bootstrap 3 knowledge.</p>
-							</div>
-							<div class="col-md-4" data-ride="animated"
-								data-animation="fadeIn" data-delay="1800">
-								<i class="fa fa-expand  fa-4x"></i>
-								<h4 class="title">RESPONSIVE DESIGN</h4>
-								<p>Every project begins with a round of research and
-									discovery. We dig through the values, strategy, and
-									organizational culture that make you unique.</p>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="menu">
+				<ul>
+						<li><a href="#">中文文档</a></li>
+						<li><a href="#signContact">CONTACT</a></li>
+						<li><a href="#signTeam">TEAM</a></li>
+						<li><a href="#signSupport">SUPPORT</a></li>
+						<li><a href="https://github.com/uavorg">GITHUB</a></li>
+						<li><a href="#signTop">HOME</a></li>
+				</ul>
 			</div>
 		</div>
-		<!--support eng-->
+		<!--默认菜单 end-->
+
+		<!--大图 begin-->
+		<div>
+		 	<div id="banner" class="banner">
+		 				<div id="bannerTitle" class="bannerTitle"><!--js动态填写--></div>
+		 				<div id="bannerText" class="bannerText"><!--js动态填写--></div>
+		 	</div>
+		</div>
+		<!--大图 end-->
+
+		<!--功能介绍 begin-->
+		<div class="supportCenter support_1_1">
+			<div class="line"></div>
+		 	 UAVStack是由宜信技术研发中心推出的智能化服务技术栈，是研发运维一体化的解决方案。
+		 	 <br/>UAV是无人机的缩写，寓意无人机翱翔蓝天，智能的，透明的完成任务。
+		 	 <br/>它包括任务机器人（代号HIT），全维监控（代号UAV.Monitor）,应用性能管理（代号UAV.APM）,
+		 	 <br/>服务治理（代号UAV.ServiceGovern）,微服务计算（代号UAV.MSCP），用户体验管理（代号UAV.UEM）等。
+		</div>
+		<div class="supportCenter">
+		    <div><img style="width:50%;" src="index/img/support/openSource.png"></img></div>
+		</div>
+		<div class="supportCenter support_1_1">
+			<div class="line"></div>
+		 	 UAV.Monitor+UAV.APM可以帮助您搭建一站式的全维度监控+应用运维解决方案。
+		</div>
+		<div class="supportCenter">
+		    <div><img style="width:75%;" src="index/img/support/oneStopSolution.png"></img></div>
+		</div>
+		<div class="support_1_1">
+		 	 JAVA探针支持：
+				<br/>JDK：6，7，8，9
+				<br/>应用服务器：Tomcat（6+），SpringBoot，Jetty（7+），MSCP，任意JSE
+				<br/>应用框架：Dubbo，CXF，AXIS2，XFIRE，SUN JAXWS，Jersey，Wink，Apache HttpClient（同步/异步），SpringMVC，SpringRESTService，Servlet（2.5/3.x），Web Filter（2.5/3.x），Log4j，LogBack，Java Logging
+				<br/>数据源：MySQL，Oracle等JDBC数据源，MongoDB（MongoClient），Redis（JEDIS，LETTUCE，ARedis）
+				<br/>数据库连接池：DBCP/2，c3p0，Druid，Proxool,Hikari, MyBatis CP，Tomcat DBCP/2
+				<br/>消息中间件：RabbitMQ（消费/生产），RocketMQ（消费/生产）
+		</div>
+		<div class="supportCenter">
+			<div class="line"></div>
+				全维数据展示
+		</div>
+		<!--功能介绍 end-->
 
 
 		<!-- team begin-->
-		<div style="border: 5px solid #179d82;border-left: none;border-right: none;display: flex;height: 390px;">
+		<div class="team">
 		 	<div class="scroll_left" id="LeftArr"><span class="glyphicon glyphicon-chevron-left"></span></div>
 
-        <div class="pic" id="scrollPic" style="width:100%;">
+        <div class="context" id="scrollPic">
         <ul id="teamUserUl">
-
             	<!-- team user append begin -->
-           
 							<!-- team user append end -->
-
         </ul>
         </div>
         <div class="scroll_right" id="RightArr"><span class="glyphicon glyphicon-chevron-right"></span></div>
 		</div>
 		<!-- tean end-->
 
-		<!-- contact beigin-->
-		<div style="background-color: white;">
-					<div class="col-lg-12 text-center">
-						<h1>Contact Us</h1>
-						<p>Welcome for any feedback, suggestion, proposal, and
-							contribution.</p>
-					</div>
-				<div style="display: inline-block;text-align: center;width:100%;margin-top:20px;">
-							<strong><span class="navy" style="color: #179d82; font-size: 16px;">UAVStack Organization</span></strong>
-							<p class="text-color">
-								xxxxxxxxxxxx这里是一段介绍xxxxxxxxxxxxxxxxxx<br>
-								xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
-							</p>
-							<br> Beijing China<br>
-							<abbr title="E-Mail"></abbr> xxx@xxxxx.com
-				</div>
-				<div style="margin-top: 20px; margin-bottom: 20px;text-align:center;">
-						<a href="mailto:xxxx@xxxxx.com" class="btn btn-primary"
-							style="color: white; background-color: #179d82;">Send us mail</a>
-				</div>
-				<div  style="margin-top: 20px; margin-bottom: 30px;text-align:center;">
-							<strong>© 2016-2017 UAVStack Organization </strong><br>
-				</div>
-
-			<a name="signContact"></a>
-		<!-- contact end-->
-
-		</div>
-
-	</div>
-
-	<script type="text/javascript" src="index/js/jquery-1.8.3.min.js"></script>	
-	<!--整体架构加载-->
-	<script type="text/javascript" src="index/js/pace.min.js" ></script>
-	<!--team 滚动js-->
-	<script type="text/javascript" src="index/js/scrollPic.js"></script>
-	<script>
-		window.onload = function () {
-		    appendTeamUser();
-				scrollPic();
-				init();
-				setInterval("showBanner()","10000");
-		}
-		window.onscroll = function (){
-				logoChange();
-		}
-		/**
-		*图片滚动
-		*/
-		function scrollPic() {
-
-		    var scrollPic = new ScrollPic();
-		    scrollPic.scrollContId   = "scrollPic"; //内容容器ID
-		    scrollPic.arrLeftId      = "LeftArr";//左箭头ID
-		    scrollPic.arrRightId     = "RightArr"; //右箭头ID
-
-		    scrollPic.frameWidth     = 800;//显示框宽度
-		    //scrollPic.frameWidth     = document.body.clientWidth;
-		    scrollPic.pageWidth      = 250; //翻页宽度
-
-		    scrollPic.speed          = 10; //移动速度(单位毫秒，越小越快)
-		    scrollPic.space          = 10; //每次移动像素(单位px，越大越快)
-		    scrollPic.autoPlay       = false; //自动播放
-		    scrollPic.autoPlayTime   = 300; //自动播放间隔时间(秒)
-
-		    scrollPic.initialize(); //初始化
-		}
-		
-		function appendTeamUser(){
-			var users = [
+<script type="text/javascript">
+		var users = [
 								{'userName':'张真','imgName':'zhangzhen.png','githubId':'zxzxzczz','userDesc':'Focus on AIOps, APM, MicroService, Service-Governonce, Cloud Middleware Dev.Founder of UAVStack. International Patent Inventor. Opensource Commitor.'}
 								,{'userName':'梁鑫','imgName':'liangxin.png','githubId':'TedLiang81','userDesc':'宜信高级架构师<br/>曾任职神州数码，链家网'}
 								,{'userName':'王佩华','imgName':'wangpeihua.png','githubId':'peihuaw','userDesc':'宜信技术研发中心<br/>UAV监控领域DSC<br/>多年电信行业工作经验，CrossRole As架构设计，项目管理，Solution工程师，软件研发on Java&C++<br/>座右铭: 大道至简'}
@@ -344,36 +111,7 @@ to {width:60px;}
 								,{'userName':'鲁宁','imgName':'luning.jpg','githubId':'luning110','userDesc':'宜信技术研发中心<br/>JavaEE的Web开发及运维支持<br/>彪悍的人生不需要解释<br/>彪悍的代码不需要注释'}
 			];
 			
-			
-			$.each(users,function(index,obj){
-				var html='<li>'+
-										 '<div class="teamDiv">'+
-													'<div class="teamBodyDiv">'+
-														'<div><img class="teamimg" src="index/img/team/'+obj.imgName+'" alt=""/></div>'+
-														'<div class="teamUserName">'+obj.userName+'</div>'+
-														'<div class="teamUserDesc">'+obj.userDesc+'</div>'+
-													'</div>'+
-													'<div><a href="https://github.com/'+obj.githubId+'"><img class="githubimg" src="index/img/logo/github.png"></img></a></div>'+
-											'</div>'+
-				            '</li>';
-				$("#teamUserUl").append(html);	
-			});
-			
-		}
-		
-		function logoChange(){
-			var stop = document.documentElement.scrollTop || document.body.scrollTop;
-			
-			
-			if(stop >= 300 ){
-				$("#logoImg").attr("class","logoZoom");
-			}else{
-				$("#logoImg").attr("class","logo ");
-			}
-	
-		}
-		
-		var bannerIndex=1,banners=[
+		var banners=[
 			{"urlName":"bg1.jpg"
 				,"title":"UAV.Monitor：是业务，应用/服务，基础三维一体的监控平台，同时支持单体架构，SOA架构，微服务架构。<br/>只需部署1个Agent即可采集全维度数据，支持物理机，虚拟机，Docker。"
 				,"text":"<p><span>●</span>基础监控：操作系统以及进程级性能指标（CPU，内存，连接数，网络流量，磁盘IO等）</p>"+
@@ -407,27 +145,8 @@ to {width:60px;}
 								"<p><span>●</span>动态服务编排：根据Feature语义自动协调具备符合业务能力的节点参与任务执行</p>"+
 								"<p><span>●</span>动态计算编排：根据计算资源自动协调合适的节点参与任务执行</p>"}
 		];
-		function showBanner(){
-			var bannerObj = banners[bannerIndex];
-			var urlName =  bannerObj.urlName;
-			$("#bannerCont").css("backgroundImage","url('index/img/bg/"+urlName+"')");
-			$("#bannerContTitle").html(bannerObj.title);
-			$("#bannerContText").html(bannerObj.text);
-			
-			bannerIndex++;
-			if(bannerIndex==banners.length){
-				bannerIndex=0;
-			}
-		}
-		
-		function init(){
-			var bannerObj = banners[0];
-			var urlName =  bannerObj.urlName;
-			$("#bannerCont").css("backgroundImage","url('index/img/bg/"+urlName+"')");
-			$("#bannerContTitle").html(bannerObj.title);
-			$("#bannerContText").html(bannerObj.text);
-		}
-	</script>
+</script>
+
 </body>
 </html>
 
