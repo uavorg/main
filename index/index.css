@@ -276,7 +276,7 @@ a{ text-decoration:none; }
     margin-bottom: 10px;
 }
 .teamUserDesc{
-		color:#505458;
+		color:rgba(80, 84, 88, 0.64);;
 	  font-family: monospace;
 }
 .githubimg{
