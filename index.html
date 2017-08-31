@@ -6,20 +6,20 @@
 <title>UAVStack</title>
 <link rel="Shortcut Icon" href="index/img/logo/uav.ico" />
 <link rel="stylesheet" type="text/css" href="index/index.css"/>
-<script type="text/javascript" src="index/jquery-1.8.3.min.js"></script>	
+<script type="text/javascript" src="index/js/jquery-1.8.3.min.js"></script>	
 <!--team 滚动js-->
-<script type="text/javascript" src="index/scrollPic.js"></script>
+<script type="text/javascript" src="index/js/scrollPic.js"></script>
 <!--index js-->
-<script type="text/javascript" src="index/index.js"></script>
+<script type="text/javascript" src="index/js/index.js"></script>
 </head>
 
 <body>
 	
 		<!--默认菜单 begin-->
-		<div class="headDef">
-			<div class="logo">
-				<img src="index/img/logo/logo.png"></img>
-			</div>
+		<div class="logo">
+				<img id="logoImg" src="index/img/logo/logo.png"></img>
+		</div>
+		<div class="headDef" id="headDef">
 			<div class="menu">
 				<ul>
 						<li><a href="#">中文文档</a></li>
@@ -32,6 +32,22 @@
 			</div>
 		</div>
 		<!--默认菜单 end-->
+		
+		
+		<!--下拉菜单 begin-->
+		<div class="headDown" id="headDown" style="display:none;">
+			<div class="menuDown">
+				<ul>
+						<li><a href="#">中文文档</a></li>
+						<li><a href="#signContact">CONTACT</a></li>
+						<li><a href="#signTeam">TEAM</a></li>
+						<li><a href="#signSupport">SUPPORT</a></li>
+						<li><a href="https://github.com/uavorg">GITHUB</a></li>
+						<li><a href="#signTop">HOME</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--下拉菜单 end-->
 
 		<!--大图 begin-->
 		<div>
@@ -43,41 +59,92 @@
 		<!--大图 end-->
 
 		<!--功能介绍 begin-->
-		<div class="supportCenter support_1_1">
-			<div class="line"></div>
-		 	 UAVStack是由宜信技术研发中心推出的智能化服务技术栈，是研发运维一体化的解决方案。
-		 	 <br/>UAV是无人机的缩写，寓意无人机翱翔蓝天，智能的，透明的完成任务。
-		 	 <br/>它包括任务机器人（代号HIT），全维监控（代号UAV.Monitor）,应用性能管理（代号UAV.APM）,
-		 	 <br/>服务治理（代号UAV.ServiceGovern）,微服务计算（代号UAV.MSCP），用户体验管理（代号UAV.UEM）等。
+		<div class="supportCenter">
+				<div class="line"></div>
+				<p><span class="lineTitle">UAVStack Support</span></p>
+				<p>
+					<span class="lineDesc">
+					 UAVStack是由宜信技术研发中心推出的智能化服务技术栈，是研发运维一体化的解决方案。
+				 	 <br/>UAV是无人机的缩写，寓意无人机翱翔蓝天，智能的，透明的完成任务。
+				 	 <br/>它包括任务机器人（代号HIT），全维监控（代号UAV.Monitor）,应用性能管理（代号UAV.APM）,
+				 	 <br/>服务治理（代号UAV.ServiceGovern）,微服务计算（代号UAV.MSCP），用户体验管理（代号UAV.UEM）等。
+					</span>
+				</p>
 		</div>
 		<div class="supportCenter">
 		    <div><img style="width:50%;" src="index/img/support/openSource.png"></img></div>
 		</div>
-		<div class="supportCenter support_1_1">
-			<div class="line"></div>
-		 	 UAV.Monitor+UAV.APM可以帮助您搭建一站式的全维度监控+应用运维解决方案。
+		<div class="supportCenter">
+				<div class="line"></div>
+				<p><span class="lineTitle">UAV.Monitor+UAV.APM可以帮助您搭建一站式的全维度监控+应用运维解决方案</span></p>
 		</div>
 		<div class="supportCenter">
 		    <div><img style="width:75%;" src="index/img/support/oneStopSolution.png"></img></div>
 		</div>
-		<div class="support_1_1">
-		 	 JAVA探针支持：
-				<br/>JDK：6，7，8，9
-				<br/>应用服务器：Tomcat（6+），SpringBoot，Jetty（7+），MSCP，任意JSE
-				<br/>应用框架：Dubbo，CXF，AXIS2，XFIRE，SUN JAXWS，Jersey，Wink，Apache HttpClient（同步/异步），SpringMVC，SpringRESTService，Servlet（2.5/3.x），Web Filter（2.5/3.x），Log4j，LogBack，Java Logging
-				<br/>数据源：MySQL，Oracle等JDBC数据源，MongoDB（MongoClient），Redis（JEDIS，LETTUCE，ARedis）
-				<br/>数据库连接池：DBCP/2，c3p0，Druid，Proxool,Hikari, MyBatis CP，Tomcat DBCP/2
-				<br/>消息中间件：RabbitMQ（消费/生产），RocketMQ（消费/生产）
+		<div class="supportCenter">
+				<div class="line"></div><p><span class="lineTitle">JAVA探针支持</span></p>
 		</div>
 		<div class="supportCenter">
-			<div class="line"></div>
-				全维数据展示
+				<table align="center">
+							<tr>
+									<td valign="top"> 
+											<span class="title">JDK版本</span>
+											<p> JDK6</p>
+											<p> JDK7</p>
+											<p> JDK8</p>
+											<p> JDK9</p>
+									</td>
+									<td valign="top">
+											<span class="title">应用框架</span>
+											<p>Dubbo&nbsp;&nbsp;|&nbsp;&nbsp;CXF&nbsp;&nbsp;|&nbsp;&nbsp;AXIS2</p>
+											<p>XFIRE&nbsp;&nbsp;|&nbsp;&nbsp;SUN JAXWS&nbsp;&nbsp;|&nbsp;&nbsp;Jersey</p>
+											<p>SpringMVC&nbsp;&nbsp;|&nbsp;&nbsp;SpringRESTService&nbsp;&nbsp;|&nbsp;&nbsp;Servlet（2.5/3.x）</p>
+											<p>Wink&nbsp;&nbsp;|&nbsp;&nbsp;Apache HttpClient（同步/异步）</p>
+											<p>Web Filter（2.5/3.x）&nbsp;&nbsp;|&nbsp;&nbsp;Log4j&nbsp;&nbsp;|&nbsp;&nbsp;LogBack</p>
+											<p>Java Logging
+									</td>
+									<td valign="top">
+											<span class="title">应用服务器</span>
+											<p> Tomcat（6+）</p>
+											<p> SpringBoot</p>
+											<p> Jetty（7+）</p>
+											<p> MSCP</p>
+											<p> 任意JSE</p>
+									</td>
+									<td valign="top"> 
+											<span class="title">数据源</span>
+											<p/> MySQL</p>
+											<p/>Oracle等JDBC数据源</p>
+											<p/>MongoDB（MongoClient）</p>
+											<p/>Redis（JEDIS，LETTUCE，ARedis）</p>
+									</td>
+									<td valign="top">
+											<span class="title">消息中间件</span>
+											<p/>RabbitMQ（消费/生产）</p>
+											<p/>RocketMQ（消费/生产）</p>
+									</td>
+									<td valign="top">
+											<span class="title">数据库连接池</span>
+											<p/>DBCP/2&nbsp;&nbsp;|&nbsp;&nbsp;c3p0</p>
+											<p/>Druid&nbsp;&nbsp;|&nbsp;&nbsp;Proxool</p>
+											<p/>Hikari&nbsp;&nbsp;|&nbsp;&nbsp;MyBatis CP</p>
+											<p/>Tomcat DBCP/2</p>
+									</td>
+							</tr>
+					</table>
+				<br/>
 		</div>
+
 		<!--功能介绍 end-->
 
 
 		<!-- team begin-->
-		<div class="team">
+		<div class="supportCenter teamMainDiv teamMainDivTop">
+				<div class="line"></div>
+				<p><span class="lineTitle lineColor-white">Our Team</span></p>
+				<p><span class="lineDesc lineColor-white">All contributors of skywalking project.</span></p>
+		</div>
+		<div class="team teamMainDiv">
 		 	<div class="scroll_left" id="LeftArr"><span class="glyphicon glyphicon-chevron-left"></span></div>
 
         <div class="context" id="scrollPic">
@@ -89,6 +156,40 @@
         <div class="scroll_right" id="RightArr"><span class="glyphicon glyphicon-chevron-right"></span></div>
 		</div>
 		<!-- tean end-->
+		
+		
+		<!-- contact beigin-->
+		<div class="contactMain">
+				<div class="contactCenter titleDiv">
+						<p><div class="line"></div></p>
+						<p><span class="lineTitle">Contact Us</span></p>
+						<p><span class="lineDesc">Welcome for any feedback, suggestion, proposal, and contribution.</span></p>
+				</div>
+				<div class="contactCenter descDiv">
+					<table align="center">
+							<tr>
+									<td valign="top"> 
+											<span class="title">UAVStack Organization</span>
+											<br/> Beijing China
+											<br/>xxx@xxxxx.com
+									</td>
+									<td valign="top">
+															We are an open source organization of sky-walking APM project.<br/>
+															Hope to provide attractive APM features for all users.
+									</td>
+								
+							</tr>
+					</table>
+				</div>
+				<div class="contactCenter emailDiv">
+					 <a href="mailto:xxxx@xxxxx.com" class="email">Send us mail</a>
+				</div>
+				<div class="contactCenter copyDiv">
+					  © 2016-2017 UAVStack Organization
+				</div>
+	  </div>
+	 <!-- contact end-->
+		
 
 <script type="text/javascript">
 		var users = [

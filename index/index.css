@@ -2,7 +2,9 @@
 *=============================================变量 begin=============================================
 **/
 :root {
+  --style-minx-width: 1300px; 
   --style-color: #1ab394; 
+  --style-color-hover:#179d82;
 }
 
 /**
@@ -35,13 +37,49 @@
 *=============================================页面整体 begin=============================================
 **/
 body{
-	min-width: 1100px;
+	min-width: var(--style-minx-width);
 	overflow:scroll;
   margin: 0px;
   padding:0px;
   width: 100%;
   height: 100%;
-  background-color:white;
+  background-color: #fff;
+}
+
+a{ text-decoration:none; } 
+
+.line{
+    width: 60px;
+    height: 1px;
+    margin: 10px auto 0;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--style-color);
+}
+.lineTitle{
+	font-size:28px;
+	color:  rgba(0, 0, 0, 0.54);
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+}
+.lineDesc{
+	color:#aeaeae;
+}
+.lineColor-white{
+	color:  white;
+}
+/**
+*=============================================logo begin=============================================
+**/
+.logo{
+	z-index: 99;
+	position: fixed;
+	display: inline-block;
+	margin-left:180px;
+  background-color: white;
+  padding:1px 10px 2px 10px;
+  border-radius: 0px 0px 5px 5px;
+}
+.logo img{
+	width: 90px;
 }
 
 /**
@@ -50,20 +88,9 @@ body{
 .headDef{
 	width: 100%;
 	height: 70px;
-	position: absolute;
+	position: fixed;
 	background: transparent;
 	min-width: 1100px;
-}
-.logo{
-	display: inline-block;
-	margin-left:180px;
-  background-color: white;
-	width: 90px;
-  padding:1px 10px 2px 10px;
-  border-radius: 0px 0px 5px 5px;
-}
-.logo img{
-	width: 90px;
 }
 .menu{
 	float:right;
@@ -80,9 +107,10 @@ body{
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 14px;
-	padding:8px 10px; /* 设置内边距 */
+	margin-left:30px;
 	color:white; /* 设置文字颜色 */
 	text-decoration:none; /* 去掉下划线 */
+  padding:3px 5px 3px 5px;
 }
 .menu li a:hover{
     color: var(--style-color);
@@ -91,6 +119,43 @@ body{
 }
 
 
+/**
+*=============================================下拉菜单 begin=============================================
+**/
+.headDown{
+	width: 100%;
+	height: 70px;
+	position: fixed;
+	min-width: var(--style-minx-width);
+  background-color: white;
+  border: 1px solid;
+  border-top: none;
+}
+.menuDown{
+	float:right;
+	margin-top:7px;
+	margin-right:150px;
+}
+.menuDown li{
+	float:right;
+	list-style-type:none;
+}
+.menuDown li a{
+	letter-spacing: 1px;
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 14px;
+	margin-left:30px;
+	color:#676a6c; /* 设置文字颜色 */
+	text-decoration:none; /* 去掉下划线 */
+  padding:3px 5px 3px 5px;
+}
+.menuDown li a:hover{
+    color: var(--style-color);
+    background-color: white;
+    border-radius: 5px;
+}
 
 /**
 *=============================================banner begin=============================================
@@ -118,13 +183,6 @@ body{
 /**
 *=============================================support begin=============================================
 **/
-.line{
-    width: 60px;
-    height: 1px;
-    margin: 10px auto 0;
-    margin-bottom: 10px;
-    border-bottom: 2px solid var(--style-color);
-}
 .supportCenter{
 	text-align: center;
 }
@@ -132,6 +190,20 @@ body{
 	color:#676a6c;
 	padding:15px;
 	font-size:18px;
+}
+.supportCenter table{
+	color: #aeaeae;
+  font-size: 12px;
+}
+.supportCenter table td .title{
+  font-size: 16px;
+  color:var(--style-color);
+}
+.supportCenter table td{
+	padding:10px;
+}
+.supportCenter table td br{
+	margin-top:5px;
 }
 
 
@@ -141,13 +213,13 @@ body{
 **/
 
 .team{
-	border: 5px solid #179d82;
+	/**border: 5px solid #179d82;
 	border-left: none;
 	border-right: none;
+	border-bottom: none;**/
 	display: flex;
 	height: 390px;
 }
-
 .scroll_left{
 	  font-size: 26px;
 	  margin-left: 50px;
@@ -170,9 +242,21 @@ body{
 .team .context{width:100%;float:left;}
 .team .context ul{display:block;}
 .team .context li{float:left;display:inline;text-align:center;}
-
+/**
+*js 代码拼写的teamDiv
+**/
 .teamDiv{
-	margin-top: 20px;
+	padding-top: 10px;
+	background-color: white;
+	margin-left: 10px;
+}
+
+.teamMainDiv{  
+    background-color: rgba(10, 15, 28, 0.7);;
+}
+.teamMainDivTop{  
+		padding-top: 10px;
+		margin-bottom: -16px;
 }
 .teamimg{
 		width:170px;
@@ -189,6 +273,7 @@ body{
 .teamUserName{
     font-size: 16px;
     margin: 5px;
+    margin-bottom: 10px;
 }
 .teamUserDesc{
 		color:#505458;
@@ -199,3 +284,57 @@ body{
 		width:20px;
 		height:20px;
 }
+
+
+
+/**
+*=============================================contact begin=============================================
+**/
+.contactMain{
+	  background-color: #f4f4f4;
+    height: 400px;
+	  background-image: url(img/bg/word_map.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.contactCenter{
+	text-align: center;
+}
+.contactMain .titleDiv{
+	padding-top:30px;
+}
+.contactMain .descDiv{
+	padding-top: 30px;
+	font-size: 13px;
+	color:  rgba(0, 0, 0, 0.54);
+}
+.contactMain .descDiv .title{
+  color: #179d82;
+  font-weight: 700;
+}
+.contactCenter table td{
+	padding-left:10px;
+	text-align:left;
+}
+.contactMain .emailDiv{
+	padding-top: 50px;
+}
+.contactMain .emailDiv .email{
+  padding: 10px 20px;
+  color: white; 
+  background-color: var(--style-color);
+	border-radius: 4px;
+}
+.contactMain .emailDiv .email:hover{
+		background-color: var(--style-color-hover);
+    border-color: var(--style-color-hover);
+    color: #FFFFFF;
+}
+.contactMain .copyDiv{
+	padding-top: 40px;
+	font-size: 13px;
+	color:#aeaeae;
+  font-weight: 700;
+}
+
+
