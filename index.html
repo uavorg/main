@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>UAVStack</title>
 <link rel="Shortcut Icon" href="index/img/logo/uav.ico" />
 <link rel="stylesheet" type="text/css" href="index/index.css"/>
@@ -51,10 +51,12 @@
 
 		<!--大图 begin-->
 		<div>
+			<div class="banner_scroll_left" id="bannerLeftArr"><span class="glyphicon glyphicon-chevron-left"></span></div>
 		 	<div id="banner" class="banner">
 		 				<div id="bannerTitle" class="bannerTitle"><!--js动态填写--></div>
 		 				<div id="bannerText" class="bannerText"><!--js动态填写--></div>
 		 	</div>
+		 	<div class="banner_scroll_right" id="bannerRightArr"><span class="glyphicon glyphicon-chevron-right"></span></div>
 		</div>
 		<!--大图 end-->
 
@@ -136,6 +138,58 @@
 		</div>
 
 		<!--功能介绍 end-->
+		
+		
+		
+		<!--数据展示 begin-->
+		<div class="showDatasCenter">
+				<div class="line"></div>
+				<p><span class="lineTitle">全维数据展示</span></p>
+		</div>
+		<div class="showDatasCenter">
+				<table align="center">
+							<tr>
+									<td valign="top" onclick="javascript:alert(11);"> 
+										<span class="glyphicon glyphicon-folder-open"></span>
+										<br/>应用/服务画像数据示例
+									</td>
+									<td valign="top"> 
+										<span class="glyphicon glyphicon-folder-open"></span>
+										<br/>应用性能指标&日志数据示例
+									</td>
+									<td valign="top"> 
+										<span class="glyphicon glyphicon-folder-open"></span>
+										<br/>应用环境性能指标数据示例
+									</td>
+							<!--</tr>
+							<tr>-->
+									<td valign="top"> 
+										<span class="glyphicon glyphicon-folder-open"></span>
+										<br/>调用链数据示例
+									</td>
+									<td valign="top"> 
+										<span class="glyphicon glyphicon-folder-open"></span>
+										<br/>服务图谱数据示例
+									</td>
+									<td valign="top"> 
+										<span class="glyphicon glyphicon-folder-open"></span>
+										<br/>线程栈数据示例
+									</td>
+							</tr>
+					</table>
+				<br/>
+		</div>
+		
+		<!--灰层 begin-->
+	<!--	
+		<div id="showDatasEjectDiv" class="showDatasEject">
+		</div>
+		<div id="showDatasEjectImg" class="showDatasEjectImg">
+			<img src="index\img\support\openSource.png"></img>
+		</div>
+		-->
+		<!--灰层 end-->
+		<!--数据展示 end-->
 
 
 		<!-- team begin-->
@@ -145,7 +199,7 @@
 				<p><span class="lineDesc lineColor-white">All contributors of skywalking project.</span></p>
 		</div>
 		<div class="team teamMainDiv">
-		 	<div class="scroll_left" id="LeftArr"><span class="glyphicon glyphicon-chevron-left"></span></div>
+		 	<div class="team_scroll_left" id="LeftArr"><span class="glyphicon glyphicon-chevron-left"></span></div>
 
         <div class="context" id="scrollPic">
         <ul id="teamUserUl">
@@ -153,7 +207,7 @@
 							<!-- team user append end -->
         </ul>
         </div>
-        <div class="scroll_right" id="RightArr"><span class="glyphicon glyphicon-chevron-right"></span></div>
+        <div class="team_scroll_right" id="RightArr"><span class="glyphicon glyphicon-chevron-right"></span></div>
 		</div>
 		<!-- tean end-->
 		

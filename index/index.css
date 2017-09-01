@@ -33,6 +33,10 @@
 	-moz-osx-font-smoothing: grayscale
 }
 
+.glyphicon-folder-open:before
+{
+	content:"\e118"
+}
 /**
 *=============================================页面整体 begin=============================================
 **/
@@ -70,7 +74,7 @@ a{ text-decoration:none; }
 *=============================================logo begin=============================================
 **/
 .logo{
-	z-index: 99;
+	z-index: 9;
 	position: fixed;
 	display: inline-block;
 	margin-left:180px;
@@ -123,6 +127,7 @@ a{ text-decoration:none; }
 *=============================================下拉菜单 begin=============================================
 **/
 .headDown{
+	z-index: 8;
 	width: 100%;
 	height: 70px;
 	position: fixed;
@@ -163,7 +168,7 @@ a{ text-decoration:none; }
 .banner{
 	  padding-top: 130px;
     padding-left: 150px;
-    padding-right: 50px;
+    padding-right: 100px;
 		color:white;
     height: 370px;
 		font-size:24px;
@@ -177,6 +182,47 @@ a{ text-decoration:none; }
 .bannerText span{
 		margin-right: 5px;
 
+}
+
+.banner_scroll_left{
+		position: absolute;
+		height: 250px;
+		width:30px;
+	  font-size: 26px;
+	  margin-left: 50px;
+    padding-top: 250px;
+    color: aliceblue;
+}
+
+.banner_scroll_right{    
+			position: absolute;
+			height: 250px;
+			width:30px;
+	    font-size: 26px;
+	    margin-right: 50px;
+	    padding-top: 250px;
+	    color: aliceblue;
+	    top: 0px;
+	}
+
+/**
+*参考 --style-minx-width 的值。
+**/
+@media (min-width: 1300px) { 
+	.banner_scroll_right{    
+	    right: 0px;
+	}
+} 
+
+@media (max-width: 1300px) { 
+	.banner_scroll_right{    
+	    margin-left: 1200px;
+	}
+} 
+
+.banner_scroll_right:hover,.banner_scroll_left:hover{
+	cursor:pointer;
+	color: var(--style-color);
 }
 
 
@@ -206,7 +252,43 @@ a{ text-decoration:none; }
 	margin-top:5px;
 }
 
+/**
+*=============================================showDatas begin=============================================
+**/
+.showDatasCenter{
+	text-align: center;
+}
+.showDatasCenter table td{
+  font-size: 16px;
+  color:#aeaeae;
+  padding: 20px;
+}
+.showDatasCenter table td:hover{
+  font-size: 16px;
+  color:var(--style-color);
+  padding: 20px;
+  cursor:pointer;
+}
+.showDatasEject{
+    background-color:black;
+		position: fixed;
+    height: 100%;
+    width:100%;
+    z-index:98;
+    top:0px;
+    opacity: 0.7;  
+}
 
+.showDatasEjectImg{
+		position: fixed;
+    top:5%;
+    left:20%;
+    z-index:99;
+}
+.showDatasEjectImg img{
+    height: 80%;
+    width:80%;
+}
 
 /**
 *=============================================team begin=============================================
@@ -220,23 +302,24 @@ a{ text-decoration:none; }
 	display: flex;
 	height: 390px;
 }
-.scroll_left{
+.team_scroll_left{
 	  font-size: 26px;
 	  margin-left: 50px;
     margin-right: 50px;
     padding-top: 160px;
-    color:#9E9E9E'
+    color: aliceblue;
 }
-.scroll_right{
+.team_scroll_right{
 	  font-size: 26px;
 	  margin-left: 50px;
     margin-right: 50px;
     padding-top: 160px;
-    color:#9E9E9E'
+    color: aliceblue;
 }
 
-.scroll_left:hover,.scroll_right:hover{
-	cursor:pointer;color: black;
+.team_scroll_left:hover,.team_scroll_right:hover{
+	cursor:pointer;
+	color: var(--style-color);
 }
 
 .team .context{width:100%;float:left;}
