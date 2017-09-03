@@ -1,5 +1,5 @@
 /**
-*=============================================±äÁ¿ begin=============================================
+*=============================================å˜é‡ begin=============================================
 **/
 :root {
   --style-minx-width: 1300px; 
@@ -8,7 +8,7 @@
 }
 
 /**
-*=============================================×ÖÌå begin=============================================
+*=============================================å­—ä½“ begin=============================================
 **/
 @font-face {
 	font-family:'Glyphicons Halflings';
@@ -38,7 +38,7 @@
 	content:"\e118"
 }
 /**
-*=============================================Ò³ÃæÕûÌå begin=============================================
+*=============================================é¡µé¢æ•´ä½“ begin=============================================
 **/
 body{
 	min-width: var(--style-minx-width);
@@ -87,7 +87,7 @@ a{ text-decoration:none; }
 }
 
 /**
-*=============================================²Ëµ¥ begin=============================================
+*=============================================èœå• begin=============================================
 **/
 .headDef{
 	width: 100%;
@@ -112,8 +112,8 @@ a{ text-decoration:none; }
 	font-weight: 700;
 	font-size: 14px;
 	margin-left:30px;
-	color:white; /* ÉèÖÃÎÄ×ÖÑÕÉ« */
-	text-decoration:none; /* È¥µôÏÂ»®Ïß */
+	color:white; /* è®¾ç½®æ–‡å­—é¢œè‰² */
+	text-decoration:none; /* å»æ‰ä¸‹åˆ’çº¿ */
   padding:3px 5px 3px 5px;
 }
 .menu li a:hover{
@@ -124,7 +124,7 @@ a{ text-decoration:none; }
 
 
 /**
-*=============================================ÏÂÀ­²Ëµ¥ begin=============================================
+*=============================================ä¸‹æ‹‰èœå• begin=============================================
 **/
 .headDown{
 	z-index: 8;
@@ -152,8 +152,8 @@ a{ text-decoration:none; }
 	font-weight: 700;
 	font-size: 14px;
 	margin-left:30px;
-	color:#676a6c; /* ÉèÖÃÎÄ×ÖÑÕÉ« */
-	text-decoration:none; /* È¥µôÏÂ»®Ïß */
+	color:#676a6c; /* è®¾ç½®æ–‡å­—é¢œè‰² */
+	text-decoration:none; /* å»æ‰ä¸‹åˆ’çº¿ */
   padding:3px 5px 3px 5px;
 }
 .menuDown li a:hover{
@@ -171,7 +171,7 @@ a{ text-decoration:none; }
     padding-right: 100px;
 		color:white;
     height: 370px;
-		font-size:24px;
+		font-size:20px;
 }
 
 .bannerTitle{
@@ -206,7 +206,7 @@ a{ text-decoration:none; }
 	}
 
 /**
-*²Î¿¼ --style-minx-width µÄÖµ¡£
+*å‚è€ƒ --style-minx-width çš„å€¼ã€‚
 **/
 @media (min-width: 1300px) { 
 	.banner_scroll_right{    
@@ -326,7 +326,7 @@ a{ text-decoration:none; }
 .team .context ul{display:block;}
 .team .context li{float:left;display:inline;text-align:center;}
 /**
-*js ´úÂëÆ´Ğ´µÄteamDiv
+*js ä»£ç æ‹¼å†™çš„teamDiv
 **/
 .teamDiv{
 	padding-top: 10px;
