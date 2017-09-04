@@ -120,6 +120,14 @@
 						setTimeout("toolsClass.logoChangeMax()",pageParams.logoChangeIntervalTime);
 					}
 				},
+				openDatasEjectDiv(){
+					$("#showDatasEjectDiv").show();
+					$("#showDatasEjectImg").show();
+				},
+				closeDatasEjectDiv(){
+					$("#showDatasEjectDiv").hide();
+					$("#showDatasEjectImg").hide();
+				}
 				
 		}
 		/**

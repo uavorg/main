@@ -149,29 +149,29 @@
 		<div class="showDatasCenter">
 				<table align="center">
 							<tr>
-									<td valign="top" onclick="javascript:alert(11);"> 
+									<td valign="top" onclick="javascript:toolsClass.openDatasEjectDiv(0);"> 
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>应用/服务画像数据示例
 									</td>
-									<td valign="top"> 
+									<td valign="top" onclick="javascript:toolsClass.openDatasEjectDiv(1);"> 
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>应用性能指标&日志数据示例
 									</td>
-									<td valign="top"> 
+									<td valign="top" onclick="javascript:toolsClass.openDatasEjectDiv(2);"> 
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>应用环境性能指标数据示例
 									</td>
 							<!--</tr>
 							<tr>-->
-									<td valign="top"> 
+									<td valign="top" onclick="javascript:toolsClass.openDatasEjectDiv(3);"> 
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>调用链数据示例
 									</td>
-									<td valign="top"> 
+									<td valign="top" onclick="javascript:toolsClass.openDatasEjectDiv(4);"> 
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>服务图谱数据示例
 									</td>
-									<td valign="top"> 
+									<td valign="top" onclick="javascript:toolsClass.openDatasEjectDiv(5);"> 
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>线程栈数据示例
 									</td>
@@ -180,15 +180,14 @@
 				<br/>
 		</div>
 		
-		<!--灰层 begin-->
-	<!--	
-		<div id="showDatasEjectDiv" class="showDatasEject">
+		<!--灰层背景 begin-->
+		<div id="showDatasEjectDiv" class="showDatasEject" style="display:none;"><!--灰层-->
+			<div class="showDatasEjectClose" onclick="javascript:toolsClass.closeDatasEjectDiv();"><!--灰层关闭按钮-->
+				 		<span class="glyphicon glyphicon-resize-small"></span>
+			</div>
 		</div>
-		<div id="showDatasEjectImg" class="showDatasEjectImg">
-			<img src="index\img\support\openSource.png"></img>
-		</div>
-		-->
-		<!--灰层 end-->
+		<div id="showDatasEjectImg" class="showDatasEjectImg" style="display:none;"><!-- js append img--></div>
+		<!--灰层背景 end-->
 		<!--数据展示 end-->
 
 

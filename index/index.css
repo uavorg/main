@@ -15,12 +15,6 @@
 	src:url('fonts/glyphicons-halflings-regular.woff') format('woff')
 }
 
-.glyphicon-chevron-left:before {
-	content: "\e079"
-}
-.glyphicon-chevron-right:before {
-	content: "\e080"
-}
 .glyphicon {
 	position: relative;
 	top: 1px;
@@ -33,9 +27,21 @@
 	-moz-osx-font-smoothing: grayscale
 }
 
+.glyphicon-chevron-left:before {
+	content: "\e079"
+}
+
+.glyphicon-chevron-right:before {
+	content: "\e080"
+}
+
 .glyphicon-folder-open:before
 {
 	content:"\e118"
+}
+
+.glyphicon-resize-small:before {
+	content: "\e097"
 }
 /**
 *=============================================“≥√Ê’˚ÃÂ begin=============================================
@@ -277,6 +283,20 @@ a{ text-decoration:none; }
     z-index:98;
     top:0px;
     opacity: 0.7;  
+}
+
+.showDatasEjectClose{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    color: white;
+    z-index:100;
+    padding: 10px;
+    position: absolute;
+	  color: aliceblue;
+	  top: 0px;
+	  right:0px;
+	    
 }
 
 .showDatasEjectImg{
