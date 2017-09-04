@@ -1,8 +1,9 @@
 		/**
-		*开关 begin
+		*===================================全局页面/开关===================================
 		**/
 		var pageOf={
-					"bannerInterval":10000
+					"bannerInterval":10000,
+					"style-color":"#1ab394"
 		}
 		/**
 		*开关 end
@@ -17,49 +18,128 @@
 		}
 		
 		/**
-		*页面参数
+		*===================================页面参数===================================
 		**/
 		var pageParams={
-			"bannerIndex":1,     //记录当下banner下标
-			"logoChangeIntervalTime":20 //计算logo函数时间
+			"bannerIndex":-1,     //记录当下banner下标
+			"bannerIntervalId":null, //banner时间运算对象
+			"logoChangeIntervalTime":20 //logo计算函数：变化间隔时间
 		}
 		
 		/**
-		*初始化类 begin
+		*===================================初始化类 begin===================================
 		**/
 		var initClass={
-			 initBanner:function (){
-				var bannerObj = banners[0];
-				var urlName =  bannerObj.urlName;
-				$("#banner").css("backgroundImage","url('index/img/bg/"+urlName+"')");
-				$("#bannerTitle").html(bannerObj.title);
-				$("#bannerText").html(bannerObj.text);
-				setInterval("toolsClass.showBanner()",pageOf.bannerInterval);
+			initBanner:function (){
+			 	userClass.showBannerRight();
+				pageParams.bannerIntervalId = setInterval("userClass.showBannerRight()",pageOf.bannerInterval);
 			},
 			initScrollPic:function(){
 				toolsClass.appendTeamUser("teamUserUl");
 				toolsClass.createScrollPic("scrollPic","LeftArr","RightArr");
 			}
 		}
-		/**
-		*初始化类 end
-		**/
+		
 		
 		/**
-		*工具类 begin
+		*===================================用户操作 begin===================================
+		**/
+		var userClass={
+				showBannerLeft(){
+					pageParams.bannerIndex--;
+					if(pageParams.bannerIndex<0){
+						pageParams.bannerIndex=banners.length-1;
+					}
+					toolsClass.showBanner();
+				},
+				showBannerRight(){
+					pageParams.bannerIndex++;
+					if(pageParams.bannerIndex==banners.length){
+						pageParams.bannerIndex=0;
+					}
+					toolsClass.showBanner();
+				},
+				openDatasEjectDiv(_index,thisObj){
+					
+					/**
+					*	其它td css还原
+					*/
+					var tds = $("td[name='showDatasTd']");
+					var extendsShow = false; //是否有在查看的
+					$.each(tds,function(_index,_obj){
+						
+							if(_obj.style.color){
+								extendsShow =true; //存在样式则视为用户有点击其中一个查看
+							}
+							
+							if(_obj!=thisObj){
+										_obj.style.color="";
+							}
+					});
+					
+					/**
+					**动作判断
+					*/
+					var isShow = "show";
+					if(!thisObj.style.color){
+						thisObj.style.color= pageOf["style-color"];
+						isShow = "show";
+					}else{
+						thisObj.style.color="";
+						isShow = "close";
+					}
+					
+					
+					if("close"==isShow){
+						$("#showDatasEjectImgDiv").fadeOut("slow");
+					}
+					
+					if("show"==isShow){
+						
+						var waitTime = 1; 
+						if(extendsShow){
+							$("#showDatasEjectImgDiv").fadeOut("slow");
+							/**有查看的则需要关闭时间，没有查看的直接打开**/
+							waitTime = 700;
+						}
+						
+						setTimeout(function(){
+								$("#showDatasEjectImgDiv").html("");
+								var showData = showDatas[_index];
+								var showHeight = showData["h"];
+								var imgNames = showData["imgs"].split(",");
+								$.each(imgNames,function(index,value){
+											var div = document.createElement("div");
+											var img = document.createElement("img");
+											img.src="index\\img\\datas\\"+value;
+											div.append(img);
+											$("#showDatasEjectImgDiv").append(div);
+								});
+								$("#showDatasEjectImgDiv").show("slow").animate({height:showHeight});
+							
+							},waitTime);
+					}
+					
+				},
+				menuScrollMove(_id){
+						$("html,body").animate({scrollTop: $("#"+_id).offset().top-80}, 1000);	
+				}
+		}
+		/**
+		*用户操作 end
+		**/
+		
+		
+		/**
+		*===================================工具类 begin===================================
 		**/
 		var toolsClass={
-			showBanner:function (){
+			showBanner:function(){
 				var bannerObj = banners[pageParams.bannerIndex];
 				var urlName =  bannerObj.urlName;
 				$("#banner").css("backgroundImage","url('index/img/bg/"+urlName+"')");
 				$("#bannerTitle").html(bannerObj.title);
 				$("#bannerText").html(bannerObj.text);
-				
-				pageParams.bannerIndex++;
-				if(pageParams.bannerIndex==banners.length){
-					pageParams.bannerIndex=0;
-				}
 			},
 			appendTeamUser:function(appendDivId){
 					$.each(users,function(index,obj){
@@ -119,14 +199,6 @@
 						$("#logoImg").width(width+5);
 						setTimeout("toolsClass.logoChangeMax()",pageParams.logoChangeIntervalTime);
 					}
-				},
-				openDatasEjectDiv(){
-					$("#showDatasEjectDiv").show();
-					$("#showDatasEjectImg").show();
-				},
-				closeDatasEjectDiv(){
-					$("#showDatasEjectDiv").hide();
-					$("#showDatasEjectImg").hide();
 				}
 				
 		}

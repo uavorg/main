@@ -2,7 +2,8 @@
 *=============================================变量 begin=============================================
 **/
 :root {
-  --style-minx-width: 1300px; 
+  --style-minx-width: 1300px;
+  --style-backgroup-color: #f3f3f4; 
   --style-color: #1ab394; 
   --style-color-hover:#179d82;
 }
@@ -43,6 +44,11 @@
 .glyphicon-resize-small:before {
 	content: "\e097"
 }
+
+.glyphicon-download-alt:before {
+	content: "\e025"
+}
+
 /**
 *=============================================页面整体 begin=============================================
 **/
@@ -53,7 +59,7 @@ body{
   padding:0px;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: white;
 }
 
 a{ text-decoration:none; } 
@@ -80,11 +86,11 @@ a{ text-decoration:none; }
 *=============================================logo begin=============================================
 **/
 .logo{
-	z-index: 9;
+	z-index: 99;  /**不能大于弹出灰层100*/
 	position: fixed;
 	display: inline-block;
 	margin-left:180px;
-  background-color: white;
+  background-color: var(--style-backgroup-color);
   padding:1px 10px 2px 10px;
   border-radius: 0px 0px 5px 5px;
 }
@@ -133,12 +139,12 @@ a{ text-decoration:none; }
 *=============================================下拉菜单 begin=============================================
 **/
 .headDown{
-	z-index: 8;
+	z-index: 2;
 	width: 100%;
-	height: 70px;
+	height: 72px;
 	position: fixed;
 	min-width: var(--style-minx-width);
-  background-color: white;
+  background-color: var(--style-backgroup-color);
   border: 1px solid;
   border-top: none;
 }
@@ -164,7 +170,7 @@ a{ text-decoration:none; }
 }
 .menuDown li a:hover{
     color: var(--style-color);
-    background-color: white;
+    background-color: var(--style-backgroup-color);
     border-radius: 5px;
 }
 
@@ -275,39 +281,23 @@ a{ text-decoration:none; }
   padding: 20px;
   cursor:pointer;
 }
-.showDatasEject{
-    background-color:black;
-		position: fixed;
-    height: 100%;
-    width:100%;
-    z-index:98;
-    top:0px;
-    opacity: 0.7;  
-}
 
-.showDatasEjectClose{
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
-    color: white;
-    z-index:100;
-    padding: 10px;
-    position: absolute;
-	  color: aliceblue;
-	  top: 0px;
-	  right:0px;
-	    
-}
-
-.showDatasEjectImg{
-		position: fixed;
-    top:5%;
-    left:20%;
-    z-index:99;
-}
 .showDatasEjectImg img{
-    height: 80%;
-    width:80%;
+	max-width: 95%;
+}
+/**
+*=============================================download begin=============================================
+**/
+
+.downloadSpan{
+    padding: 10px 20px 10px 20px;
+    background-color: var(--style-color);
+    color: white;
+    border-radius: 5px;
+    font-size: 13px;
+    width: 150px;
+    height: 16px;
+  cursor:pointer;
 }
 
 /**
@@ -315,10 +305,6 @@ a{ text-decoration:none; }
 **/
 
 .team{
-	/**border: 5px solid #179d82;
-	border-left: none;
-	border-right: none;
-	border-bottom: none;**/
 	display: flex;
 	height: 390px;
 }
@@ -345,6 +331,7 @@ a{ text-decoration:none; }
 .team .context{width:100%;float:left;}
 .team .context ul{display:block;}
 .team .context li{float:left;display:inline;text-align:center;}
+
 /**
 *js 代码拼写的teamDiv
 **/
@@ -381,6 +368,7 @@ a{ text-decoration:none; }
 .teamUserDesc{
 		color:rgba(80, 84, 88, 0.64);;
 	  font-family: monospace;
+	  font-size: 13px
 }
 .githubimg{
 		margin-top:5px;
@@ -407,7 +395,7 @@ a{ text-decoration:none; }
 	padding-top:30px;
 }
 .contactMain .descDiv{
-	padding-top: 30px;
+	padding-top: 20px;
 	font-size: 13px;
 	color:  rgba(0, 0, 0, 0.54);
 }

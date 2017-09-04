@@ -15,6 +15,8 @@
 
 <body>
 	
+	
+		<div id="mianhomeAnchorId""><!--锚点id--></div>
 		<!--默认菜单 begin-->
 		<div class="logo">
 				<img id="logoImg" src="index/img/logo/logo.png"></img>
@@ -22,12 +24,11 @@
 		<div class="headDef" id="headDef">
 			<div class="menu">
 				<ul>
-						<li><a href="#">中文文档</a></li>
-						<li><a href="#signContact">CONTACT</a></li>
-						<li><a href="#signTeam">TEAM</a></li>
-						<li><a href="#signSupport">SUPPORT</a></li>
 						<li><a href="https://github.com/uavorg">GITHUB</a></li>
-						<li><a href="#signTop">HOME</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('contactAnchorId');">联系我们</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('teamAnchorId');">开发团队</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('downloadAnchorId');">下载</a></li>
+						<li><a href="javascript:console.log(1);">文档中心</a></li>
 				</ul>
 			</div>
 		</div>
@@ -38,12 +39,12 @@
 		<div class="headDown" id="headDown" style="display:none;">
 			<div class="menuDown">
 				<ul>
-						<li><a href="#">中文文档</a></li>
-						<li><a href="#signContact">CONTACT</a></li>
-						<li><a href="#signTeam">TEAM</a></li>
-						<li><a href="#signSupport">SUPPORT</a></li>
 						<li><a href="https://github.com/uavorg">GITHUB</a></li>
-						<li><a href="#signTop">HOME</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('contactAnchorId');">联系我们</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('teamAnchorId');">开发团队</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('downloadAnchorId');">下载</a></li>
+						<li><a href="javascript:console.log(1);">文档中心</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('mianhomeAnchorId');">首页</a></li>
 				</ul>
 			</div>
 		</div>
@@ -51,19 +52,20 @@
 
 		<!--大图 begin-->
 		<div>
-			<div class="banner_scroll_left" id="bannerLeftArr"><span class="glyphicon glyphicon-chevron-left"></span></div>
+			<a href="https://github.com/uavorg"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+			<div class="banner_scroll_left" id="bannerLeftArr" onclick="javascript:userClass.showBannerLeft();"><span class="glyphicon glyphicon-chevron-left"></span></div>
 		 	<div id="banner" class="banner">
 		 				<div id="bannerTitle" class="bannerTitle"><!--js动态填写--></div>
 		 				<div id="bannerText" class="bannerText"><!--js动态填写--></div>
 		 	</div>
-		 	<div class="banner_scroll_right" id="bannerRightArr"><span class="glyphicon glyphicon-chevron-right"></span></div>
+		 	<div class="banner_scroll_right" id="bannerRightArr" onclick="javascript:userClass.showBannerRight();"><span class="glyphicon glyphicon-chevron-right"></span></div>
 		</div>
 		<!--大图 end-->
 
 		<!--功能介绍 begin-->
 		<div class="supportCenter">
 				<div class="line"></div>
-				<p><span class="lineTitle">UAVStack Support</span></p>
+				<p><span class="lineTitle">UAVStack 支持</span></p>
 				<p>
 					<span class="lineDesc">
 					 UAVStack是由宜信技术研发中心推出的智能化服务技术栈，是研发运维一体化的解决方案。
@@ -149,29 +151,29 @@
 		<div class="showDatasCenter">
 				<table align="center">
 							<tr>
-									<td valign="top" onclick="javascript:toolsClass.openDatasEjectDiv(0);"> 
+									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(0,this);"> 
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>应用/服务画像数据示例
 									</td>
-									<td valign="top" onclick="javascript:toolsClass.openDatasEjectDiv(1);"> 
+									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(1,this);"> 
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>应用性能指标&日志数据示例
 									</td>
-									<td valign="top" onclick="javascript:toolsClass.openDatasEjectDiv(2);"> 
+									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(2,this);"> 
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>应用环境性能指标数据示例
 									</td>
 							<!--</tr>
 							<tr>-->
-									<td valign="top" onclick="javascript:toolsClass.openDatasEjectDiv(3);"> 
+									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(3,this);"> 
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>调用链数据示例
 									</td>
-									<td valign="top" onclick="javascript:toolsClass.openDatasEjectDiv(4);"> 
+									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(4,this);"> 
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>服务图谱数据示例
 									</td>
-									<td valign="top" onclick="javascript:toolsClass.openDatasEjectDiv(5);"> 
+									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(5,this);"> 
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>线程栈数据示例
 									</td>
@@ -179,22 +181,40 @@
 					</table>
 				<br/>
 		</div>
-		
-		<!--灰层背景 begin-->
-		<div id="showDatasEjectDiv" class="showDatasEject" style="display:none;"><!--灰层-->
-			<div class="showDatasEjectClose" onclick="javascript:toolsClass.closeDatasEjectDiv();"><!--灰层关闭按钮-->
-				 		<span class="glyphicon glyphicon-resize-small"></span>
-			</div>
-		</div>
-		<div id="showDatasEjectImg" class="showDatasEjectImg" style="display:none;"><!-- js append img--></div>
-		<!--灰层背景 end-->
+		<div id="showDatasEjectImgDiv" class="supportCenter showDatasEjectImg" style="display:none;"><!--js 动态加载数据展示图片--></div>
 		<!--数据展示 end-->
 
 
+		<!--下载 begin-->
+		<div id="downloadAnchorId""><!--锚点id--></div>
+		<div class="supportCenter">
+				<div class="line"></div><p><span class="lineTitle">UAVStack 下载</span></p>
+		</div>
+		<div class="supportCenter">
+				<table align="center">
+							<tr>
+									<td valign="top"> 
+											<span class="title">安装包</span>
+											<p>XXX（MOF）<p/><span class="glyphicon glyphicon-download-alt downloadSpan">&nbsp;Download-MOF</span> </p>
+											<p> XXXX<p/><span class="glyphicon glyphicon-download-alt downloadSpan">&nbsp;Download-xxx</span></p>
+											<p> XXXXX<p/><span class="glyphicon glyphicon-download-alt downloadSpan">&nbsp;Download-xxxx</span></p>
+									</td>
+									<td valign="top">
+											<span class="title">单机部署包</span>
+											<p>XXXXXXXXXXXXXXXXXXXXXX</p>
+											<p><span class="glyphicon glyphicon-download-alt downloadSpan">&nbsp;Download-xxxx</span>
+									</td>
+							</tr>
+					</table>
+				<br/>
+		</div>
+		<!--下载 end-->
+
 		<!-- team begin-->
-		<div class="supportCenter teamMainDiv teamMainDivTop">
+		<div id="teamAnchorId""><!--锚点id--></div>
+		<div class="supportCenter teamMainDiv teamMainDivTop" id="teamDivId">
 				<div class="line"></div>
-				<p><span class="lineTitle lineColor-white">Our Team</span></p>
+				<p><span class="lineTitle lineColor-white">开发团队</span></p>
 		</div>
 		<div class="team teamMainDiv">
 		 	<div class="team_scroll_left" id="LeftArr"><span class="glyphicon glyphicon-chevron-left"></span></div>
@@ -211,11 +231,13 @@
 		
 		
 		<!-- contact beigin-->
+		<div id="contactAnchorId""><!--锚点id--></div>
 		<div class="contactMain">
 				<div class="contactCenter titleDiv">
 						<p><div class="line"></div></p>
-						<p><span class="lineTitle">Contact Us</span></p>
-						<p><span class="lineDesc">Welcome for any feedback, suggestion, proposal, and contribution.</span></p>
+						<p><span class="lineTitle">联系我们</span></p>
+						<p><span class="lineDesc">欢迎任何反馈、建议和贡献</span></p>
+					<!--	<p><span class="lineDesc">Welcome for any feedback, suggestion, proposal, and contribution.</span></p> -->
 				</div>
 				<div class="contactCenter descDiv">
 					<table align="center">
@@ -225,15 +247,12 @@
 											<br/> Beijing China
 											<br/> zhenzhang18@creditease.cn
 									</td>
-									<td valign="top">
-															
-									</td>
-								
+								<!--	<td></td> -->
 							</tr>
 					</table>
 				</div>
 				<div class="contactCenter emailDiv">
-					 <a href="mailto:zhenzhang18@creditease.cn" class="email">Send us mail</a>
+					 <a href="mailto:zhenzhang18@creditease.cn" class="email">发送电子邮件</a>
 				</div>
 				<div class="contactCenter copyDiv">
 					  © 2016-2017 UAVStack Organization
@@ -296,6 +315,15 @@
 								"<p><span>●</span>组件图谱：可自动生成组件图谱，清晰了解代码静态结构与动态关联关系</p>"+
 								"<p><span>●</span>动态服务编排：根据Feature语义自动协调具备符合业务能力的节点参与任务执行</p>"+
 								"<p><span>●</span>动态计算编排：根据计算资源自动协调合适的节点参与任务执行</p>"}
+		];
+		
+		var showDatas = [
+				{"h":"1540px","imgs":"1-1.png,1-2.png"},
+				{"h":"660px","imgs":"2-1.png"},
+				{"h":"680px","imgs":"3-1.png"},
+				{"h":"800px","imgs":"4-1.png"},
+				{"h":"1550px","imgs":"5-1.png,5-2.png"},
+				{"h":"800px","imgs":"6-1.png"}
 		];
 </script>
 
