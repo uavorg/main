@@ -161,7 +161,7 @@
 															'<div class="teamBodyDiv">'+
 																'<div><img class="teamimg" src="" imgLazy-src="index/img/team/'+obj.imgName+'" alt=""/></div>'+
 																'<div class="teamUserName">'+obj.userName+'</div>'+
-																'<div><a href="https://github.com/'+obj.githubId+'"><img class="githubimg" src="" imgLazy-src="index/img/logo/github.png"></img></a></div>'+
+																'<div><a href="https://github.com/'+obj.githubId+'"><img class="githubimg" src="index/img/logo/github.png" imgLazy-src="index/img/logo/github.png"></img></a></div>'+
 																'<div class="teamUserDesc">'+obj.userDesc+'</div>'+
 															'</div>'+
 															'</div>'+
