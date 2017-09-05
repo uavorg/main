@@ -214,8 +214,6 @@
 					}
 				},
 				imgLazy(){
-					
-		
 	        var aImg = document.querySelectorAll('img');
 	        var len = aImg.length;
 					/**Õº∆¨¿¡º”‘ÿ*/	

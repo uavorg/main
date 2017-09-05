@@ -1,0 +1,794 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>实时数据采集 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="hua-xiang-shu-ju-cai-ji.html" />
+    
+    
+    <link rel="prev" href="mofshu-ju-cai-ji.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../healthmanager.html">
+            
+                <a href="../healthmanager.html">
+            
+                    
+                    HealthManager
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../healthmanager/mscpyuan-li.html">
+            
+                <a href="../healthmanager/mscpyuan-li.html">
+            
+                    
+                    MSCP原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../healthmanager/hmjia-gou-zu-jian.html">
+            
+                <a href="../healthmanager/hmjia-gou-zu-jian.html">
+            
+                    
+                    HM架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../healthmanager/hmfu-wu.html">
+            
+                <a href="../healthmanager/hmfu-wu.html">
+            
+                    
+                    HM服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../healthmanager/xin-tiao-shu-ju-fu-wu.html">
+            
+                <a href="../healthmanager/xin-tiao-shu-ju-fu-wu.html">
+            
+                    
+                    心跳数据服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../healthmanager/hua-xiang-shu-ju-fu-wu.html">
+            
+                <a href="../healthmanager/hua-xiang-shu-ju-fu-wu.html">
+            
+                    
+                    画像数据服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../healthmanager/shi-shi-shu-ju-fu-wu.html">
+            
+                <a href="../healthmanager/shi-shi-shu-ju-fu-wu.html">
+            
+                    
+                    实时数据服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../healthmanager/rong-qi-jie-dian-shu-ju-fu-wu.html">
+            
+                <a href="../healthmanager/rong-qi-jie-dian-shu-ju-fu-wu.html">
+            
+                    
+                    容器节点数据服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../healthmanager/shi-shi-yu-jing-fu-wu.html">
+            
+                <a href="../healthmanager/shi-shi-yu-jing-fu-wu.html">
+            
+                    
+                    实时预警服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.5.1" data-path="../healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-xin-xi-shu-ju-jie-gou-slice.html">
+            
+                <a href="../healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-xin-xi-shu-ju-jie-gou-slice.html">
+            
+                    
+                    预警信息数据结构Slice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5.2" data-path="../healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve.html">
+            
+                <a href="../healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve.html">
+            
+                    
+                    预警策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5.3" data-path="../healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve-biao-da-shi.html">
+            
+                <a href="../healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve-biao-da-shi.html">
+            
+                    
+                    预警策略表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5.4" data-path="../healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-tong-zhi-ge-shi.html">
+            
+                <a href="../healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-tong-zhi-ge-shi.html">
+            
+                    
+                    预警通知格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../healthmanager/yu-jing-zhong-xin-fu-wu.html">
+            
+                <a href="../healthmanager/yu-jing-zhong-xin-fu-wu.html">
+            
+                    
+                    预警中心服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.7" data-path="../healthmanager/apphubfu-wu.html">
+            
+                <a href="../healthmanager/apphubfu-wu.html">
+            
+                    
+                    APPHUB服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.8" data-path="../healthmanager/ri-zhi-fu-wu.html">
+            
+                <a href="../healthmanager/ri-zhi-fu-wu.html">
+            
+                    
+                    日志数据服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.9" data-path="../healthmanager/diao-yong-lian.html">
+            
+                <a href="../healthmanager/diao-yong-lian.html">
+            
+                    
+                    调用链数据服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../monitoragent.html">
+            
+                <a href="../monitoragent.html">
+            
+                    
+                    MonitorAgent
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../monitoragent/majia-gou-zu-jian.html">
+            
+                <a href="../monitoragent/majia-gou-zu-jian.html">
+            
+                    
+                    MA架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../monitoragent/xin-tiao-ji-zhi.html">
+            
+                <a href="../monitoragent/xin-tiao-ji-zhi.html">
+            
+                    
+                    心跳机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../monitoragent/ying-yong-shu-ju-cai-ji.html">
+            
+                <a href="../monitoragent/ying-yong-shu-ju-cai-ji.html">
+            
+                    
+                    应用数据归集
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.html">
+            
+                <a href="../monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.html">
+            
+                    
+                    应用画像数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.html">
+            
+                <a href="../monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.html">
+            
+                    
+                    应用实时数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../monitoragent/rong-qi-ji-jin-cheng-shu-ju-cai-ji.html">
+            
+                <a href="../monitoragent/rong-qi-ji-jin-cheng-shu-ju-cai-ji.html">
+            
+                    
+                    容器与进程数据采集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../monitoragent/shu-ju-gui-ji-ji-zhi.html">
+            
+                <a href="../monitoragent/shu-ju-gui-ji-ji-zhi.html">
+            
+                    
+                    文件数据归集机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../monitoragent/jin-cheng-zhi-shou.html">
+            
+                <a href="../monitoragent/jin-cheng-zhi-shou.html">
+            
+                    
+                    进程值守
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../monitoragent/jie-dian-kong-zhi.html">
+            
+                <a href="../monitoragent/jie-dian-kong-zhi.html">
+            
+                    
+                    节点控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../moniorframework.html">
+            
+                <a href="../moniorframework.html">
+            
+                    
+                    MoniorFramework
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="mofjia-gou-zu-jian.html">
+            
+                <a href="mofjia-gou-zu-jian.html">
+            
+                    
+                    MOF架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="mof-agent.html">
+            
+                <a href="mof-agent.html">
+            
+                    
+                    MOF Agent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="supportor.html">
+            
+                <a href="supportor.html">
+            
+                    
+                    Supportor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="globalfilter.html">
+            
+                <a href="globalfilter.html">
+            
+                    
+                    GlobalFilter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="interceptframework.html">
+            
+                <a href="interceptframework.html">
+            
+                    
+                    InterceptFramework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="captureframework.html">
+            
+                <a href="captureframework.html">
+            
+                    
+                    CaptureFramework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="mofshu-ju-cai-ji.html">
+            
+                <a href="mofshu-ju-cai-ji.html">
+            
+                    
+                    MOF数据采集
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.7.1" data-path="shi-shi-shu-ju-sheng-cheng.html">
+            
+                <a href="shi-shi-shu-ju-sheng-cheng.html">
+            
+                    
+                    实时数据采集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="hua-xiang-shu-ju-cai-ji.html">
+            
+                <a href="hua-xiang-shu-ju-cai-ji.html">
+            
+                    
+                    画像数据采集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="diao-yong-lian-shu-ju-sheng-cheng.html">
+            
+                <a href="diao-yong-lian-shu-ju-sheng-cheng.html">
+            
+                    
+                    调用链数据生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="xian-cheng-fen-xi-shu-ju-cai-ji.html">
+            
+                <a href="xian-cheng-fen-xi-shu-ju-cai-ji.html">
+            
+                    
+                    线程分析数据采集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >实时数据采集</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x6293;&#x53D6;">&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x6293;&#x53D6;</h1>
+<h4 id="&#x5B9E;&#x65F6;&#x6570;&#x636E;">&#x5B9E;&#x65F6;&#x6570;&#x636E;</h4>
+<p>&#x5373;&#x8FD0;&#x884C;&#x65F6;&#x6570;&#x636E;&#xFF0C;&#x6307;&#x7684;&#x662F;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x4EA7;&#x751F;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x7A0B;&#x5E8F;&#x5360;&#x7528;&#x7684;CPU&#xFF0C;&#x5806;&#x5185;&#x5B58;&#xFF0C;JVM&#x4FE1;&#x606F;&#x4EE5;&#x53CA;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x8BBF;&#x95EE;&#x4E0E;&#x5BA2;&#x6237;&#x7AEF;&#x8C03;&#x7528;&#x7684;&#x76F8;&#x5173;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;(&#x5E73;&#x5747;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x3001;&#x8BBF;&#x95EE;&#x8BA1;&#x6570;&#x7B49;)&#x3002;</p>
+<h4 id="&#x670D;&#x52A1;&#x6570;&#x636E;&#x91C7;&#x96C6;">&#x670D;&#x52A1;&#x6570;&#x636E;&#x91C7;&#x96C6;</h4>
+<p>&#x670D;&#x52A1;&#x6570;&#x636E;&#x91C7;&#x96C6;&#x7531;DefaultMonitorSupporter.start&#x4F5C;&#x4E3A;&#x5165;&#x53E3;&#x70B9;&#xFF0C;&#x6784;&#x5EFA;monitor&#x5B9E;&#x4F8B;&#xFF0C;&#x9ED8;&#x8BA4;&#x6784;&#x5EFA;server&#x7C7B;&#x578B;&#x7684;StandardMonitor&#x5B9E;&#x4F8B;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;StandardMonitorRepository&#x5B9E;&#x4F8B;&#x548C;uavlog&#x5B9E;&#x4F8B;&#x3002;StandardMonitorRepository&#x5B9E;&#x4F8B;&#x6CE8;&#x518C;monitor&#xFF0C;&#x4E00;&#x4E2A;&#x8BE5;&#x5B9E;&#x4F8B;&#x5305;&#x542B;&#x591A;&#x4E2A;MonitorElement&#x5B9E;&#x4F8B;&#xFF0C;&#x4FDD;&#x5B58;&#x5728;elemsMap&#x5C5E;&#x6027;&#x4E2D;&#x3002;</p>
+<p>elemsMap&#x5C5E;&#x6027;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x91C7;&#x96C6;&#x5BF9;&#x8C61;&#x4FDD;&#x5B58;&#x4E0D;&#x540C;&#x7684;&#x91C7;&#x96C6;&#x7C7B;handler&#xFF1A;</p>
+<ul>
+<li>ServerEndRespTimeCapHandler&#xFF1A;&#x91C7;&#x96C6;Server&#x3001;APP&#x3001;URL&#x7684;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x548C;&#x52A0;&#x8F7D;&#x8BA1;&#x6570;&#x7B49;&#x3002;</li>
+<li>JVMStateCapHandler&#xFF1A;&#x91C7;&#x96C6;jvm&#x72B6;&#x6001;&#xFF0C;&#x5305;&#x62EC;Heap&#x4F7F;&#x7528;&#x3001;GC&#x8BA1;&#x6570;&#x3001;&#x7EBF;&#x7A0B;&#x8BA1;&#x6570;&#x3001;CPU&#x3001;class&#x8BA1;&#x6570;&#x7B49;&#x3002;</li>
+</ul>
+<h4 id="&#x5BA2;&#x6237;&#x7AEF;&#x6570;&#x636E;&#x91C7;&#x96C6;">&#x5BA2;&#x6237;&#x7AEF;&#x6570;&#x636E;&#x91C7;&#x96C6;</h4>
+<p>&#x670D;&#x52A1;&#x6570;&#x636E;&#x91C7;&#x96C6;&#x7531;DefaultClientMonitorSupporter.start&#x4F5C;&#x4E3A;&#x5165;&#x53E3;&#x70B9;&#xFF0C;&#x6784;&#x5EFA;monitor&#x5B9E;&#x4F8B;&#xFF0C;&#x9ED8;&#x8BA4;&#x6784;&#x5EFA;client&#x7C7B;&#x578B;&#x7684;StandardMonitor&#x5B9E;&#x4F8B;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;StandardMonitorRepository&#x5B9E;&#x4F8B;&#x548C;uavlog&#x5B9E;&#x4F8B;&#x3002;StandardMonitorRepository&#x5B9E;&#x4F8B;&#x6CE8;&#x518C;monitor&#xFF0C;&#x4E00;&#x4E2A;&#x8BE5;&#x5B9E;&#x4F8B;&#x5305;&#x542B;&#x591A;&#x4E2A;MonitorElement&#x5B9E;&#x4F8B;&#xFF0C;&#x4FDD;&#x5B58;&#x5728;elemsMap&#x5C5E;&#x6027;&#x4E2D;&#x3002;</p>
+<p>elemsMap&#x5C5E;&#x6027;&#x53EA;&#x4FDD;&#x5B58;&#x4E00;&#x4E2A;&#x91C7;&#x96C6;&#x7C7B;handler&#xFF1A;</p>
+<ul>
+<li>ClientRespTimeCapHandler&#xFF1A;&#x91C7;&#x96C6;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x548C;&#x52A0;&#x8F7D;&#x8BA1;&#x6570;&#x7B49;&#x3002;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="mofshu-ju-cai-ji.html" class="navigation navigation-prev " aria-label="Previous page: MOF数据采集">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="hua-xiang-shu-ju-cai-ji.html" class="navigation navigation-next " aria-label="Next page: 画像数据采集">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"实时数据采集","level":"1.4.7.1","depth":3,"next":{"title":"画像数据采集","level":"1.4.7.2","depth":3,"path":"moniorframework/hua-xiang-shu-ju-cai-ji.md","ref":"moniorframework/hua-xiang-shu-ju-cai-ji.md","articles":[]},"previous":{"title":"MOF数据采集","level":"1.4.7","depth":2,"path":"moniorframework/mofshu-ju-cai-ji.md","ref":"moniorframework/mofshu-ju-cai-ji.md","articles":[{"title":"实时数据采集","level":"1.4.7.1","depth":3,"path":"moniorframework/shi-shi-shu-ju-sheng-cheng.md","ref":"moniorframework/shi-shi-shu-ju-sheng-cheng.md","articles":[]},{"title":"画像数据采集","level":"1.4.7.2","depth":3,"path":"moniorframework/hua-xiang-shu-ju-cai-ji.md","ref":"moniorframework/hua-xiang-shu-ju-cai-ji.md","articles":[]},{"title":"调用链数据生成","level":"1.4.7.3","depth":3,"path":"moniorframework/diao-yong-lian-shu-ju-sheng-cheng.md","ref":"moniorframework/diao-yong-lian-shu-ju-sheng-cheng.md","articles":[]},{"title":"线程分析数据采集","level":"1.4.7.4","depth":3,"path":"moniorframework/xian-cheng-fen-xi-shu-ju-cai-ji.md","ref":"moniorframework/xian-cheng-fen-xi-shu-ju-cai-ji.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"moniorframework/shi-shi-shu-ju-sheng-cheng.md","mtime":"2017-09-05T02:21:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-05T02:44:35.534Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
