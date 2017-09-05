@@ -19,7 +19,7 @@
 		<div id="mianhomeAnchorId""><!--锚点id--></div>
 		<!--默认菜单 begin-->
 		<div class="logo">
-				<img id="logoImg" src="index/img/logo/logo.png"></img>
+				<img id="logoImg" src="" imgLazy-src="index/img/logo/logo.png" ></img>
 		</div>
 		<div class="headDef" id="headDef">
 			<div class="menu">
@@ -28,7 +28,7 @@
 						<li><a href="javascript:userClass.menuScrollMove('contactAnchorId');">联系我们</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('teamAnchorId');">开发团队</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('downloadAnchorId');">下载</a></li>
-						<li><a href="javascript:console.log(1);">文档中心</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('downloadAnchorId');">文档中心 </a></li>
 				</ul>
 			</div>
 		</div>
@@ -36,14 +36,14 @@
 		
 		
 		<!--下拉菜单 begin-->
-		<div class="headDown" id="headDown" style="display:none;">
-			<div class="menuDown">
+		<div class="headDef headDown" id="headDown" style="display:none;">
+			<div class="menu menuDown">
 				<ul>
 						<li><a href="https://github.com/uavorg">GITHUB</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('contactAnchorId');">联系我们</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('teamAnchorId');">开发团队</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('downloadAnchorId');">下载</a></li>
-						<li><a href="javascript:console.log(1);">文档中心</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('downloadAnchorId');">文档中心 </a></li>
 						<li><a href="javascript:userClass.menuScrollMove('mianhomeAnchorId');">首页</a></li>
 				</ul>
 			</div>
@@ -52,7 +52,8 @@
 
 		<!--大图 begin-->
 		<div>
-			<a href="https://github.com/uavorg"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+		<!--左上角	<a href="https://github.com/uavorg"><img style="position: absolute; top: 0; left: 0; border: 0; z-index:1;" src="" imgLazy-src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a> -->
+		<!--右上角-->	<a href="https://github.com/uavorg"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1;" src="" imgLazy-src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 			<div class="banner_scroll_left" id="bannerLeftArr" onclick="javascript:userClass.showBannerLeft();"><span class="glyphicon glyphicon-chevron-left"></span></div>
 		 	<div id="banner" class="banner">
 		 				<div id="bannerTitle" class="bannerTitle"><!--js动态填写--></div>
@@ -61,9 +62,10 @@
 		 	<div class="banner_scroll_right" id="bannerRightArr" onclick="javascript:userClass.showBannerRight();"><span class="glyphicon glyphicon-chevron-right"></span></div>
 		</div>
 		<!--大图 end-->
-
+		
+		
 		<!--功能介绍 begin-->
-		<div class="supportCenter">
+		<div class="divCenter">
 				<div class="line"></div>
 				<p><span class="lineTitle">UAVStack 支持</span></p>
 				<p>
@@ -75,20 +77,20 @@
 					</span>
 				</p>
 		</div>
-		<div class="supportCenter">
-		    <div><img style="width:50%;" src="index/img/support/openSource.png"></img></div>
+		<div class="divCenter">
+		    <div><img style="width:50%;" src="" imgLazy-src="index/img/support/openSource.png"></img></div>
 		</div>
-		<div class="supportCenter">
+		<div class="divCenter">
 				<div class="line"></div>
 				<p><span class="lineTitle">UAV.Monitor+UAV.APM可以帮助您搭建一站式的全维度监控+应用运维解决方案</span></p>
 		</div>
-		<div class="supportCenter">
-		    <div><img style="width:75%;" src="index/img/support/oneStopSolution.png"></img></div>
+		<div class="divCenter">
+		    <div><img style="width:75%;" src="" imgLazy-src="index/img/support/oneStopSolution.png"></img></div>
 		</div>
-		<div class="supportCenter">
+		<div class="divCenter">
 				<div class="line"></div><p><span class="lineTitle">JAVA探针支持</span></p>
 		</div>
-		<div class="supportCenter">
+		<div class="divCenter support">
 				<table align="center">
 							<tr>
 									<td valign="top"> 
@@ -144,11 +146,11 @@
 		
 		
 		<!--数据展示 begin-->
-		<div class="showDatasCenter">
+		<div class="divCenter">
 				<div class="line"></div>
 				<p><span class="lineTitle">全维数据展示</span></p>
 		</div>
-		<div class="showDatasCenter">
+		<div class="divCenter showDatas">
 				<table align="center">
 							<tr>
 									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(0,this);"> 
@@ -179,40 +181,49 @@
 									</td>
 							</tr>
 					</table>
-				<br/>
 		</div>
-		<div id="showDatasEjectImgDiv" class="supportCenter showDatasEjectImg" style="display:none;"><!--js 动态加载数据展示图片--></div>
+		<div id="showDatasEjectImgDiv" class="divCenter  showDatasEjectImg" style="display:none;"><!--js 动态加载数据展示图片--></div>
 		<!--数据展示 end-->
 
 
 		<!--下载 begin-->
 		<div id="downloadAnchorId""><!--锚点id--></div>
-		<div class="supportCenter">
-				<div class="line"></div><p><span class="lineTitle">UAVStack 下载</span></p>
+		<div class="divCenter">
+				<div class="line"></div><p><span class="lineTitle">UAVStack 使用</span></p>
 		</div>
-		<div class="supportCenter">
+		<div class="divCenter download">
 				<table align="center">
 							<tr>
+							</tr>
+							<tr  style="text-align: left;">
 									<td valign="top"> 
-											<span class="title">安装包</span>
-											<p>XXX（MOF）<p/><span class="glyphicon glyphicon-download-alt downloadSpan">&nbsp;Download-MOF</span> </p>
-											<p> XXXX<p/><span class="glyphicon glyphicon-download-alt downloadSpan">&nbsp;Download-xxx</span></p>
-											<p> XXXXX<p/><span class="glyphicon glyphicon-download-alt downloadSpan">&nbsp;Download-xxxx</span></p>
+											<span class="title">全维监控（文档）</span>
+											<p><span class="glyphicon glyphicon-link documentSpan">&nbsp;用户指南</span></p>
+											<p><span class="glyphicon glyphicon-link documentSpan">&nbsp;安装部署</span></p>
+											<p><span class="glyphicon glyphicon-link documentSpan">&nbsp;架构说明</span></p>
+									</td>
+									<td> 
+												│
+									</td>
+									<td valign="top"> 
+												<span class="title">安装包</span>
+												<p><span class="glyphicon glyphicon-download-alt downloadSpan">&nbsp;Download-MOF</span></p>
+												<p><span class="glyphicon glyphicon-download-alt downloadSpan">&nbsp;Download-MA</span></p>
+												<p><span class="glyphicon glyphicon-download-alt downloadSpan">&nbsp;Download-HM</span></p>
 									</td>
 									<td valign="top">
 											<span class="title">单机部署包</span>
-											<p>XXXXXXXXXXXXXXXXXXXXXX</p>
+											<p>本地无安装，可独立运行的部署包</p>
 											<p><span class="glyphicon glyphicon-download-alt downloadSpan">&nbsp;Download-xxxx</span>
 									</td>
 							</tr>
 					</table>
-				<br/>
 		</div>
 		<!--下载 end-->
 
 		<!-- team begin-->
 		<div id="teamAnchorId""><!--锚点id--></div>
-		<div class="supportCenter teamMainDiv teamMainDivTop" id="teamDivId">
+		<div class="divCenter teamMainDiv teamMainDivTop" id="teamDivId">
 				<div class="line"></div>
 				<p><span class="lineTitle lineColor-white">开发团队</span></p>
 		</div>
@@ -233,13 +244,13 @@
 		<!-- contact beigin-->
 		<div id="contactAnchorId""><!--锚点id--></div>
 		<div class="contactMain">
-				<div class="contactCenter titleDiv">
+				<div class="divCenter titleDiv">
 						<p><div class="line"></div></p>
 						<p><span class="lineTitle">联系我们</span></p>
 						<p><span class="lineDesc">欢迎任何反馈、建议和贡献</span></p>
 					<!--	<p><span class="lineDesc">Welcome for any feedback, suggestion, proposal, and contribution.</span></p> -->
 				</div>
-				<div class="contactCenter descDiv">
+				<div class="divCenter descDiv">
 					<table align="center">
 							<tr>
 									<td valign="top"> 
@@ -251,10 +262,10 @@
 							</tr>
 					</table>
 				</div>
-				<div class="contactCenter emailDiv">
+				<div class="divCenter emailDiv">
 					 <a href="mailto:zhenzhang18@creditease.cn" class="email">发送电子邮件</a>
 				</div>
-				<div class="contactCenter copyDiv">
+				<div class="divCenter copyDiv">
 					  © 2016-2017 UAVStack Organization
 				</div>
 	  </div>

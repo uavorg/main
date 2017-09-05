@@ -49,6 +49,18 @@
 	content: "\e025"
 }
 
+.glyphicon-link:before {
+	content: "\e144"
+}
+
+.bootstrap-caret {
+	margin-left: 2px;
+	display: inline-block;
+	vertical-align: middle;
+	border-top: 8px solid;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent
+	}
 /**
 *=============================================页面整体 begin=============================================
 **/
@@ -82,6 +94,10 @@ a{ text-decoration:none; }
 .lineColor-white{
 	color:  white;
 }
+
+.divCenter{
+	text-align: center;
+}
 /**
 *=============================================logo begin=============================================
 **/
@@ -106,7 +122,7 @@ a{ text-decoration:none; }
 	height: 70px;
 	position: fixed;
 	background: transparent;
-	min-width: 1100px;
+	min-width: var(--style-minx-width);
 }
 .menu{
 	float:right;
@@ -117,21 +133,25 @@ a{ text-decoration:none; }
 	float:right;
 	list-style-type:none;
 }
-.menu li a{
+.menu li a,.menuDef{
 	letter-spacing: 1px;
-	font-family: 'Open Sans', helvetica, arial, sans-serif;
-	text-transform: uppercase;
 	font-weight: 700;
-	font-size: 14px;
+	font-size: 15px;
 	margin-left:30px;
 	color:white; /* 设置文字颜色 */
 	text-decoration:none; /* 去掉下划线 */
   padding:3px 5px 3px 5px;
 }
-.menu li a:hover{
+
+.menuDef{
+	/**兼容对齐*/
+	margin-top: -2px;
+}
+.menu li a:hover,.menuDef:hover{
     color: var(--style-color);
     background-color: white;
-    border-radius: 5px;
+    border-radius: 2px;
+		cursor:pointer;
 }
 
 
@@ -140,38 +160,17 @@ a{ text-decoration:none; }
 **/
 .headDown{
 	z-index: 2;
-	width: 100%;
 	height: 72px;
-	position: fixed;
-	min-width: var(--style-minx-width);
   background-color: var(--style-backgroup-color);
   border: 1px solid;
   border-top: none;
 }
-.menuDown{
-	float:right;
-	margin-top:7px;
-	margin-right:150px;
+.menuDown li a,.menuDown .menuDef{
+	color:#676a6c; 
 }
-.menuDown li{
-	float:right;
-	list-style-type:none;
-}
-.menuDown li a{
-	letter-spacing: 1px;
-	font-family: 'Open Sans', helvetica, arial, sans-serif;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 14px;
-	margin-left:30px;
-	color:#676a6c; /* 设置文字颜色 */
-	text-decoration:none; /* 去掉下划线 */
-  padding:3px 5px 3px 5px;
-}
-.menuDown li a:hover{
+.menuDown li a:hover,.menuDown .menuDef:hover{
     color: var(--style-color);
     background-color: var(--style-backgroup-color);
-    border-radius: 5px;
 }
 
 /**
@@ -241,41 +240,36 @@ a{ text-decoration:none; }
 /**
 *=============================================support begin=============================================
 **/
-.supportCenter{
-	text-align: center;
-}
 .support_1_1{
 	color:#676a6c;
 	padding:15px;
 	font-size:18px;
 }
-.supportCenter table{
+.support table{
 	color: #aeaeae;
   font-size: 12px;
 }
-.supportCenter table td .title{
+.support table td .title{
   font-size: 16px;
   color:var(--style-color);
 }
-.supportCenter table td{
+.support table td{
 	padding:10px;
 }
-.supportCenter table td br{
+.support table td br{
 	margin-top:5px;
 }
 
 /**
 *=============================================showDatas begin=============================================
 **/
-.showDatasCenter{
-	text-align: center;
-}
-.showDatasCenter table td{
+
+.showDatas table td{
   font-size: 16px;
   color:#aeaeae;
   padding: 20px;
 }
-.showDatasCenter table td:hover{
+.showDatas table td:hover{
   font-size: 16px;
   color:var(--style-color);
   padding: 20px;
@@ -285,20 +279,51 @@ a{ text-decoration:none; }
 .showDatasEjectImg img{
 	max-width: 95%;
 }
+
+
 /**
-*=============================================download begin=============================================
+*=============================================document 文档中心 & download begin=============================================
 **/
 
-.downloadSpan{
-    padding: 10px 20px 10px 20px;
-    background-color: var(--style-color);
-    color: white;
+.documentSpan{
+    font-size: 16px;
     border-radius: 5px;
-    font-size: 13px;
     width: 150px;
     height: 16px;
-  cursor:pointer;
+  	cursor:pointer;
 }
+.documentSpan:hover{
+	  font-size: 16px;
+	  color:var(--style-color);
+	  cursor:pointer;
+}
+
+.downloadSpan{
+    border-radius: 5px;
+	  font-size: 16px;
+    width: 170px;
+    height: 16px;
+  	cursor:pointer;
+}
+
+.downloadSpan:hover{
+	  color:var(--style-color);
+}
+.download table{
+	color: #aeaeae;
+  font-size: 12px;
+}
+.download table td .title{
+  font-size: 16px;
+  color:var(--style-color);
+}
+.download table td{
+	padding:10px;
+}
+.download table td br{
+	margin-top:5px;
+}
+
 
 /**
 *=============================================team begin=============================================
@@ -306,7 +331,7 @@ a{ text-decoration:none; }
 
 .team{
 	display: flex;
-	height: 390px;
+	height: 410px;
 }
 .team_scroll_left{
 	  font-size: 26px;
@@ -339,6 +364,7 @@ a{ text-decoration:none; }
 	padding-top: 10px;
 	background-color: white;
 	margin-left: 10px;
+	height: 365px;
 }
 
 .teamMainDiv{  
@@ -358,22 +384,21 @@ a{ text-decoration:none; }
 	width:210px;
 	margin-left:10px;
 	margin-right: 10px;
-	height: 320px;
+	height: 330px;
 }
 .teamUserName{
     font-size: 16px;
     margin: 5px;
-    margin-bottom: 10px;
 }
 .teamUserDesc{
 		color:rgba(80, 84, 88, 0.64);;
 	  font-family: monospace;
-	  font-size: 13px
+	  font-size: 13px;
 }
 .githubimg{
 		margin-top:5px;
-		width:20px;
-		height:20px;
+		width:15px;
+		height:15px;
 }
 
 
@@ -388,9 +413,7 @@ a{ text-decoration:none; }
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
-.contactCenter{
-	text-align: center;
-}
+
 .contactMain .titleDiv{
 	padding-top:30px;
 }
@@ -403,7 +426,7 @@ a{ text-decoration:none; }
   color: #179d82;
   font-weight: 700;
 }
-.contactCenter table td{
+.contactMain .descDiv table td{
 	padding-left:10px;
 	text-align:left;
 }

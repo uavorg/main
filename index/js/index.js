@@ -12,9 +12,21 @@
 		window.onload = function () {
 				initClass.initBanner();
 				initClass.initScrollPic();
+				/**
+				*页面图片懒加载
+				*/
+				toolsClass.imgLazy();
 		}
 		window.onscroll = function (){
+				/**
+				*logo图片变化
+				*/
 				toolsClass.logoOnscroll();
+				
+				/**
+				*页面图片懒加载
+				*/
+				toolsClass.imgLazy();
 		}
 		
 		/**
@@ -23,7 +35,8 @@
 		var pageParams={
 			"bannerIndex":-1,     //记录当下banner下标
 			"bannerIntervalId":null, //banner时间运算对象
-			"logoChangeIntervalTime":20 //logo计算函数：变化间隔时间
+			"logoChangeIntervalTime":20, //logo计算函数：变化间隔时间
+			"imgLazyOnscrollHeight":0 //存储:懒加载图片加载到的位置，避免每次都从第一张图片开始遍历
 		}
 		
 		/**
@@ -91,14 +104,14 @@
 					
 					
 					if("close"==isShow){
-						$("#showDatasEjectImgDiv").fadeOut("slow");
+						$("#showDatasEjectImgDiv").slideUp("slow");
 					}
 					
 					if("show"==isShow){
 						
 						var waitTime = 1; 
 						if(extendsShow){
-							$("#showDatasEjectImgDiv").fadeOut("slow");
+							$("#showDatasEjectImgDiv").slideUp("slow");
 							/**有查看的则需要关闭时间，没有查看的直接打开**/
 							waitTime = 700;
 						}
@@ -115,7 +128,7 @@
 											div.append(img);
 											$("#showDatasEjectImgDiv").append(div);
 								});
-								$("#showDatasEjectImgDiv").show("slow").animate({height:showHeight});
+								$("#showDatasEjectImgDiv").slideDown("slow").animate({height:showHeight});
 							
 							},waitTime);
 					}
@@ -146,12 +159,12 @@
 						var html='<li>'+
 												 '<div class="teamDiv">'+
 															'<div class="teamBodyDiv">'+
-																'<div><img class="teamimg" src="index/img/team/'+obj.imgName+'" alt=""/></div>'+
+																'<div><img class="teamimg" src="" imgLazy-src="index/img/team/'+obj.imgName+'" alt=""/></div>'+
 																'<div class="teamUserName">'+obj.userName+'</div>'+
+																'<div><a href="https://github.com/'+obj.githubId+'"><img class="githubimg" src="" imgLazy-src="index/img/logo/github.png"></img></a></div>'+
 																'<div class="teamUserDesc">'+obj.userDesc+'</div>'+
 															'</div>'+
-															'<div><a href="https://github.com/'+obj.githubId+'"><img class="githubimg" src="index/img/logo/github.png"></img></a></div>'+
-													'</div>'+
+															'</div>'+
 						            '</li>';
 						$("#"+appendDivId).append(html);	
 					})
@@ -199,12 +212,31 @@
 						$("#logoImg").width(width+5);
 						setTimeout("toolsClass.logoChangeMax()",pageParams.logoChangeIntervalTime);
 					}
+				},
+				imgLazy(){
+					
+		
+	        var aImg = document.querySelectorAll('img');
+	        var len = aImg.length;
+					/**图片懒加载*/	
+					  var seeHeight = document.documentElement.clientHeight;
+            var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            for (var i = pageParams.imgLazyOnscrollHeight; i < len; i++) {
+                if (aImg[i].offsetTop < seeHeight + scrollTop) {
+                    if (aImg[i].getAttribute('src') == '') {
+                        aImg[i].src = aImg[i].getAttribute('imgLazy-src');
+                    }
+                    pageParams.imgLazyOnscrollHeight = i + 1;
+                   // console.log('n = ' + pageParams.imgLazyOnscrollHeight);
+                }
+            }
 				}
 				
 		}
 		/**
 		*工具类 end
 		**/
+		
 			
 			
 		
