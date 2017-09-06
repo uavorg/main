@@ -140,12 +140,15 @@
 								var showData = showDatas[_index];
 								var showHeight = showData["h"];
 								var imgNames = showData["imgs"].split(",");
+								alert(imgNames);
 								$.each(imgNames,function(index,value){
+								alert(2333);
 											var div = document.createElement("div");
 											var img = document.createElement("img");
 											img.src="index\\img\\datas\\"+value;
 											div.append(img);
 											$("#showDatasEjectImgDiv").append(div);
+								alert(2333444);
 								});
 								alert(showHeight);
 								$("#showDatasEjectImgDiv").slideDown("slow").animate({height:showHeight});
