@@ -432,7 +432,7 @@ a{ text-decoration:none; }
 **/
 .contactMain{
 	  background-color: #f4f4f4;
-    height: 400px;
+    height: 500px;
 	  background-image: url(img/bg/word_map.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -451,13 +451,15 @@ a{ text-decoration:none; }
   font-weight: 700;
 }
 .contactMain .descDiv table td{
-	padding-left:10px;
+	padding-left: 70px;
+  padding-right: 30px;
 	text-align:left;
 }
 .contactMain .emailDiv{
-	padding-top: 50px;
+	padding-top: 20px;
 }
 .contactMain .emailDiv .email{
+	float:left;
   padding: 10px 20px;
   color: white; 
   background-color: var(--style-color);
@@ -469,10 +471,12 @@ a{ text-decoration:none; }
     color: #FFFFFF;
 }
 .contactMain .copyDiv{
-	padding-top: 40px;
+	padding-top: 20px;
 	font-size: 13px;
 	color:#aeaeae;
   font-weight: 700;
 }
 
-
+.contactMain .qrcode img{
+	width:200px;	
+}

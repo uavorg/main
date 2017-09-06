@@ -53,8 +53,7 @@
 		var pageParams={
 			"bannerIndex":-1,     //记录当下banner下标
 			"bannerIntervalId":null, //banner时间运算对象
-			"logoChangeIntervalTime":20, //logo计算函数：变化间隔时间
-			"imgLazyOnscrollHeight":0 //存储:懒加载图片加载到的位置，避免每次都从第一张图片开始遍历
+			"logoChangeIntervalTime":20 //logo计算函数：变化间隔时间
 		}
 		
 		/**
@@ -237,13 +236,11 @@
 					/**图片懒加载*/	
 					  var seeHeight = document.documentElement.clientHeight;
             var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-            for (var i = pageParams.imgLazyOnscrollHeight; i < len; i++) {
+            for (var i = 0; i < len; i++) {
                 if (aImg[i].offsetTop < seeHeight + scrollTop) {
                     if (aImg[i].getAttribute('src') == '') {
                         aImg[i].src = aImg[i].getAttribute('imgLazy-src');
                     }
-                    pageParams.imgLazyOnscrollHeight = i + 1;
-                   // console.log('n = ' + pageParams.imgLazyOnscrollHeight);
                 }
             }
 				}
