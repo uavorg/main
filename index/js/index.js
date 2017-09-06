@@ -10,6 +10,9 @@
 		**/
 
 		window.onload = function () {
+			
+				var mc = new mobleClass();
+				mc.bindClick();
 				/**
 				*菜单变化
 				*/
@@ -244,13 +247,38 @@
             }
 				}
 				
-		}
+		};
 		/**
 		*工具类 end
 		**/
 		
+		/**
+		*移动端处理 begin
+		**/
+		var  mobleClass = function (){
+				
+				this.bindClick=function(){
+						var showDatasIndex =  $("td[name='showDatasTd']").length;
+						
+						while (showDatasIndex>0)
+					  {
+					  		showDatasIndex--;
+					 			 var id = "showDatasTd_"+showDatasIndex;
+					 			 $( "#"+id ).on( "click", function(){
+					 			 		var _index = this.id.substring(this.id.indexOf("_")+1);
+										userClass.openDatasEjectDiv(_index,this);
+								}); 
+					  }
+											
+						
+				}	;
 			
-			
+		};
+			/**
+		*移动端处理 end
+		**/
+		
+		
 		
 		
 		

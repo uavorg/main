@@ -105,14 +105,25 @@ a{ text-decoration:none; }
 /**
 *参考 --style-minx-width 的值。
 **/
+/*页面最小超过1300*/
 @media (min-width: 1300px) { 
 	.banner_scroll_right{ 
+		/*海报右边按钮位置调整对齐*/ 
+	    padding-top: 250px;
 		/*海报右边按钮固定*/   
 	    right: 0px;
 	}
 	.menu{
 		/*菜单固定，不随着滚动条滚动*/
 		position: fixed;
+	}
+} 
+
+/*页面最大没有1300*/
+@media (max-width: 1300px) { 
+	.banner_scroll_right{ 
+		/*海报右边按钮位置调整对齐*/ 
+	    padding-top: 323px;
 	}
 } 
 
@@ -231,7 +242,6 @@ a{ text-decoration:none; }
 			width:30px;
 	    font-size: 26px;
 	    margin-right: 50px;
-	    padding-top: 250px;
 	    color: aliceblue;
 	    top: 0px;
 	    margin-left: 1200px;
