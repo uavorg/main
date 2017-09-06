@@ -10,6 +10,13 @@
 		**/
 
 		window.onload = function () {
+				/**
+				*菜单变化
+				*/
+				toolsClass.menuOnscroll();
+				/**
+				*海报init
+				*/
 				initClass.initBanner();
 				initClass.initScrollPic();
 				/**
@@ -17,11 +24,19 @@
 				*/
 				toolsClass.imgLazy();
 		}
+		
+		window.onresize =  function () {
+				/**
+				*菜单变化
+				*/
+				toolsClass.menuOnscroll();
+		}
+		
 		window.onscroll = function (){
 				/**
-				*logo图片变化
+				*菜单变化
 				*/
-				toolsClass.logoOnscroll();
+				toolsClass.menuOnscroll();
 				
 				/**
 				*页面图片懒加载
@@ -186,32 +201,31 @@
 
 				    scrollPic.initialize(); //初始化
 				}
-				,logoOnscroll:function(){
-					var stop = document.documentElement.scrollTop || document.body.scrollTop;		
+				,menuOnscroll:function(){
 					
-					if( stop >= 30 && $("#headDown").is(':hidden')){
-							$("#headDef").hide();
-							$("#headDown").fadeIn("slow");
-							setTimeout("toolsClass.logoChangeMin()",pageParams.logoChangeIntervalTime);
-					}else if(stop < 30 && $("#headDef").is(':hidden')){	
-							$("#headDef").show();
-							$("#headDown").fadeOut("slow");
-							setTimeout("toolsClass.logoChangeMax()",pageParams.logoChangeIntervalTime);
+					//小于最小宽度  
+					var hidnWidth = document.documentElement.scrollWidth || document.body.scrollWidth; 
+					if(hidnWidth <= 1303){
+						$("#menuDown").show();
+						$("#menu").hide();
+					}else{
+						thisHeightChange();
 					}
-				},
-				logoChangeMin(){
-					var width = $("#logoImg").width();
-					if(width>55){
-						$("#logoImg").width(width-5);
-						setTimeout("toolsClass.logoChangeMin()",pageParams.logoChangeIntervalTime);
+					
+					function thisHeightChange(){
+							var stop = document.documentElement.scrollTop || document.body.scrollTop;
+				
+							var hidnHeight = 50; //隐藏触发高度
+							
+							if( stop >= hidnHeight){
+								$("#menu").slideUp("slow");
+								$("#menuDown").slideDown("slow");
+							}else if(stop < hidnHeight){	
+								$("#menuDown").slideUp("slow");
+								$("#menu").slideDown("slow");
+							}
 					}
-				},
-				logoChangeMax(){
-					var width = $("#logoImg").width();
-					if(width<=90){
-						$("#logoImg").width(width+5);
-						setTimeout("toolsClass.logoChangeMax()",pageParams.logoChangeIntervalTime);
-					}
+					
 				},
 				imgLazy(){
 	        var aImg = document.querySelectorAll('img');

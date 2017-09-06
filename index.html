@@ -6,7 +6,7 @@
 <title>UAVStack</title>
 <link rel="Shortcut Icon" href="index/img/logo/uav.ico" />
 <link rel="stylesheet" type="text/css" href="index/index.css"/>
-<script type="text/javascript" src="index/js/jquery-1.8.3.min.js"></script>	
+<script type="text/javascript" src="index/js/jquery-1.8.3.min.js"></script>
 <!--team 滚动js-->
 <script type="text/javascript" src="index/js/scrollPic.js"></script>
 <!--index js-->
@@ -14,46 +14,47 @@
 </head>
 
 <body>
-	
-	
+
+
 		<div id="mianhomeAnchorId""><!--锚点id--></div>
-		<!--默认菜单 begin-->
-		<div class="logo">
-				<img id="logoImg" src="" imgLazy-src="index/img/logo/logo.png" ></img>
-		</div>
-		<div class="headDef" id="headDef">
-			<div class="menu">
+
+		<!--菜单 begin-->
+		<div class="menu" id="menu">
+			<div class="logo">
+					<img id="menulogoImg" src="" imgLazy-src="index/img/logo/logo.png" ></img>
+			</div>
+			<div class="title">
 				<ul>
 						<li><a href="https://github.com/uavorg" target="_black">GITHUB</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('contactAnchorId');">联系我们</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('teamAnchorId');">开发团队</a></li>
-						<li><a href="javascript:userClass.menuScrollMove('downloadAnchorId');">下载</a></li>
-						<li><a href="javascript:userClass.menuScrollMove('downloadAnchorId');">文档</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('downloadAnchorId');">文档&下载</a></li>
 				</ul>
 			</div>
 		</div>
-		<!--默认菜单 end-->
+		<!--菜单 end-->
 		
-		
-		<!--下拉菜单 begin-->
-		<div class="headDef headDown" id="headDown" style="display:none;">
-			<div class="menu menuDown">
+		<!--下滑菜单 begin-->
+		<div class="menu menuDown" id="menuDown" style="display:none;">
+			<div class="logo">
+					<img src="" imgLazy-src="index/img/logo/logo.png" ></img>
+			</div>
+			<div class="title">
 				<ul>
 						<li><a href="https://github.com/uavorg" target="_black">GITHUB</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('contactAnchorId');">联系我们</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('teamAnchorId');">开发团队</a></li>
-						<li><a href="javascript:userClass.menuScrollMove('downloadAnchorId');">下载</a></li>
-						<li><a href="javascript:userClass.menuScrollMove('downloadAnchorId');">文档</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('downloadAnchorId');">文档&下载</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('mianhomeAnchorId');">首页</a></li>
 				</ul>
 			</div>
 		</div>
-		<!--下拉菜单 end-->
+		<!--下滑菜单 end-->
 
 		<!--大图 begin-->
 		<div>
-		<!--左上角	<a href="https://github.com/uavorg" target="_black"><img style="position: absolute; top: 0; left: 0; border: 0; z-index:1;" src="" imgLazy-src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a> -->
-		<!--右上角-->	<a href="https://github.com/uavorg" target="_black"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1;" src="" imgLazy-src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+		<!--左上角-->	<a href="https://github.com/uavorg" target="_black"><img style="position: absolute; top: 0; left: 0; border: 0; z-index:1;" src="" imgLazy-src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
+		<!--右上角<a href="https://github.com/uavorg" target="_black"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1;" src="" imgLazy-src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>-->
 			<div class="banner_scroll_left" id="bannerLeftArr" onclick="javascript:userClass.showBannerLeft();"><span class="glyphicon glyphicon-chevron-left"></span></div>
 		 	<div id="banner" class="banner">
 		 				<div id="bannerTitle" class="bannerTitle"><!--js动态填写--></div>
@@ -62,8 +63,8 @@
 		 	<div class="banner_scroll_right" id="bannerRightArr" onclick="javascript:userClass.showBannerRight();"><span class="glyphicon glyphicon-chevron-right"></span></div>
 		</div>
 		<!--大图 end-->
-		
-		
+
+
 		<!--功能介绍 begin-->
 		<div class="divCenter">
 				<div class="line"></div>
@@ -93,7 +94,7 @@
 		<div class="divCenter support">
 				<table align="center">
 							<tr>
-									<td valign="top"> 
+									<td valign="top">
 											<span class="title">JDK版本</span>
 											<p> JDK6</p>
 											<p> JDK7</p>
@@ -117,7 +118,7 @@
 											<p> MSCP</p>
 											<p> 任意JSE</p>
 									</td>
-									<td valign="top"> 
+									<td valign="top">
 											<span class="title">数据源</span>
 											<p/> MySQL</p>
 											<p/>Oracle等JDBC数据源</p>
@@ -142,9 +143,9 @@
 		</div>
 
 		<!--功能介绍 end-->
-		
-		
-		
+
+
+
 		<!--数据展示 begin-->
 		<div class="divCenter">
 				<div class="line"></div>
@@ -153,29 +154,29 @@
 		<div class="divCenter showDatas">
 				<table align="center">
 							<tr>
-									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(0,this);"> 
+									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(0,this);">
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>应用/服务画像数据示例
 									</td>
-									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(1,this);"> 
+									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(1,this);">
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>应用性能指标&日志数据示例
 									</td>
-									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(2,this);"> 
+									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(2,this);">
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>应用环境性能指标数据示例
 									</td>
 							<!--</tr>
 							<tr>-->
-									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(3,this);"> 
+									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(3,this);">
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>调用链数据示例
 									</td>
-									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(4,this);"> 
+									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(4,this);">
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>服务图谱数据示例
 									</td>
-									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(5,this);"> 
+									<td valign="top" name="showDatasTd" onclick="javascript:userClass.openDatasEjectDiv(5,this);">
 										<span class="glyphicon glyphicon-folder-open"></span>
 										<br/>线程栈数据示例
 									</td>
@@ -196,16 +197,16 @@
 							<tr>
 							</tr>
 							<tr  style="text-align: left;">
-									<td valign="top"> 
+									<td valign="top">
 											<span class="title">全维监控（文档）</span>
 											<p><a href="uavdoc_useroperation/index.html" target="_black"><span class="glyphicon glyphicon-link documentSpan">&nbsp;用户指南</span></a></p>
 											<p><a href="uavdoc_deploydocs/index.html" target="_black"><span class="glyphicon glyphicon-link documentSpan">&nbsp;安装部署</span></a></p>
 											<p><a href="uavdoc_architecture/index.html" target="_black"><span class="glyphicon glyphicon-link documentSpan">&nbsp;架构说明</span></a></p>
 									</td>
-									<td> 
+									<td>
 												│
 									</td>
-									<td valign="top"> 
+									<td valign="top">
 												<span class="title">安装包</span>
 												<p><span class="glyphicon glyphicon-download-alt downloadSpan">&nbsp;Download-MOF</span></p>
 												<p><span class="glyphicon glyphicon-download-alt downloadSpan">&nbsp;Download-MA</span></p>
@@ -239,8 +240,8 @@
         <div class="team_scroll_right" id="RightArr"><span class="glyphicon glyphicon-chevron-right"></span></div>
 		</div>
 		<!-- tean end-->
-		
-		
+
+
 		<!-- contact beigin-->
 		<div id="contactAnchorId""><!--锚点id--></div>
 		<div class="contactMain">
@@ -253,7 +254,7 @@
 				<div class="divCenter descDiv">
 					<table align="center">
 							<tr>
-									<td valign="top"> 
+									<td valign="top">
 											<span class="title">UAVStack Organization</span>
 											<br/> Beijing China
 											<br/> zhenzhang18@creditease.cn
@@ -270,7 +271,7 @@
 				</div>
 	  </div>
 	 <!-- contact end-->
-		
+
 
 <script type="text/javascript">
 		var users = [
@@ -292,7 +293,7 @@
 								,{'userName':'朱文强','imgName':'zhuwenqiang.jpg','githubId':'zwq0317','userDesc':'宜信技术研发中心<br/>西安电子科技大学硕士学位'}
 								,{'userName':'鲁宁','imgName':'luning.jpg','githubId':'luning110','userDesc':'宜信技术研发中心<br/>JavaEE的Web开发及运维支持<br/>彪悍的人生不需要解释<br/>彪悍的代码不需要注释'}
 			];
-			
+
 		var banners=[
 			{"urlName":"bg1.jpg"
 				,"title":"UAV.Monitor：是业务，应用/服务，基础三维一体的监控平台，同时支持单体架构，SOA架构，微服务架构。<br/>只需部署1个Agent即可采集全维度数据，支持物理机，虚拟机，Docker。"
@@ -327,7 +328,7 @@
 								"<p><span>●</span>动态服务编排：根据Feature语义自动协调具备符合业务能力的节点参与任务执行</p>"+
 								"<p><span>●</span>动态计算编排：根据计算资源自动协调合适的节点参与任务执行</p>"}
 		];
-		
+
 		var showDatas = [
 				{"h":"1540px","imgs":"1-1.png,1-2.png"},
 				{"h":"660px","imgs":"2-1.png"},

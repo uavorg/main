@@ -98,42 +98,47 @@ a{ text-decoration:none; }
 .divCenter{
 	text-align: center;
 }
+
 /**
-*=============================================logo begin=============================================
+*=============================================页面整体 自适应 begin=============================================
 **/
-.logo{
-	z-index: 99;  /**不能大于弹出灰层100*/
-	position: fixed;
-	display: inline-block;
-	margin-left:180px;
-  background-color: var(--style-backgroup-color);
-  padding:1px 10px 2px 10px;
-  border-radius: 0px 0px 5px 5px;
-}
-.logo img{
-	width: 90px;
-}
+/**
+*参考 --style-minx-width 的值。
+**/
+@media (min-width: 1300px) { 
+	.banner_scroll_right{ 
+		/*海报右边按钮固定*/   
+	    right: 0px;
+	}
+	.menu{
+		/*菜单固定，不随着滚动条滚动*/
+		position: fixed;
+	}
+} 
 
 /**
 *=============================================菜单 begin=============================================
 **/
-.headDef{
-	width: 100%;
-	height: 70px;
-	position: fixed;
-	background: transparent;
-	min-width: var(--style-minx-width);
-}
 .menu{
+  background-color: var(--style-backgroup-color);
+  border-top: none;
+	width: 100%;
+	height: 111px;
+	background: transparent;
+}
+
+.menu .title{
 	float:right;
 	margin-top:7px;
 	margin-right:150px;
 }
-.menu li{
+
+.menu .title li{
 	float:right;
 	list-style-type:none;
 }
-.menu li a,.menuDef{
+
+.menu .title li a{
 	letter-spacing: 1px;
 	font-weight: 700;
 	font-size: 15px;
@@ -143,32 +148,47 @@ a{ text-decoration:none; }
   padding:3px 5px 3px 5px;
 }
 
-.menuDef{
-	/**兼容对齐*/
-	margin-top: -2px;
-}
-.menu li a:hover,.menuDef:hover{
+.menu .title li a:hover{
     color: var(--style-color);
     background-color: white;
     border-radius: 2px;
 		cursor:pointer;
 }
 
+.menu .logo{
+	z-index: 99;  /**不能大于弹出灰层100*/
+	display: inline-block;
+	margin-left:180px;
+  background-color: var(--style-backgroup-color);
+  padding:1px 10px 2px 10px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.menu .logo img{
+	width: 90px;
+}
 
 /**
-*=============================================下拉菜单 begin=============================================
+*=============================================菜单下拉 begin=============================================
 **/
-.headDown{
-	z-index: 2;
-	height: 72px;
+.menuDown{
+	z-index:2;
   background-color: var(--style-backgroup-color);
   border: 1px solid;
   border-top: none;
+	width: 100%;
+	height: 72px;
 }
-.menuDown li a,.menuDown .menuDef{
+
+.menuDown .logo img{
+	width: 55px;
+}
+
+.menuDown .title li a{
 	color:#676a6c; 
 }
-.menuDown li a:hover,.menuDown .menuDef:hover{
+
+.menuDown .title li a:hover{
     color: var(--style-color);
     background-color: var(--style-backgroup-color);
 }
@@ -214,22 +234,8 @@ a{ text-decoration:none; }
 	    padding-top: 250px;
 	    color: aliceblue;
 	    top: 0px;
-	}
-
-/**
-*参考 --style-minx-width 的值。
-**/
-@media (min-width: 1300px) { 
-	.banner_scroll_right{    
-	    right: 0px;
-	}
-} 
-
-@media (max-width: 1300px) { 
-	.banner_scroll_right{    
 	    margin-left: 1200px;
-	}
-} 
+}
 
 .banner_scroll_right:hover,.banner_scroll_left:hover{
 	cursor:pointer;
