@@ -91,7 +91,7 @@
 					toolsClass.showBanner();
 				},
 				openDatasEjectDiv(_index,thisObj){
-					alert(9);
+					
 					/**
 					*	其它td css还原
 					*/
@@ -120,7 +120,7 @@
 						isShow = "close";
 					}
 					
-					alert(isShow);
+				
 					
 					if("close"==isShow){
 						$("#showDatasEjectImgDiv").slideUp("slow");
@@ -134,8 +134,8 @@
 							/**有查看的则需要关闭时间，没有查看的直接打开**/
 							waitTime = 700;
 						}
-						
-						setTimeout(function(){
+						alert(waitTime);
+						setTimeout(function(){alert(5);
 								$("#showDatasEjectImgDiv").html("");
 								var showData = showDatas[_index];
 								var showHeight = showData["h"];
