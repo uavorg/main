@@ -266,6 +266,7 @@
 					 			 var id = "showDatasTd_"+showDatasIndex;
 					 			 document.getElementById(id).addEventListener( "click", function(){
 					 			 		var _index = this.id.substring(this.id.indexOf("_")+1);
+					 			 	alert(_index);
 										userClass.openDatasEjectDiv(_index,this);
 								}); 
 					  }
