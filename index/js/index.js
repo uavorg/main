@@ -264,7 +264,7 @@
 					  {
 					  		showDatasIndex--;
 					 			 var id = "showDatasTd_"+showDatasIndex;
-					 			 $( "#"+id ).on( "click", function(){
+					 			 document.getElementById(id).addEventListener( "click", function(){
 					 			 		var _index = this.id.substring(this.id.indexOf("_")+1);
 										userClass.openDatasEjectDiv(_index,this);
 								}); 
