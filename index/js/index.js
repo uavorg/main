@@ -134,8 +134,8 @@
 							/**有查看的则需要关闭时间，没有查看的直接打开**/
 							waitTime = 700;
 						}
-						alert(waitTime);
-						setTimeout(function(){alert(5);
+					
+						setTimeout(function(){
 								$("#showDatasEjectImgDiv").html("");
 								var showData = showDatas[_index];
 								var showHeight = showData["h"];
@@ -147,6 +147,7 @@
 											div.append(img);
 											$("#showDatasEjectImgDiv").append(div);
 								});
+								alert(showHeight);
 								$("#showDatasEjectImgDiv").slideDown("slow").animate({height:showHeight});
 							
 							},waitTime);
