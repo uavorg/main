@@ -91,7 +91,7 @@
 					toolsClass.showBanner();
 				},
 				openDatasEjectDiv(_index,thisObj){
-					
+					alert(9);
 					/**
 					*	其它td css还原
 					*/
@@ -120,6 +120,7 @@
 						isShow = "close";
 					}
 					
+					alert(isShow);
 					
 					if("close"==isShow){
 						$("#showDatasEjectImgDiv").slideUp("slow");
@@ -265,9 +266,7 @@
 					  		showDatasIndex--;
 					 			 var id = "showDatasTd_"+showDatasIndex;
 					 			 document.getElementById(id).addEventListener( "click", function(){
-					 			 	alert(3);
 					 			 		var _index = this.id.substring(this.id.indexOf("_")+1);
-					 			 	alert(_index);
 										userClass.openDatasEjectDiv(_index,this);
 								},false); 
 					  }
