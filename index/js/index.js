@@ -2,6 +2,7 @@
 		*===================================全局页面/开关===================================
 		**/
 		var pageOf={
+					"minPageWidth":1000, //页面最小宽度
 					"bannerInterval":10000,
 					"style-color":"#1ab394"
 		}
@@ -208,7 +209,8 @@
 					
 					//小于最小宽度  
 					var hidnWidth = document.documentElement.scrollWidth || document.body.scrollWidth; 
-					if(hidnWidth <= 1303){
+					console.log(hidnWidth,pageOf.minPageWidth);
+					if(hidnWidth <= pageOf.minPageWidth){
 						$("#menuDown").show();
 						$("#menu").hide();
 					}else{

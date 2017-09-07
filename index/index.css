@@ -2,7 +2,7 @@
 *=============================================变量 begin=============================================
 **/
 :root {
-  --style-minx-width: 1300px;
+  --style-minx-width: 1000px;
   --style-backgroup-color: #f3f3f4; 
   --style-color: #1ab394; 
   --style-color-hover:#179d82;
@@ -105,8 +105,8 @@ a{ text-decoration:none; }
 /**
 *参考 --style-minx-width 的值。
 **/
-/*页面最小超过1300*/
-@media (min-width: 1300px) { 
+/*页面最小超过XXX*/
+@media (min-width: 1000px) { 
 	.banner_scroll_right{ 
 		/*海报右边按钮位置调整对齐*/ 
 	    padding-top: 250px;
@@ -120,8 +120,8 @@ a{ text-decoration:none; }
 
 } 
 
-/*页面最大没有1300*/
-@media (max-width: 1300px) { 
+/*页面最大没有xxxx*/
+@media (max-width: 1000px) { 
 	.banner_scroll_right{ 
 		/*海报右边按钮位置调整对齐*/ 
 	    padding-top: 323px;
