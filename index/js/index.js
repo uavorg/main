@@ -209,7 +209,7 @@
 					
 					//小于最小宽度  
 					var hidnWidth = document.documentElement.scrollWidth || document.body.scrollWidth; 
-					console.log(hidnWidth,pageOf.minPageWidth);
+					
 					if(hidnWidth <= pageOf.minPageWidth){
 						$("#menuDown").show();
 						$("#menu").hide();

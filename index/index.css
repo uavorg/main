@@ -300,36 +300,54 @@ a{ text-decoration:none; }
 .showDatasEjectImg img{
 	max-width: 95%;
 }
+/**
+*=============================================文档中心 begin=============================================
+**/
+
+.document a{
+	color: #aeaeae;
+}
+
+.document .bodyDiv{
+	display: inline-block; 
+	height:250px;
+  width: 602px;
+}
+
+.document table{
+	color: #aeaeae;
+  font-size: 12px;
+}
+
+.document table td .title{
+  font-size: 16px;
+  color:var(--style-color);
+}
+
+.document .documentSpan{
+    font-size: 16px;
+  	cursor:pointer;
+}
+
+.document .documentSpan:hover{
+	  color:var(--style-color);
+}
 
 
 /**
-*=============================================document 文档中心 & download begin=============================================
+*=============================================download begin=============================================
 **/
 
-.documentSpan{
-    font-size: 16px;
-    border-radius: 5px;
-    width: 150px;
-    height: 16px;
-  	cursor:pointer;
-}
-.documentSpan:hover{
-	  font-size: 16px;
-	  color:var(--style-color);
-	  cursor:pointer;
+.download a{
+	color: #aeaeae;
 }
 
-.downloadSpan{
-    border-radius: 5px;
-	  font-size: 16px;
-    width: 170px;
-    height: 16px;
-  	cursor:pointer;
+.download .bodyDiv{
+	display: inline-block; 
+	height:400px;
+  width: 400px;
 }
 
-.downloadSpan:hover{
-	  color:var(--style-color);
-}
 .download table{
 	color: #aeaeae;
   font-size: 12px;
@@ -338,16 +356,26 @@ a{ text-decoration:none; }
   font-size: 16px;
   color:var(--style-color);
 }
-.download table td{
-	padding:10px;
-}
-.download table td br{
-	margin-top:5px;
+.download table td .title2{
+  font-size: 16px;
+  color:#aeaeae;
 }
 
-.download a{
-	color: #aeaeae;
+.download .downloadDesc{
+	margin-top:15px;
+  font-size: 14px;
 }
+
+.download .downloadLink{
+  	cursor:pointer;
+    font-size: 16px;
+}
+
+.download .downloadLink:hover{
+	  color:var(--style-color);
+}
+
+
 
 /**
 *=============================================team begin=============================================
