@@ -311,7 +311,6 @@ a{ text-decoration:none; }
 .document .bodyDiv{
 	display: inline-block; 
 	height:250px;
-  width: 602px;
 }
 
 .document table{
@@ -333,6 +332,21 @@ a{ text-decoration:none; }
 	  color:var(--style-color);
 }
 
+/*页面最小超过XXX*/
+@media (min-width: 1200px) { 
+	.documentBodyDiv1{
+		width:500px;
+	}
+
+} 
+
+/*页面最大没有xxxx*/
+@media (max-width: 1200px) { 
+	.documentBodyDiv1{
+		width:350px;
+	}
+
+} 
 
 /**
 *=============================================download begin=============================================
@@ -344,8 +358,7 @@ a{ text-decoration:none; }
 
 .download .bodyDiv{
 	display: inline-block; 
-	height:530px;
-  width: 450px;
+	height:450px;
 }
 
 .download table{
