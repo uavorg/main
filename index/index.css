@@ -344,8 +344,8 @@ a{ text-decoration:none; }
 
 .download .bodyDiv{
 	display: inline-block; 
-	height:400px;
-  width: 400px;
+	height:530px;
+  width: 450px;
 }
 
 .download table{
@@ -364,6 +364,11 @@ a{ text-decoration:none; }
 .download .downloadDesc{
 	margin-top:15px;
   font-size: 14px;
+}
+
+.download .downloadDesc .desc{
+    padding-left: 32px;
+    padding-top: 8px;
 }
 
 .download .downloadLink{
