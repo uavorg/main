@@ -99,36 +99,6 @@ a{ text-decoration:none; }
 	text-align: center;
 }
 
-/**
-*=============================================页面整体 自适应 begin=============================================
-**/
-/**
-*参考 --style-minx-width 的值。
-**/
-/*页面最小超过XXX*/
-@media (min-width: 1000px) { 
-	.banner_scroll_right{ 
-		/*海报右边按钮位置调整对齐*/ 
-	    padding-top: 250px;
-		/*海报右边按钮固定*/   
-	    right: 0px;
-	}
-	.menu{
-		/*菜单固定，随着滚动条滚动*/
-		position: fixed;
-	}	
-
-} 
-
-/*页面最大没有xxxx*/
-@media (max-width: 1000px) { 
-	.banner_scroll_right{ 
-		/*海报右边按钮位置调整对齐*/ 
-	    padding-top: 323px;
-	}
-
-	
-} 
 
 /**
 *=============================================菜单 begin=============================================
@@ -249,14 +219,40 @@ a{ text-decoration:none; }
 	    margin-right: 50px;
 	    color: aliceblue;
 	    top: 0px;
-	    margin-left: 1200px;
 }
 
 .banner_scroll_right:hover,.banner_scroll_left:hover{
 	cursor:pointer;
 	color: var(--style-color);
 }
+/**
+*参考 --style-minx-width 的值。
+**/
+/*页面最小超过XXX*/
+@media (min-width: 1000px) { 
+	.banner_scroll_right{ 
+		/*海报右边按钮位置调整对齐*/ 
+	    padding-top: 250px;
+		/*海报右边按钮固定*/   
+	    right: 0px;
+	}
+	.menu{
+		/*菜单固定，随着滚动条滚动*/
+		position: fixed;
+	}	
 
+} 
+
+/*页面最大没有xxxx*/
+@media (max-width: 1000px) { 
+	.banner_scroll_right{ 
+		/*海报右边按钮位置调整对齐*/ 
+	    padding-top: 323px;
+	    margin-left: 900px;
+	}
+
+	
+} 
 
 /**
 *=============================================support begin=============================================
