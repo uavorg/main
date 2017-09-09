@@ -171,7 +171,12 @@ function ScrollPic(scrollContId, arrLeftId, arrRightId, dotListId) {
 		if (_state != "ready") {
 			return
 		};
-		_state = "floating";
+		_state = "floating";	
+		
+		/**兼容移动端不起作用 begin*/
+		ScrollPic.childs[this.ID ].moveRight();
+		/**兼容移动端不起作用 end*/
+		
 		_scrollTimeObj = setInterval("ScrollPic.childs[" + this.ID + "].moveRight()", this.speed)
 	};
 	this.moveLeft = function () {
