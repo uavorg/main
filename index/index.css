@@ -344,6 +344,8 @@ a{ text-decoration:none; }
 
 } 
 
+
+
 /**
 *=============================================download begin=============================================
 **/
@@ -389,6 +391,22 @@ a{ text-decoration:none; }
 	  color:var(--style-color);
 }
 
+
+/*页面最小超过XXX*/
+@media (min-width: 1200px) { 
+	.downloadBodyDiv1{
+		margin-left: 150px;
+	}
+
+} 
+
+/*页面最大没有xxxx*/
+@media (max-width: 1200px) { 
+	.downloadBodyDiv1{
+		margin-left: 50px;
+	}
+
+} 
 
 
 /**
