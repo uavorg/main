@@ -60,7 +60,7 @@
     <link rel="next" href="grafana.html" />
     
     
-    <link rel="prev" href="elasticsearch.html" />
+    <link rel="prev" href="opentsdb.html" />
     
 
     </head>
@@ -107,11 +107,56 @@
                 <a href="../quickstart.html">
             
                     
-                    快速部署
+                    开发演示版部署
             
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../quick_install_windows.html">
+            
+                <a href="../quick_install_windows.html">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../quick_install_linux.html">
+            
+                <a href="../quick_install_linux.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../quick_install_mac.html">
+            
+                <a href="../quick_install_mac.html">
+            
+                    
+                    Mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -129,12 +174,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="rocketmq.html">
+        <li class="chapter " data-level="1.3.1" data-path="../thirdparty.html">
             
-                <a href="rocketmq.html">
+                <a href="../thirdparty.html">
             
                     
-                    1. 第三方环境准备
+                    1. 第三方服务准备
             
                 </a>
             
@@ -156,20 +201,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.1.2" data-path="opentsdb.html">
-            
-                <a href="opentsdb.html">
-            
-                    
-                    1.2 OPENTSDB
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.1.3" data-path="mongodb.html">
+        <li class="chapter " data-level="1.3.1.2" data-path="mongodb.html">
             
                 <a href="mongodb.html">
             
@@ -182,7 +214,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.1.4" data-path="redis.html">
+        <li class="chapter " data-level="1.3.1.3" data-path="redis.html">
             
                 <a href="redis.html">
             
@@ -195,12 +227,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.1.5" data-path="elasticsearch.html">
+        <li class="chapter " data-level="1.3.1.4" data-path="elasticsearch.html">
             
                 <a href="elasticsearch.html">
             
                     
                     1.5 Elasticsearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="opentsdb.html">
+            
+                <a href="opentsdb.html">
+            
+                    
+                    1.2 OPENTSDB
             
                 </a>
             
@@ -704,9 +749,9 @@
                                 <h1 id="ldap">LDAP</h1>
 <p>UAV&#x7684;&#x6743;&#x9650;&#x63A7;&#x5236;&#x901A;&#x8FC7;&#x5BF9;&#x63A5;LDAP&#x5B9E;&#x73B0;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528;OPENLDAP&#xFF0C;&#x5B89;&#x88C5;&#x8BE6;&#x89C1;<a href="http://www.openldap.org/" target="_blank">http://www.openldap.org/</a></p>
 <h2 id="uav&#x6743;&#x9650;&#x4E0E;ldap&#x6743;&#x9650;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;">UAV&#x6743;&#x9650;&#x4E0E;LDAP&#x6743;&#x9650;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;</h2>
-<p>LDAP&#x4E2D;&#x5E38;&#x89C1;&#x4EBA;&#x5458;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x56FE;
-<img src="../assets/ldap_1.png" alt="">
-&#x901A;&#x5E38;&#x4EBA;&#x5458;&#x53EA;&#x5C5E;&#x4E8E;&#x7EC4;&#x7EC7;&#x67B6;&#x6784;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7EC4;&#x7EC7;(org)&#x3002;&#x540C;&#x65F6;&#x4E00;&#x4E2A;&#x4EBA;&#x5458;&#x53EF;&#x80FD;&#x5C5E;&#x4E8E;&#x591A;&#x4E2A;&#x4E1A;&#x52A1;&#x56E2;&#x961F;(group)&#x3002;</p>
+<p>LDAP&#x4E2D;&#x5E38;&#x89C1;&#x4EBA;&#x5458;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x56FE;</p>
+<p><img src="../assets/ldap_1.png" alt=""></p>
+<p>&#x901A;&#x5E38;&#x4EBA;&#x5458;&#x53EA;&#x5C5E;&#x4E8E;&#x7EC4;&#x7EC7;&#x67B6;&#x6784;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7EC4;&#x7EC7;(org)&#x3002;&#x540C;&#x65F6;&#x4E00;&#x4E2A;&#x4EBA;&#x5458;&#x53EF;&#x80FD;&#x5C5E;&#x4E8E;&#x591A;&#x4E2A;&#x4E1A;&#x52A1;&#x56E2;&#x961F;(group)&#x3002;</p>
 <h4 id="&#x767B;&#x5F55;&#x6743;&#x9650;">&#x767B;&#x5F55;&#x6743;&#x9650;</h4>
 <p>UAV apphub&#x7684;&#x767B;&#x5F55;&#x6743;&#x9650;&#x901A;&#x8FC7;LDAP&#x7684;&#x57DF;&#x8D26;&#x6237;&#x8FDB;&#x884C;&#x767B;&#x5F55;&#xFF0C;&#x57DF;&#x8D26;&#x6237;&#x540D;&#x5BF9;&#x5E94;&#x4EBA;&#x5458;&#x7684;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x5C5E;&#x6027;&#xFF0C;&#x5C5E;&#x6027;&#x540D;&#x53EF;&#x914D;&#x7F6E;&#x3002;</p>
 <h4 id="app&#x8BBF;&#x95EE;&#x6743;&#x9650;">APP&#x8BBF;&#x95EE;&#x6743;&#x9650;</h4>
@@ -764,7 +809,7 @@
 
             
                 
-                <a href="elasticsearch.html" class="navigation navigation-prev " aria-label="Previous page: 1.5 Elasticsearch">
+                <a href="opentsdb.html" class="navigation navigation-prev " aria-label="Previous page: 1.2 OPENTSDB">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -780,7 +825,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.6 LDAP","level":"1.3.1.6","depth":3,"next":{"title":"1.7 Grafana","level":"1.3.1.7","depth":3,"path":"thirdparty/grafana.md","ref":"thirdparty/grafana.md","articles":[]},"previous":{"title":"1.5 Elasticsearch","level":"1.3.1.5","depth":3,"path":"thirdparty/elasticsearch.md","ref":"thirdparty/elasticsearch.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"thirdparty/ldap.md","mtime":"2017-09-08T10:43:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-08T10:47:49.162Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1.6 LDAP","level":"1.3.1.6","depth":3,"next":{"title":"1.7 Grafana","level":"1.3.1.7","depth":3,"path":"thirdparty/grafana.md","ref":"thirdparty/grafana.md","articles":[]},"previous":{"title":"1.2 OPENTSDB","level":"1.3.1.5","depth":3,"path":"thirdparty/opentsdb.md","ref":"thirdparty/opentsdb.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"thirdparty/ldap.md","mtime":"2017-09-14T06:21:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-15T04:06:50.307Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
