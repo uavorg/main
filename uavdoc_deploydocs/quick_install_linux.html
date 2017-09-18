@@ -793,9 +793,40 @@
 <li><p>&#x4F7F;&#x7528;start_sup_hbase.sh&#xFF0C;&#x542F;&#x52A8;HBase&#xFF0C;&#x53C2;&#x89C1;<a href="#HBase&#x6B63;&#x5E38;&#x542F;&#x52A8;&#x65E5;&#x5FD7;">&#x6B63;&#x5E38;&#x542F;&#x52A8;&#x65E5;&#x5FD7;</a></p>
 <pre><code>&#x6CE8;&#xFF1A;HBase&#x8FD0;&#x884C;&#x5728;standalone&#x6A21;&#x5F0F;&#xFF0C;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x8BF7;&#x81EA;&#x884C;&#x642D;&#x5EFA;&#x57FA;&#x4E8E;Hadoop&#x7684;&#x5206;&#x5E03;&#x5F0F;HBase
 </code></pre></li>
-<li><p>cd&#x5230;sup_hbase&#x76EE;&#x5F55;&#xFF0C;&#x8FD0;&#x884C;create_opentsdb_tables.sh</p>
+<li><p>cd&#x5230;sup_hbase&#x76EE;&#x5F55;&#xFF0C;&#x8FD0;&#x884C;create_opentsdb_tables.sh&#xFF0C;&#x521B;&#x5EFA;OpenTSDB&#x6240;&#x9700;&#x7684;&#x8868;</p>
 <pre><code>cd sup_hbase
 ./create_opentsdb_tables.sh
+</code></pre><p>&#x200B;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x8FD0;&#x884C;&#x6210;&#x529F;&#xFF0C;&#x65E5;&#x5FD7;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>HBase Shell; enter &apos;help&lt;RETURN&gt;&apos; for list of supported commands.
+Type &quot;exit&lt;RETURN&gt;&quot; to leave the HBase Shell
+Version 1.1.4, r14c0e77956f9bb4c6edf0378474264843e4a82c3, Wed Mar 16 21:18:26 PDT 2016
+
+create &apos;tsdb-uid&apos;,
+  {NAME =&gt; &apos;id&apos;, COMPRESSION =&gt; &apos;GZ&apos;, BLOOMFILTER =&gt; &apos;ROW&apos;},
+  {NAME =&gt; &apos;name&apos;, COMPRESSION =&gt; &apos;GZ&apos;, BLOOMFILTER =&gt; &apos;ROW&apos;}
+0 row(s) in 1.5160 seconds
+
+Hbase::Table - tsdb-uid
+
+create &apos;tsdb&apos;,
+  {NAME =&gt; &apos;t&apos;, VERSIONS =&gt; 1, COMPRESSION =&gt; &apos;GZ&apos;, BLOOMFILTER =&gt; &apos;ROW&apos;}
+0 row(s) in 1.2270 seconds
+
+Hbase::Table - tsdb
+
+create &apos;tsdb-tree&apos;,
+  {NAME =&gt; &apos;t&apos;, VERSIONS =&gt; 1, COMPRESSION =&gt; &apos;GZ&apos;, BLOOMFILTER =&gt; &apos;ROW&apos;}
+0 row(s) in 1.2200 seconds
+
+Hbase::Table - tsdb-tree
+
+create &apos;tsdb-meta&apos;,
+  {NAME =&gt; &apos;name&apos;, COMPRESSION =&gt; &apos;GZ&apos;, BLOOMFILTER =&gt; &apos;ROW&apos;}
+0 row(s) in 1.2280 seconds
+
+Hbase::Table - tsdb-meta
 </code></pre><p>&#x200B;</p>
 </li>
 <li><p>&#x4F7F;&#x7528;start_sup_opentsdb.sh&#xFF0C;&#x542F;&#x52A8;OpenTSDB&#xFF0C;&#x53C2;&#x89C1;<a href="#OpenTSDB&#x6B63;&#x5E38;&#x542F;&#x52A8;&#x65E5;&#x5FD7;">&#x6B63;&#x5E38;&#x542F;&#x52A8;&#x65E5;&#x5FD7;</a></p>
@@ -1348,7 +1379,7 @@ java.net.URLClassLoader@3b192d32
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Linux","level":"1.2.2","depth":2,"next":{"title":"Mac","level":"1.2.3","depth":2,"path":"quick_install_mac.md","ref":"quick_install_mac.md","articles":[]},"previous":{"title":"Windows","level":"1.2.1","depth":2,"path":"quick_install_windows.md","ref":"quick_install_windows.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"quick_install_linux.md","mtime":"2017-09-18T11:46:27.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-18T11:47:07.461Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Linux","level":"1.2.2","depth":2,"next":{"title":"Mac","level":"1.2.3","depth":2,"path":"quick_install_mac.md","ref":"quick_install_mac.md","articles":[]},"previous":{"title":"Windows","level":"1.2.1","depth":2,"path":"quick_install_windows.md","ref":"quick_install_windows.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"quick_install_linux.md","mtime":"2017-09-18T12:02:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-18T12:03:11.061Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
