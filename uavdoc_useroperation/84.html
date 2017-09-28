@@ -1494,9 +1494,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <pre><code>package com.creditease.agent.spi;
-
-import java.text.SimpleDateFormat;
+                                <pre><code>import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -1506,13 +1504,18 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.creditease.agent.helpers.JSONHelper;
-
 /**
- * ComponentMonitor &#x7B80;&#x5355;&#x76D1;&#x63A7;&#x5668;
+ * SimpleMonitor &#x7B80;&#x5355;&#x76D1;&#x63A7;&#x5668;
  */
-public class ComponentMonitor {
+public class SimpleMonitor {
 
+    private static Map&lt;String, SimpleMonitor&gt; smMap = new ConcurrentHashMap&lt;String, SimpleMonitor&gt;();
+
+    /**
+     * 
+     * Aggregation description: &#x805A;&#x5408;&#x64CD;&#x4F5C;&#x6807;&#x8BC6;
+     *
+     */
     public enum Aggregation {
 
         Avg(&quot;avg&quot;), Sum(&quot;sum&quot;), Diff(&quot;diff&quot;);
@@ -1530,6 +1533,11 @@ public class ComponentMonitor {
         }
     }
 
+    /**
+     * 
+     * SumBySeconds description:
+     *
+     */
     private static class SumBySeconds {
 
         private static SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss.SSS&quot;);
@@ -1580,15 +1588,13 @@ public class ComponentMonitor {
         }
     }
 
-    private static Map&lt;String, ComponentMonitor&gt; smMap = new ConcurrentHashMap&lt;String, ComponentMonitor&gt;();
-
     /**
      * get simple monitor
      * 
      * @param name
      * @return
      */
-    public static ComponentMonitor getMonitor(String name) {
+    public static SimpleMonitor getMonitor(String name) {
 
         if (null == name || &quot;&quot;.equals(name)) {
             return null;
@@ -1598,7 +1604,7 @@ public class ComponentMonitor {
             return smMap.get(name);
         }
 
-        ComponentMonitor sm = new ComponentMonitor();
+        SimpleMonitor sm = new SimpleMonitor();
 
         smMap.put(name, sm);
 
@@ -1691,27 +1697,6 @@ public class ComponentMonitor {
             return;
 
         elems.put(key, value);
-    }
-
-    /**
-     * remove metric
-     * 
-     * @param key
-     */
-    public void removeMetric(String key) {
-
-        if (elems.containsKey(key)) {
-
-            String skey = getSKey(key);
-
-            System.getProperties().remove(skey);
-
-            elems.remove(key);
-            elemSumBySeconds.remove(key);
-            elemsAttrs.remove(key);
-
-        }
-
     }
 
     /**
@@ -1861,6 +1846,27 @@ public class ComponentMonitor {
     }
 
     /**
+     * remove metric
+     * 
+     * @param key
+     */
+    public void removeMetric(String key) {
+
+        if (elems.containsKey(key)) {
+
+            String skey = getSKey(key);
+
+            System.getProperties().remove(skey);
+
+            elems.remove(key);
+            elemSumBySeconds.remove(key);
+            elemsAttrs.remove(key);
+
+        }
+
+    }
+
+    /**
      * &#x5C06;&#x67D0;&#x4E2A;&#x6307;&#x6807;&#x8BBE;&#x5B9A;&#x5230;&#x4E00;&#x4E2A;&#x6307;&#x6807;group&#x91CC;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5408;&#x5E76;&#x663E;&#x793A;
      * 
      * @param metricKey
@@ -1900,7 +1906,7 @@ public class ComponentMonitor {
      * &#x5C06;metric&#x503C;flush&#x5230;SystemProperties
      * 
      * @param includeMetrics
-     *            &#x4E3A;null&#x5219;&#x8868;&#x793A;flush &#x6240;&#x6709;metrics&#xFF1B;&#x5982;&#x679C;&#x7ED9;&#x51FA;metrics&#x540D;&#x5B57;&#xFF0C;&#x5219;&#x53EA;flush&#x8FD9;&#x4E9B;metrics
+     *            &#x4E3A;null&#x5219;&#x8868;&#x793A;flush &#x6240;&#x6709;metrics&#xFF1B;&#x5982;&#x679C;&#x7ED9;&#x51FA;metrics&#x540D;&#x5B57;&#xFF0C;&#x5219;&#x53EA;flush&#x8FD9;&#x4E9B;metrics &#x6CE8;&#x610F;&#xFF1A;&#x8BE5;&#x65B9;&#x6CD5;&#x53EA;&#x5C06;&#x6700;&#x8FD1;&#x7684;metric&#x503C;flush&#x5230;&#xFF0C;&#x800C;&#x5386;&#x53F2;&#x503C;&#x662F;&#x9ED8;&#x8BA4;&#x5FFD;&#x7565;&#x7684;
      */
     public void flushToSystemProperties(String... includeMetrics) {
 
@@ -1948,12 +1954,32 @@ public class ComponentMonitor {
             Map&lt;String, String&gt; attrs = this.elemsAttrs.get(key);
 
             if (attrs.size() &gt; 0) {
-                skey += &quot;@&quot; + JSONHelper.toString(attrs);
+                skey += &quot;@&quot; + convertMapToString(attrs);
             }
         }
 
         return skey;
     }
+
+    private String convertMapToString(Map&lt;String, String&gt; attrs) {
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(&quot;{&quot;);
+
+        for (String key : attrs.keySet()) {
+            sb.append(&quot;\&quot;&quot; + key + &quot;\&quot;:\&quot;&quot; + attrs.get(key) + &quot;\&quot;,&quot;);
+        }
+
+        if (attrs.size() &gt; 0) {
+            sb = sb.deleteCharAt(sb.length() - 1);
+        }
+
+        sb.append(&quot;}&quot;);
+
+        return sb.toString();
+    }
+
 }
 </code></pre>
                                 
@@ -1998,7 +2024,7 @@ public class ComponentMonitor {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9.5 简单监控器","level":"1.5.9.5","depth":3,"next":{"title":"应用：上帝罗盘","level":"1.6","depth":1,"path":"90.md","ref":"90.md","articles":[{"title":"1. 情报中心","level":"1.6.1","depth":2,"anchor":"#情报中心","path":"90.md","ref":"90.md#情报中心","articles":[]},{"title":"2. panel配置说明","level":"1.6.2","depth":2,"anchor":"#配置说明","path":"90.md","ref":"90.md#配置说明","articles":[]}]},"previous":{"title":"9.4 预警配置","level":"1.5.9.4","depth":3,"path":"83.md","ref":"83.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"84.md","mtime":"2017-06-06T10:10:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-08T10:48:31.334Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"9.5 简单监控器","level":"1.5.9.5","depth":3,"next":{"title":"应用：上帝罗盘","level":"1.6","depth":1,"path":"90.md","ref":"90.md","articles":[{"title":"1. 情报中心","level":"1.6.1","depth":2,"anchor":"#情报中心","path":"90.md","ref":"90.md#情报中心","articles":[]},{"title":"2. panel配置说明","level":"1.6.2","depth":2,"anchor":"#配置说明","path":"90.md","ref":"90.md#配置说明","articles":[]}]},"previous":{"title":"9.4 预警配置","level":"1.5.9.4","depth":3,"path":"83.md","ref":"83.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"84.md","mtime":"2017-09-28T09:14:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-28T12:11:43.222Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
