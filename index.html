@@ -25,9 +25,11 @@
 			</div>
 			<div class="title">
 				<ul>
-						<li><a href="https://github.com/uavorg" target="_black">GITHUB</a></li>
+						<!--<li><a href="https://github.com/uavorg" target="_black">GitHub</a></li>-->
 						<li><a href="javascript:userClass.menuScrollMove('contactAnchorId');">联系我们</a></li>
-						<li><a href="javascript:userClass.menuScrollMove('teamAnchorId');">开发团队</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('serviceAnchorId');">服务支持</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('teamAnchorId');">开源贡献者</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('joinAnchorId');">加入项目</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('downloadAnchorId');">下载</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('documentAnchorId');">文档</a></li>
 				</ul>
@@ -42,9 +44,11 @@
 			</div>
 			<div class="title">
 				<ul>
-						<li><a href="https://github.com/uavorg" target="_black">GITHUB</a></li>
+						<li><a href="https://github.com/uavorg" target="_black">GitHub</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('contactAnchorId');">联系我们</a></li>
-						<li><a href="javascript:userClass.menuScrollMove('teamAnchorId');">开发团队</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('serviceAnchorId');">服务支持</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('teamAnchorId');">开源贡献者</a></li>
+						<li><a href="javascript:userClass.menuScrollMove('joinAnchorId');">加入项目</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('downloadAnchorId');">下载</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('documentAnchorId');">文档</a></li>
 						<li><a href="javascript:userClass.menuScrollMove('mianhomeAnchorId');">首页</a></li>
@@ -83,7 +87,7 @@ AllInOne开发演示版原则上每月更新一次（打包上传比较耗时）
 				<p><span class="lineTitle">开源系列</span></p>
 				<p>
 					<span class="lineDesc">
-					 UAVStack是由宜信技术研发中心推出的智能化服务技术栈，是研发运维一体化的解决方案。
+					 UAVStack是一套智能化服务技术栈，是研发运维一体化的解决方案。
 				 	 <br/>UAV是无人机的缩写，寓意无人机翱翔蓝天，智能的，透明的完成任务。
 				 	 <br/>它包括任务机器人（代号HIT），全维监控（代号UAV.Monitor）,应用性能管理（代号UAV.APM）,
 				 	 <br/>服务治理（代号UAV.ServiceGovern）,微服务计算（代号UAV.MSCP），用户体验管理（代号UAV.UEM）等。
@@ -278,7 +282,8 @@ AllInOne开发演示版原则上每月更新一次（打包上传比较耗时）
 												
 									</td>
 							</tr>
-					</table>
+					</table>					
+					<br/>
 				</div>
 			
 	
@@ -399,12 +404,20 @@ AllInOne开发演示版原则上每月更新一次（打包上传比较耗时）
 				
 		</div>
 		<!--下载 end-->
-
+		<!-- join begin-->
+		<div id="joinAnchorId""><!--锚点id--></div>
+		<div class="divCenter">
+				<div class="line"></div><p><span class="lineTitle">加入项目</span></p>
+		</div>
+		<div align="center">  <br/><br/>（预告：开发者手册和配套IDE将于11月上线到社区，敬请期待!!） <br/><br/> <br/><br/>
+		</div>
+		<!-- join end-->
+		
 		<!-- team begin-->
 		<div id="teamAnchorId""><!--锚点id--></div>
 		<div class="divCenter teamMainDiv teamMainDivTop" id="teamDivId">
 				<div class="line"></div>
-				<p><span class="lineTitle lineColor-white">开发团队</span></p>
+				<p><span class="lineTitle lineColor-white">开源贡献者</span></p>
 		</div>
 		<div class="team teamMainDiv">
 		 	<div class="team_scroll_left" id="LeftArr"><span class="glyphicon glyphicon-chevron-left"></span></div>
@@ -417,8 +430,16 @@ AllInOne开发演示版原则上每月更新一次（打包上传比较耗时）
         </div>
         <div class="team_scroll_right" id="RightArr"><span class="glyphicon glyphicon-chevron-right"></span></div>
 		</div>
-		<!-- tean end-->
-
+		<!-- team end-->
+		
+		<!-- service begin-->
+		<div id="serviceAnchorId""><!--锚点id--></div>
+		<div class="divCenter">
+				<div class="line"></div><p><span class="lineTitle">服务支持</span></p>
+		</div>
+		<div align="center"> UAVStack服务支持由UAVStack.Org开源贡献者团队和宜信技术研发中心智能微服务团队联合提供<br/><br/>服务支持请通过邮件或官方微信用户群联系我们<br/><br/>鸣谢：宜信技术研发中心的赞助支持!<br/><br/>特别介绍：智能微服务团队负责宜信技术研发中心的<br/>智能化运维（AIOps），DevOps工具链，中间件定制与改进，云计算平台，金融基础服务，全流程自动化测试平台的研发&运维<br/><br/>
+		</div>
+		<!-- service end-->
 
 		<!-- contact beigin-->
 		<div id="contactAnchorId""><!--锚点id--></div>
@@ -435,8 +456,8 @@ AllInOne开发演示版原则上每月更新一次（打包上传比较耗时）
 									<td valign="top">
 											<span class="title">UAVStack Organization</span>
 											<br/> Beijing China
-											<br/> zhenzhang18@creditease.cn
-											<br/><div class="divCenter emailDiv"><a href="mailto:zhenzhang18@creditease.cn" class="email">发送电子邮件</a></div>
+											<br/> UAVStackSupport@163.com
+											<br/><div class="divCenter emailDiv"><a href="mailto:uavstacksupport@163.com" class="email">发送电子邮件</a></div>
 									</td>
 								<td>
 										<div class="qrcode">
@@ -457,22 +478,13 @@ AllInOne开发演示版原则上每月更新一次（打包上传比较耗时）
 <script type="text/javascript">
 		var users = [
 								{'userName':'张真','imgName':'zhangzhen.png','githubId':'zxzxzczz','userDesc':'Dev.Founder of UAVStack. Focus on AIOps, APM, MicroService, Service-Governonce, Cloud Middleware. International Patent Inventor. Opensource Commitor.'}
-								,{'userName':'梁鑫','imgName':'liangxin.jpg','githubId':'TedLiang81','userDesc':'宜信技术研发中心<br/>高级架构师'}
-								,{'userName':'王佩华','imgName':'wangpeihua.png','githubId':'peihuaw','userDesc':'宜信技术研发中心<br/>UAV监控领域DSC<br/>多年电信行业工作经验，CrossRole As架构设计，项目管理，Solution工程师，软件研发on Java&C++<br/>座右铭: 大道至简'}
-								,{'userName':'杨宏壮','imgName':'yanghongzhuang.jpg','githubId':'yanghongzhuang','userDesc':'宜信技术研发中心<br/>UAV APM领域DSC<br/>关注系统性能、高并发、高可用<br/>座右铭：知其然更要知其所以然'}
-								,{'userName':'肖龙','imgName':'xiaolong.jpg','githubId':'xxxllluuu','userDesc':'宜信技术研发中心<br/>UAV应用虚拟化领域DSC<br/>2010年开始从事Java开发'}
-								,{'userName':'刘波安野','imgName':'lbay.png','githubId':'lbay2015','userDesc':'宜信技术研发中心<br/>全栈工程师'}
-								,{'userName':'杨明朗','imgName':'yangminglang.jpg','githubId':'noob-noob','userDesc':'宜信技术研发中心<br/>Java开发工程师'}
-								,{'userName':'李鹏飞','imgName':'pengfeili23.jpg','githubId':'EatApples','userDesc':'宜信技术研发中心<br/>Just Do IT'}
-								,{'userName':'白鑫','imgName':'baixin.png','githubId':'baixbaib','userDesc':'宜信技术研发中心<br/>肌肉型肥胖程序员一枚'}
-								,{'userName':'李崇','imgName':'lichong.jpg','githubId':'ieven','userDesc':'宜信技术研发中心<br/>做一个有追求的工程师'}
-								,{'userName':'周新宇','imgName':'zhouxingyu.png','githubId':'zxy0728','userDesc':'宜信技术研发中心'}
-								,{'userName':'段德华','imgName':'duandehua.png','githubId':'ddh27','userDesc':'宜信技术研发中心<br/>电子科技大学硕士学位'}
-								,{'userName':'何建欣','imgName':'hjx228.jpg','githubId':'jianxinhe','userDesc':'宜信技术研发中心'}
-								,{'userName':'冯永彪','imgName':'fengyongbiao.jpg','githubId':'fyb007','userDesc':'宜信技术研发中心<br/>做有趣的人，干有趣的事'}
-								,{'userName':'李兴胜','imgName':'lixingsheng.jpg','githubId':'BeliefYou8','userDesc':'宜信技术研发中心<br/>Java开发<br/>不断去尝试去争取'}
-								,{'userName':'朱文强','imgName':'zhuwenqiang.jpg','githubId':'zwq0317','userDesc':'宜信技术研发中心<br/>西安电子科技大学硕士学位'}
-								,{'userName':'鲁宁','imgName':'luning.jpg','githubId':'luning110','userDesc':'宜信技术研发中心<br/>JavaEE的Web开发及运维支持<br/>彪悍的人生不需要解释<br/>彪悍的代码不需要注释'}
+								,{'userName':'杨宏壮','imgName':'yanghongzhuang.jpg','githubId':'yanghongzhuang','userDesc':'UAV.Monitor/APM Domain Senior Commitor<br/>关注系统性能、高并发、高可用<br/>座右铭：知其然更要知其所以然'}
+								,{'userName':'肖龙','imgName':'xiaolong.jpg','githubId':'xxxllluuu','userDesc':'UAV.Container Domain Senior Commitor<br/>'}
+								,{'userName':'李崇','imgName':'lichong.jpg','githubId':'ieven','userDesc':'UAV.ServiceGovern Domain Senior Commitor<br/>做一个有追求的工程师'}
+								,{'userName':'刘波安野','imgName':'lbay.png','githubId':'lbay2015','userDesc':'Staff Commitor<br/>全栈工程师'}
+								,{'userName':'杨明朗','imgName':'yangminglang.jpg','githubId':'noob-noob','userDesc':'Staff Commitor & Document Owner<br/>'}	
+								,{'userName':'周新宇','imgName':'zhouxingyu.png','githubId':'zxy0728','userDesc':'Staff Commitor & Community Ops Owner<br/>'}
+								
 			];
 
 		var banners=[
