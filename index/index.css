@@ -114,7 +114,7 @@ a{ text-decoration:none; }
 .menu .title{
 	float:right;
 	margin-top:7px;
-	margin-right:150px;
+	margin-right:100px;
 }
 
 .menu .title li{
@@ -125,8 +125,8 @@ a{ text-decoration:none; }
 .menu .title li a{
 	letter-spacing: 1px;
 	font-weight: 700;
-	font-size: 15px;
-	margin-left:30px;
+	font-size: 14px;
+	margin-left:10px;
 	color:white; /* 设置文字颜色 */
 	text-decoration:none; /* 去掉下划线 */
   padding:3px 5px 3px 5px;
@@ -415,7 +415,7 @@ a{ text-decoration:none; }
 
 .team{
 	display: flex;
-	height: 410px;
+	height: 320px;
 }
 .team_scroll_left{
 	  font-size: 26px;
@@ -448,7 +448,7 @@ a{ text-decoration:none; }
 	padding-top: 10px;
 	background-color: white;
 	margin-left: 10px;
-	height: 365px;
+	height: 280px;
 }
 
 .teamMainDiv{  
@@ -459,16 +459,16 @@ a{ text-decoration:none; }
 		margin-bottom: -16px;
 }
 .teamimg{
-		width:170px;
-		height:180px;
-		border-radius: 20px;
+		width:80px;
+		height:90px;
+		border-radius: 10px;
 }
 .teamBodyDiv{
 	text-align: center;
-	width:210px;
+	width:160px;
 	margin-left:10px;
 	margin-right: 10px;
-	height: 330px;
+	height: 320px;
 }
 .teamUserName{
     font-size: 16px;
