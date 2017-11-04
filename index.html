@@ -73,7 +73,7 @@
 
 		<!--功能介绍 begin-->
 		<div class="divCenter">
-				<div class="line"></div>
+				<!--<div class="line"></div>
 				<p><span class="lineTitle">更新公告</span></p>
 				<p>
 				<span class="lineDesc">						      
@@ -82,21 +82,41 @@
 开源系列源代码相关的新功能开放，会提前一周预告，并于下周内发布<br/>
 标准部署包下载会与源代码更新同步，最低频率每周一次<br/>
 AllInOne开发演示版原则上每月更新一次（打包上传比较耗时），中间更新请下载标准部署包替换<br/>	
-				</span>			  
+				</span>	-->		  
 				<div class="line"></div>
-				<p><span class="lineTitle">开源系列</span></p>
+				<p><span class="lineTitle">UAVStack介绍</span></p>
 				<p>
 					<span class="lineDesc">
 					 UAVStack是一套智能化服务技术栈，是研发运维一体化的解决方案。
 				 	 <br/>UAV是无人机的缩写，寓意无人机翱翔蓝天，智能的，透明的完成任务。
-				 	 <br/>它包括任务机器人（代号HIT），全维监控（代号UAV.Monitor）,应用性能管理（代号UAV.APM）,
-				 	 <br/>服务治理（代号UAV.ServiceGovern）,微服务计算（代号UAV.MSCP），用户体验管理（代号UAV.UEM）等。
+				 	 <br/>它包括任务机器人（HIT），全维监控（UAV.Monitor），应用性能管理（UAV.APM），容器化支持（UAV.Container）
+				 	 <br/>服务治理（UAV.ServiceGovern），微服务计算（UAV.MSCP），用户体验管理（UAV.UEM）等。
 					</span>
 				</p>
 		</div>
-		<div class="divCenter">
+		<!--<div class="divCenter">
 		    <div><img style="width:50%;" src="" imgLazy-src="index/img/support/openSource.png"></img></div>
+		</div>-->
+		
+		<div class="divCenter showDatas">
+				<table align="center" >
+							<tr>
+									<td valign="top" name="roadMapTd" id="roadMapTd_0" style="color: rgb(26, 179, 148);font-size:20px;">
+										<span class="glyphicon glyphicon-folder-open"></span>
+										<br/>智能运维蓝图
+									</td>
+									<td valign="top" name="roadMapTd" id="roadMapTd_1" style="font-size:20px;">
+										<span class="glyphicon glyphicon-folder-open"></span>
+										<br/>开源系列
+									</td>									
+							</tr>
+					</table>
 		</div>
+		<div id="roadMapImgDiv" class="divCenter showDatasEjectImg" style="display1:none;"><!--js 动态加载数据展示图片-->
+		<div><img style="width:1000px" src="index\img\datas\r1-1.gif"></div>
+		</div>
+		
+		
 		<div class="divCenter">
 				<div class="line"></div>
 				<p><span class="lineTitle">UAV.Monitor+UAV.APM可以帮助您搭建一站式的全维度监控+应用运维解决方案</span></p>
@@ -522,14 +542,20 @@ AllInOne开发演示版原则上每月更新一次（打包上传比较耗时）
 								"<p><span>●</span>动态计算编排：根据计算资源自动协调合适的节点参与任务执行</p>"}
 		];
 
-		var showDatas = [
-				{"h":"1540px","imgs":"1-1.png,1-2.png"},
-				{"h":"660px","imgs":"2-1.png"},
-				{"h":"680px","imgs":"3-1.png"},
-				{"h":"800px","imgs":"4-1.png"},
-				{"h":"1550px","imgs":"5-1.png,5-2.png"},
-				{"h":"800px","imgs":"6-1.png"}
+		var funcShowDatas = [
+				{"h":"1540px","imgs":"f1-1.png,f1-2.png"},
+				{"h":"660px","imgs":"f2-1.png"},
+				{"h":"680px","imgs":"f3-1.png"},
+				{"h":"800px","imgs":"f4-1.png"},
+				{"h":"1550px","imgs":"f5-1.png,f5-2.png"},
+				{"h":"800px","imgs":"f6-1.png"}
 		];
+		
+		var roadmapShowDatas=[
+				{"h":"650px",w:"1000px","imgs":"r1-1.gif"},
+				{"h":"650px",w:"1000px","imgs":"r2-1.png"}
+		];
+		
 </script>
 
 </body>

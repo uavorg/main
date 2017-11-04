@@ -1,64 +1,67 @@
 		/**
-		*===================================È«¾ÖÒ³Ãæ/¿ª¹Ø===================================
+		*===================================å…¨å±€é¡µé¢/å¼€å…³===================================
 		**/
 		var pageOf={
-					"minPageWidth":1000, //Ò³Ãæ×îĞ¡¿í¶È
+					"minPageWidth":1000, //é¡µé¢æœ€å°å®½åº¦
 					"bannerInterval":10000,
 					"style-color":"#1ab394"
 		}
 		/**
-		*¿ª¹Ø end
+		*å¼€å…³ end
 		**/
 
 		window.onload = function () {
 			
-				var mc = new mobleClass();
+				var mc = new mobleClass(funcShowDatas);
 				mc.bindClick();
+				
+				var rm= new mobleClass(roadmapShowDatas,"roadMapTd","roadMapImgDiv");
+				rm.bindClick();
 				/**
-				*²Ëµ¥±ä»¯
+				*èœå•å˜åŒ–
 				*/
 				toolsClass.menuOnscroll();
 				/**
-				*º£±¨init
+				*æµ·æŠ¥init
 				*/
 				initClass.initBanner();
 				initClass.initScrollPic();
 				/**
-				*Ò³ÃæÍ¼Æ¬ÀÁ¼ÓÔØ
+				*é¡µé¢å›¾ç‰‡æ‡’åŠ è½½
 				*/
 				toolsClass.imgLazy();
 		}
 		
 		window.onresize =  function () {
 				/**
-				*²Ëµ¥±ä»¯
+				*èœå•å˜åŒ–
 				*/
 				toolsClass.menuOnscroll();
 		}
 		
 		window.onscroll = function (){
 				/**
-				*²Ëµ¥±ä»¯
+				*èœå•å˜åŒ–
 				*/
 				toolsClass.menuOnscroll();
 				
 				/**
-				*Ò³ÃæÍ¼Æ¬ÀÁ¼ÓÔØ
+				*é¡µé¢å›¾ç‰‡æ‡’åŠ è½½
 				*/
 				toolsClass.imgLazy();
 		}
 		
 		/**
-		*===================================Ò³Ãæ²ÎÊı===================================
+		*===================================é¡µé¢å‚æ•°===================================
 		**/
 		var pageParams={
-			"bannerIndex":-1,     //¼ÇÂ¼µ±ÏÂbannerÏÂ±ê
-			"bannerIntervalId":null, //bannerÊ±¼äÔËËã¶ÔÏó
-			"logoChangeIntervalTime":20 //logo¼ÆËãº¯Êı£º±ä»¯¼ä¸ôÊ±¼ä
+			"bannerIndex":-1,     //è®°å½•å½“ä¸‹bannerä¸‹æ ‡
+			"bannerIntervalId":null, //banneræ—¶é—´è¿ç®—å¯¹è±¡
+			"logoChangeIntervalTime":20 //logoè®¡ç®—å‡½æ•°ï¼šå˜åŒ–é—´éš”æ—¶é—´
 		}
 		
 		/**
-		*===================================³õÊ¼»¯Àà begin===================================
+		*===================================åˆå§‹åŒ–ç±» begin===================================
 		**/
 		var initClass={
 			initBanner:function (){
@@ -73,7 +76,7 @@
 		
 		
 		/**
-		*===================================ÓÃ»§²Ù×÷ begin===================================
+		*===================================ç”¨æˆ·æ“ä½œ begin===================================
 		**/
 		var userClass={
 				showBannerLeft(){
@@ -90,17 +93,25 @@
 					}
 					toolsClass.showBanner();
 				},
-				openDatasEjectDiv(_index,thisObj){
+				openDatasEjectDiv(_index,thisObj,showDatas,targetID,containerID){
+					
+					if (targetID==undefined) {
+						targetID="showDatasTd";
+					}
+					
+					if (containerID==undefined) {
+						containerID="showDatasEjectImgDiv";
+					}
 					
 					/**
-					*	ÆäËütd css»¹Ô­
+					*	å…¶å®ƒtd cssè¿˜åŸ
 					*/
-					var tds = $("td[name='showDatasTd']");
-					var extendsShow = false; //ÊÇ·ñÓĞÔÚ²é¿´µÄ
+					var tds = $("td[name='"+targetID+"']");
+					var extendsShow = false; //æ˜¯å¦æœ‰åœ¨æŸ¥çœ‹çš„
 					$.each(tds,function(_index,_obj){
 						
 							if(_obj.style.color){
-								extendsShow =true; //´æÔÚÑùÊ½ÔòÊÓÎªÓÃ»§ÓĞµã»÷ÆäÖĞÒ»¸ö²é¿´
+								extendsShow =true; //å­˜åœ¨æ ·å¼åˆ™è§†ä¸ºç”¨æˆ·æœ‰ç‚¹å‡»å…¶ä¸­ä¸€ä¸ªæŸ¥çœ‹
 							}
 							
 							if(_obj!=thisObj){
@@ -109,7 +120,7 @@
 					});
 					
 					/**
-					**¶¯×÷ÅĞ¶Ï
+					**åŠ¨ä½œåˆ¤æ–­
 					*/
 					var isShow = "show";
 					if(!thisObj.style.color){
@@ -123,31 +134,38 @@
 				
 					
 					if("close"==isShow){
-						$("#showDatasEjectImgDiv").slideUp("slow");
+						$("#"+containerID).slideUp("slow");
 					}
 					
 					if("show"==isShow){
 						
 						var waitTime = 1; 
 						if(extendsShow){
-							$("#showDatasEjectImgDiv").slideUp("slow");
-							/**ÓĞ²é¿´µÄÔòĞèÒª¹Ø±ÕÊ±¼ä£¬Ã»ÓĞ²é¿´µÄÖ±½Ó´ò¿ª**/
+							$("#"+containerID).slideUp("slow");
+							/**æœ‰æŸ¥çœ‹çš„åˆ™éœ€è¦å…³é—­æ—¶é—´ï¼Œæ²¡æœ‰æŸ¥çœ‹çš„ç›´æ¥æ‰“å¼€**/
 							waitTime = 700;
 						}
 					
 						setTimeout(function(){
-								$("#showDatasEjectImgDiv").html("");
+								$("#"+containerID).html("");
 								var showData = showDatas[_index];
 								var showHeight = showData["h"];
+								var showWidth = showData["w"];
 								var imgNames = showData["imgs"].split(",");
 								
 								$.each(imgNames,function(index,value){
-											var html = "<div><img src=\"index\\img\\datas\\"+value+"\"></div>"
-											$("#showDatasEjectImgDiv").append(html);
+									
+											var width="";
+									        if (showWidth!=undefined) {
+												width=" style='width:"+showWidth+"'";
+											}
+									
+											var html = "<div><img "+width+" src=\"index\\img\\datas\\"+value+"\"></div>"
+											$("#"+containerID).append(html);
 								
 								});
 								
-								$("#showDatasEjectImgDiv").slideDown("slow").animate({height:showHeight});
+								$("#"+containerID).slideDown("slow").animate({height:showHeight});
 							
 							},waitTime);
 					}
@@ -158,12 +176,12 @@
 				}
 		}
 		/**
-		*ÓÃ»§²Ù×÷ end
+		*ç”¨æˆ·æ“ä½œ end
 		**/
 		
 		
 		/**
-		*===================================¹¤¾ßÀà begin===================================
+		*===================================å·¥å…·ç±» begin===================================
 		**/
 		var toolsClass={
 			showBanner:function(){
@@ -190,24 +208,24 @@
 				},
 				createScrollPic:function(scrollContId,arrLeftId,arrRightId){
 				    var scrollPic = new ScrollPic();
-				    scrollPic.scrollContId   = scrollContId; //ÄÚÈİÈİÆ÷ID
-				    scrollPic.arrLeftId      = arrLeftId;//×ó¼ıÍ·ID
-				    scrollPic.arrRightId     = arrRightId; //ÓÒ¼ıÍ·ID
+				    scrollPic.scrollContId   = scrollContId; //å†…å®¹å®¹å™¨ID
+				    scrollPic.arrLeftId      = arrLeftId;//å·¦ç®­å¤´ID
+				    scrollPic.arrRightId     = arrRightId; //å³ç®­å¤´ID
 
-				    scrollPic.frameWidth     = 800;//ÏÔÊ¾¿ò¿í¶È
+				    scrollPic.frameWidth     = 800;//æ˜¾ç¤ºæ¡†å®½åº¦
 				    //scrollPic.frameWidth     = document.body.clientWidth;
-				    scrollPic.pageWidth      = 250; //·­Ò³¿í¶È
+				    scrollPic.pageWidth      = 250; //ç¿»é¡µå®½åº¦
 
-				    scrollPic.speed          = 10; //ÒÆ¶¯ËÙ¶È(µ¥Î»ºÁÃë£¬Ô½Ğ¡Ô½¿ì)
-				    scrollPic.space          = 10; //Ã¿´ÎÒÆ¶¯ÏñËØ(µ¥Î»px£¬Ô½´óÔ½¿ì)
-				    scrollPic.autoPlay       = false; //×Ô¶¯²¥·Å
-				    scrollPic.autoPlayTime   = 300; //×Ô¶¯²¥·Å¼ä¸ôÊ±¼ä(Ãë)
+				    scrollPic.speed          = 10; //ç§»åŠ¨é€Ÿåº¦(å•ä½æ¯«ç§’ï¼Œè¶Šå°è¶Šå¿«)
+				    scrollPic.space          = 10; //æ¯æ¬¡ç§»åŠ¨åƒç´ (å•ä½pxï¼Œè¶Šå¤§è¶Šå¿«)
+				    scrollPic.autoPlay       = false; //è‡ªåŠ¨æ’­æ”¾
+				    scrollPic.autoPlayTime   = 300; //è‡ªåŠ¨æ’­æ”¾é—´éš”æ—¶é—´(ç§’)
 
-				    scrollPic.initialize(); //³õÊ¼»¯
+				    scrollPic.initialize(); //åˆå§‹åŒ–
 				}
 				,menuOnscroll:function(){
 					
-					//Ğ¡ÓÚ×îĞ¡¿í¶È  
+					//å°äºæœ€å°å®½åº¦  
 					var hidnWidth = document.documentElement.scrollWidth || document.body.scrollWidth; 
 					
 					if(hidnWidth <= pageOf.minPageWidth){
@@ -220,7 +238,7 @@
 					function thisHeightChange(){
 							var stop = document.documentElement.scrollTop || document.body.scrollTop;
 				
-							var hidnHeight = 50; //Òş²Ø´¥·¢¸ß¶È
+							var hidnHeight = 50; //éšè—è§¦å‘é«˜åº¦
 							
 							if( stop >= hidnHeight){
 								$("#menu").slideUp("slow");
@@ -235,7 +253,7 @@
 				imgLazy(){
 	        var aImg = document.querySelectorAll('img');
 	        var len = aImg.length;
-					/**Í¼Æ¬ÀÁ¼ÓÔØ*/	
+					/**å›¾ç‰‡æ‡’åŠ è½½*/	
 					  var seeHeight = document.documentElement.clientHeight;
             var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
             for (var i = 0; i < len; i++) {
@@ -249,24 +267,32 @@
 				
 		};
 		/**
-		*¹¤¾ßÀà end
+		*å·¥å…·ç±» end
 		**/
 		
 		/**
-		*ÒÆ¶¯¶Ë´¦Àí begin
+		*ç§»åŠ¨ç«¯å¤„ç† begin
 		**/
-		var  mobleClass = function (){
+		var  mobleClass = function (showDatas,targetID,containerID){
+			
+			if (targetID==undefined) {
+				targetID="showDatasTd";
+			}
+			
+			if (containerID==undefined) {
+				containerID="showDatasEjectImgDiv";
+			}
 				
 				this.bindClick=function(){
-						var showDatasIndex =  $("td[name='showDatasTd']").length;
+						var showDatasIndex =  $("td[name='"+targetID+"']").length;
 						
 						while (showDatasIndex>0)
 					  {
 					  		showDatasIndex--;
-					 			 var id = "showDatasTd_"+showDatasIndex;
+					 			 var id = targetID+"_"+showDatasIndex;
 					 			 document.getElementById(id).addEventListener( "click", function(){
 					 			 		var _index = this.id.substring(this.id.indexOf("_")+1);
-										userClass.openDatasEjectDiv(_index,this);
+										userClass.openDatasEjectDiv(_index,this,showDatas,targetID,containerID);
 								},false); 
 					  }
 											
@@ -275,7 +301,7 @@
 			
 		};
 			/**
-		*ÒÆ¶¯¶Ë´¦Àí end
+		*ç§»åŠ¨ç«¯å¤„ç† end
 		**/
 		
 		
