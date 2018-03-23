@@ -106,27 +106,22 @@
 	<div class="divCenter">
 		<div class="line"></div>
 		<p>
-			<span class="lineTitle">20180316周更新</span>
+			<span class="lineTitle">20180323周更新</span>
 		</p>
 		<center>
 			<div align="left" style='width: 500px; font-size: 12px;'>
-				UAV.Monitor新能力开放：可动态切换的报警收敛模式 <br /> -
-				基于事件自动压制的收敛：默认收敛模式，无需任何配置，自动识别同一事件，在一定时间内只发生约定次数的报警<br /> -
-				基于事件次数梯度的收敛：可自定义若干级次数梯度，自动识别同一事件，根据事件发生次数，每次梯度跃升发出报警<br /> -
-				可随时切换收敛模式，配置即生效<br /> - 细粒度配置支持：收敛模式可配置到单个报警表达式<br /> -
-				自动优先级判断：同策略包含多个报警表达式，按梯度优先，以及最长梯度优先<br /> ======================================<br /><br /> <a
-					href="https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.1_20180316">https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.1_20180316</a><br />
-				 新功能同步： <br /> 1、同步
-				服务端组件画像支持Struts2自定义struts.xml路径 <br /> 2、同步 允许同时开启JMX和HTTP模式<br />
-				3、同步 支持实现Runnable+自定义接口的实例在线程调用中传递<br /> 4、同步
-				优化MA在Windows系统中进程流量采集减少重复资源消耗<br />
-				<br />FIX同步： <br /> 1、FIX 某些情况下数据库连接池由于classloading导致监控数据无法采集 <br />
-				2、FIX 在JAX-RS服务端画像中可能存在的NPE问题<br /> <br /> 文档已经同步更新 <br /> 1.
-				预警梯度收敛规则配置说明： <br /> <a
-					href="https://uavorg.github.io/documents/uavdoc_useroperation/28.html#%E8%A7%A6%E5%8F%91%E7%AD%96%E7%95%A5
-">https://uavorg.github.io/documents/uavdoc_useroperation/28.html#%E8%A7%A6%E5%8F%91%E7%AD%96%E7%95%A5
-				</a><br /> <br /> 标准部署包已同步更新 <br /> AllInOne请自行更新标准部署包 <br /> <br />
-				7 Issues total, 4 enhancements, 2 defects <br />
+				<a
+					href="https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.1_20180323">https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.1_20180323</a><br />
+				====================================== <br />
+				特别提醒：MOF默认模式由JMX切换为HTTP；MA默认模式由JMX切换为JMX+HTTP，HTTP扫描优先于JMX扫描<br /><br />新功能同步：<br />
+				1、同步 应用容器监控检索条件(应用组,标签,IP,Host)支持多值，按空格分隔<br /> 2、同步
+				应用监控检索条件(应用组,应用名,应用ID)支持多值，按空格分隔<br />3、同步 日志与调用链关联算法增强<br />4、同步
+				优化应用容器监控数据发送策略，以支持更大规模的应用容器集群<br />5、同步
+				增强HTTP模式下httpclient资源控制，有效防止httpclient资源过载 <br /> 6、同步
+				优化HTTP模式下的扫描策略，减少无效扫描<br /><br />FIX同步：<br /> 1、FIX
+				预警记录查询在某些极端情况下查询不到第一次预警记录的问题<br /> <br /> 文档已经同步更新 <br />
+				<br /> 标准部署包已同步更新 <br /> AllInOne请自行更新标准部署包 <br /> <br /> 7
+				Issues total, 6 enhancements, 1 defects <br />
 			</div>
 		</center>
 		<div class="line"></div>
@@ -227,9 +222,10 @@
 
 					<p />Druid&nbsp;&nbsp;|&nbsp;&nbsp;Proxool
 					</p>
-											<p />Hikari&nbsp;&nbsp;|&nbsp;&nbsp;MyBatis CP</p>
-											<p />Tomcat DBCP/2</p>
-									</td>
+					<p />Hikari&nbsp;&nbsp;|&nbsp;&nbsp;MyBatis CP
+
+					<p />Tomcat DBCP/2
+					</p></td>
 			</tr>
 		</table>
 		<br />
