@@ -106,23 +106,27 @@
 	<div class="divCenter">
 		<div class="line"></div>
 		<p>
-			<span class="lineTitle">20180420周更新</span>
+			<span class="lineTitle">UAVStack 1.2 版本发布</span>
 		</p>
 		<center>
 			<div align="left" style='width: 500px; font-size: 12px;'>
 				<a
-					href="https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.1_20180420">https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.1_20180420</a><br />
-				====================================== <br />
+					href="https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180427">https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180427</a><br />
+				
+				<br/> 95 Issues total, 60 enhancements,35 defects	<br/>
+				<br/>本周更新<br/>
+				====================================== 
+				<br />新能力开放：<br />
+				1、中间件增强框架（MOF）对ESClient的支持，支持transport 5.0.0-6.2.3版本 <br /> 
+				2、中间件增强框架（MOF）对Kafka的支持，支持0.9.0以上版本 <br /> 
 				<br />新功能同步：<br />
-				1、同步 uavagent默认JAppGroup改为UAV<br /> 
-				
-				<br /> 文档 特别提示
-				<br /> 1. 同环比预警增强文档更新<br /> 
-				<a
-					href="https://uavorg.github.io/documents/uavdoc_useroperation/28.html#%E7%8E%AF%E6%AF%94%E9%A2%84%E8%AD%A6%E6%9D%A1%E4%BB%B6">https://uavorg.github.io/documents/uavdoc_useroperation/28.html#%E7%8E%AF%E6%AF%94%E9%A2%84%E8%AD%A6%E6%9D%A1%E4%BB%B6 </a><br />		
-				
-				<br /> 标准部署包已同步更新 <br /> AllInOne部署包已更新 <br /> <br /> 1
-				Issues total, 1 enhancements, 0 defects <br />
+				1、同步 增加对logback使用AsyncAppender的支持 <br /> 
+				2、同步 优化日志归集功能 <br />  
+				1）优化日志输出 <br /> 
+				2）移除失效inode对内存的占用<br /> 
+
+				<br /> 文档已经同步更新<br /> 标准部署包已同步更新 <br /> AllInOne请自行更新标准部署包  <br /> <br /> 4
+				Issues total, 4 enhancements, 0 defects <br />
 			</div>
 		</center>
 		<div class="line"></div>
@@ -212,11 +216,15 @@
 					<p />MongoDB（MongoClient）
 					</p>
 					<p />Redis（JEDIS，LETTUCE，ARedis）
+					</p>
+					<p />ESClient（Transport）
 					</p></td>
 				<td valign="top"><span class="title">消息中间件</span>
 					<p />RabbitMQ（消费/生产）
 					</p>
 					<p />RocketMQ（消费/生产）
+					</p>
+					<p />Kafka（消费/生产）
 					</p></td>
 				<td valign="top"><span class="title">数据库连接池</span>
 					<p />DBCP/2&nbsp;&nbsp;|&nbsp;&nbsp;c3p0
