@@ -110,23 +110,30 @@
 		</p>
 		<center>
 			<div align="left" style='width: 500px; font-size: 12px;'>
-				<a
-					href="https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180427">https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180427</a><br />
-				
-				<br/> 95 Issues total, 60 enhancements,35 defects	<br/>
-				<br/>本周更新<br/>
-				====================================== 
-				<br />新能力开放：<br />
-				1、中间件增强框架（MOF）对ESClient的支持，支持transport 5.0.0-6.2.3版本 <br /> 
-				2、中间件增强框架（MOF）对Kafka的支持，支持0.9.0以上版本 <br /> 
-				<br />新功能同步：<br />
-				1、同步 增加对logback使用AsyncAppender的支持 <br /> 
-				2、同步 优化日志归集功能 <br />  
-				1）优化日志输出 <br /> 
-				2）移除失效inode对内存的占用<br /> 
+				UAVStack周更新<br>
+<a href='https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180511' target='_blank' >https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180511</a><br>
+====================================== <br>     
+新功能同步：<br>
+1. 预警设置增强：实现策略的复制功能（再也不用挨个配置啦）<br>
+2. AppHub授权增强：支持LDAP组属性的关键字过滤，从而实现更细粒度的应用授权<br>
+3. AppHub登录优化：LDAP超时机制优化，去除Redis缓存机制<br>
+4. Jedis Hook增加对spring-data-redis的支持<br>
+5. AbstractHttpClient Hook支持遗留方法doExecute适配<br>
+6. Mongo Datastore优化字段“_id”的api<br>
+7. 优化OpenTSDB DataStore的超时<br>
+8. MOF优化对Path Parameter的画像能力<br>
+<br>
+FIX同步：  <br>   
+1. FIX 重调用链的Http报文在某些情况下出现中文参数乱码的问题 <br>
+2. FIX 报警事件持续报警4小时未查看的情况下，新的报警事件可能也被归于此事件，修正为新起一个新报警事件<br>
+<br>
+文档已经同步更新<br>
+1. UAVStack All In One Repository的Readme默认改为英文，保留中文版Readme<br>
+<br>
+标准部署包已同步更新 <br>
+AllInOne请自行更新标准部署包 <br>
 
-				<br /> 文档已经同步更新<br /> 标准部署包已同步更新 <br /> AllInOne请自行更新标准部署包  <br /> <br /> 4
-				Issues total, 4 enhancements, 0 defects <br />
+10 Issues total, 8 enhancements, 2 defects <br>
 			</div>
 		</center>
 		<div class="line"></div>
