@@ -106,25 +106,34 @@
 	<div class="divCenter">
 		<div class="line"></div>
 		<p>
-			<span class="lineTitle">UAVStack 1.2 20180601 发布</span>
+			<span class="lineTitle">UAVStack 1.2 20180608 发布</span>
 		</p>
 		<center>
 			<div align="left" style='width: 500px; font-size: 12px;'>
 				UAVStack周更新<br>
-<a href='https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180601' target='_blank' >https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180601</a><br>
+<a href='https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180608' target='_blank' >https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180608</a><br>
 ====================================== <br>     
 新功能同步：<br>
-1. 增加对RocketMQ初始消费者数量的配置功能。<br>
+1. UAVStack平台增加对JDK9的支持。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a.监控代理程序（MA）自身支持JDK9。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;b.中间件增强框架（MOF探针）支持对JDK9应用的监控。<br>
+2. 增加对原生CXF API创建的WebService客户端的支持<br>
+3. 增加通过启动参数配置AppID，适用于自动抓取的AppID为root等难以区分的场景, 包含3种使用策略：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a.default使用基于contextroot和basePath获取AppID。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;b.custom使用配置的JAppID作为AppID。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;c.suffix使用基于contextroot和basePath获取的AppID作为前缀，配置的JAppID作为后缀，中间用"__"分割，如root__appName。<br>
+4. 增强对登录账户的LDAP组织机构信息的查询<br>
 <br>
 FIX同步：<br>
-1. FIX 日志画像在应用同时使用Logback和Log4j的情况下出现类型转换异常的问题。<br>
-2. FIX RabbitMQ客户端画像在某些情况下出现NPE的问题。<br>
+1. FIX MOF因依赖包缺失导致构建失败的问题。<br>
+2. FIX AppHub管理功能中查询邮箱组信息在邮箱组不存在的情况下出现数组越界的问题。<br>
+3. FIX 日志归集在某些情况下失效的问题。<br>
 <br>
 文档已经同步更新<br>
 标准部署包已同步更新 <br>
-AllInOne请自行更新标准部署包 <br>
+AllInOne请自行更新标准部署包 <br><br>
 
-3 Issues total, 1 enhancements, 2 defects <br>
+7 Issues total, 4 enhancements, 3 defects <br>
 			</div>
 		</center>
 		<div class="line"></div>
