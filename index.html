@@ -111,22 +111,25 @@
 		<center>
 			<div align="left" style='width: 500px; font-size: 12px;'>
 				UAVStack周更新<br>
-<a href='https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180615' target='_blank' >https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180615</a><br>
+<a href='https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180622' target='_blank' >https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180622</a><br>
 ====================================== <br>     
 新功能同步：<br>
-1. 重调用链增加对获取HTTP 500错误报文体的支持。<br>
+1. 新增进程的启动时间显示。<br>
+2. 新增对log4j2支持。<br>
+3. 新增log4j的异步Appender的支持。<br>
+4. 调整客户端画像url黑白名单的生效策略，将黑白名单的生效判断时间改为去除url参数后。<br>
 <br>
 FIX同步：<br>
-1. FIX JDBC Hook在某些情况下对SQL操作类型判断错误的问题。<br>
-2. FIX 调用链在无请求情况下出现NPE的问题。<br>
-3. FIX 调用链在某些情况下将HTTP 500请求记录错误的问题。<br>
-4. FIX JDBC客户端画像带","时预警策略实例保存错误的问题。<br>
+1. FIX redis连接池增加拒绝策略，以避免可能出现的内存堆积造成溢出的问题。<br>
 <br>
-文档已经同步更新<br>
+文档已经同步更新，新增用户指南、安装部署、架构说明英文文档<br><br>
+1. 用户指南：<a href='https://uavorg.github.io/documents/uavdoc_useroperation_EN/index.html' target='_blank' >https://uavorg.github.io/documents/uavdoc_useroperation_EN/index.html</a><br>
+2. 安装部署：<a href='https://uavorg.github.io/documents/uavdoc_deploydocs_EN/index.html' target='_blank' >https://uavorg.github.io/documents/uavdoc_deploydocs_EN/index.html</a><br>
+3. 架构说明：<a href='https://uavorg.github.io/documents/uavdoc_architecture_EN/index.html' target='_blank' >https://uavorg.github.io/documents/uavdoc_architecture_EN/index.html</a><br><br>
 标准部署包已同步更新 <br>
 AllInOne请自行更新标准部署包 <br><br>
 
-5 Issues total, 1 enhancements, 4 defects <br>
+5 Issues total, 4 enhancements, 1 defects <br>
 			</div>
 		</center>
 		<div class="line"></div>
