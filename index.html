@@ -106,26 +106,26 @@
 	<div class="divCenter">
 		<div class="line"></div>
 		<p>
-			<span class="lineTitle">UAVStack 1.2 20180720 发布</span>
+			<span class="lineTitle">UAVStack 1.2 20180727 发布</span>
 		</p>
 		<center>
 			<div align="left" style='width: 500px; font-size: 12px;'>
 				UAVStack周更新<br>
-<a href='https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180720' target='_blank' >https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180720</a><br>
+<a href='https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180727' target='_blank' >https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20180727</a><br>
 ====================================== <br>
 新功能同步： <br>
-1. 新增对Tomcat JDBC Pool连接池的支持。<br>
-2. 优化应用监控中应用集群性能页面的用户体验：单击应用集群性能页面中的单个应用实例可跳转到对应的实例性能页面。<br>
-3. 优化同环比预警的性能，减少对Redis的操作次数。<br>
+1. 支持SpringBoot通过PropertiesLauncher以轻量级的Thin Jar方式启动。<br>
+2. 调整应用服务器和应用实例的最长响应时间tmax和最短响应时间tmin的重置周期，由24小时缩短为1小时。<br>
 <br>
 FIX同步：<br>
-1. FIX 在Winsdows非管理员账户下监控代理程序采集流量时的数组越界问题。<br>
+1. FIX 调用链在多线程情况下可能出现的NPE问题。<br>
+2. FIX 初始获取最长响应时间tmax或最短响应时间tmin时可能出现的NPE问题。<br>
 <br>
 文档已经同步更新 <br>
 标准部署包已同步更新 <br>
 AllInOne部署包已更新 <br><br>
 
-4 Issues total, 3 enhancements, 1 defects <br>
+4 Issues total, 2 enhancements, 2 defects <br>
 			</div>
 		</center>
 		<div class="line"></div>
