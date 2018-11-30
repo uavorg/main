@@ -1,6 +1,5 @@
 var updateData = {
-    href: "https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20181123",
-    update: ["1. 新增 调用链和日志关联对Log4j的RollingFileAppender的支持。",
-        "2. 优化 UAV.Monitor包结构。"
+    href: "https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20181130",
+    update: ["1. 优化 监控代理程序启动行为:在相同端口上启动多个监控代理程序时，因端口占用启动失败，程序自动退出。"
     ]
 };
