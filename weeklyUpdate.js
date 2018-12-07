@@ -1,6 +1,8 @@
 var updateData = {
-    href: "https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20181130",
-    update: ["1. 优化 监控代理程序启动行为:在相同端口上启动多个监控代理程序时，因端口占用启动失败，程序自动退出。"
+    href: "https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.2_20181207",
+    update: ["1.增强对Spring MVC的RequestMapping注解画像支持。",
+        "2.新增重调用链对PrintWriter的支持。",
+        "3.新增调用链对ResponseWrapper的支持。"
     ]
 
 };
