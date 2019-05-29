@@ -1,0 +1,49 @@
+.container {
+  background: #e8e9eb;
+  border: 1px solid #f5f5f5;
+  color: #323232;
+  line-height: 26px;
+  text-align: center;
+  min-height: 150px;
+  word-wrap: break-word;
+}
+.content {
+  background: #e8e9eb;
+  padding: 20px 10px;
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.tab {
+  text-align: left;
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+.tip {
+  margin-left: 16px;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    font-size: 0.24rem;
+    line-height: 0.36rem;
+    min-height: 2rem;
+  }
+  .content {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .tab {
+    padding: 0.2rem 0.3rem;
+    text-align: left;
+    width: 100%;
+  }
+  .title {
+    font-size: 0.32rem;
+    line-height: 0.5rem;
+  }
+  .tip {
+    margin-left: 0.16rem;
+  }
+}

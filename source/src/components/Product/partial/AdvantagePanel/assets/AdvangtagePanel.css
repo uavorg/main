@@ -1,0 +1,34 @@
+.container {
+  border-radius: 2px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.anchor {
+  height: 60px;
+}
+.content {
+  width: 1200px;
+  margin: 20px auto 0;
+  text-align: left;
+}
+.title {
+  margin-top: 30px;
+  font-size: 36px;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-bottom: 0.3rem;
+  }
+  .anchor {
+    height: 0.3rem;
+  }
+  .content {
+    width: 100%;
+    margin: 0;
+  }
+  .title {
+    display: none;
+  }
+}

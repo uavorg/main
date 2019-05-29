@@ -1,0 +1,74 @@
+.container {
+  overflow: hidden;
+  background: url("./bcg.png") center center;
+  background-size: cover;
+  border-radius: 2px;
+  color: #ffffff;
+  height: 400px;
+}
+.content {
+  width: 1000px;
+  margin: 110px auto 0;
+}
+.title {
+  font-size: 36px;
+}
+.line {
+  margin: 5px auto 0;
+  width: 50px;
+  height: 2px;
+  background-color: #69c1ed;
+}
+.email {
+  margin-top: 30px;
+  text-align: center;
+  display: inline-block;
+  width: 140px;
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none !important;
+  margin-bottom: 10px;
+  line-height: 38px;
+  background-color: #69c1ed;
+  border-radius: 1px;
+  transition: background-color 0.2s;
+}
+.email:hover {
+  background-color: #59aad2;
+  color: #ffffff !important;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    height: 4.5rem;
+  }
+  .content {
+    width: 6.75rem;
+    margin: 1.2rem auto 0;
+  }
+  .title {
+    font-size: 0.36rem;
+  }
+  .line {
+    margin: 5px auto 0;
+    width: 50px;
+    height: 2px;
+    background-color: #69c1ed;
+  }
+  .email {
+    margin-top: 0.1rem;
+    text-align: center;
+    display: inline-block;
+    width: 2rem;
+    font-size: 0.24rem;
+    line-height: 0.42rem;
+
+    margin-bottom: 0.1rem;
+    padding: 5px 5px;
+    background-color: #69c1ed;
+    border-radius: 1px;
+    transition: background-color 0.2s;
+  }
+  .org {
+    font-size: 0.18rem;
+  }
+}

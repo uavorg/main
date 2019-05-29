@@ -1,0 +1,63 @@
+.button {
+  display: block;
+  width: 120px;
+  text-align: center;
+  text-decoration: none !important;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 1px solid #69c1ed;
+  color: #69c1ed;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+.button:hover {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+.pad {
+  width: 380px;
+  margin: 30px 0px 30px 50px;
+  background-color: #ffffff;
+  display: inline-block;
+}
+.head {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.head2 {
+  margin-bottom: 20px;
+}
+.pad2 {
+  background-color: #ffffff;
+  display: inline-block;
+  text-align: center;
+  width: 180px;
+  margin: 0 0 30px 80px;
+}
+@media screen and (max-width: 1024px) {
+  .button {
+    width: 2rem;
+  }
+}
+.email {
+  margin: 20px auto;
+  text-align: center;
+  display: block;
+  width: 180px;
+  font-size: 18px;
+  text-decoration: none !important;
+  padding: 5px 5px;
+  border: 1px solid #69c1ed;
+  border-radius: 3px;
+  color: #69c1ed;
+  transition: background-color 0.2s;
+}
+.email:hover {
+  background-color: #69c1ed;
+  color: #ffffff !important;
+}
+@media screen and (max-width: 1024px) {
+  .button {
+    display: none;
+  }
+}

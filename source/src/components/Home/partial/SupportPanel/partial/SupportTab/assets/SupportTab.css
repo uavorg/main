@@ -1,0 +1,55 @@
+.container {
+  position: relative;
+  vertical-align: top;
+  height: 390px;
+  width: 190px;
+  display: inline-block;
+  text-align: left;
+  padding: 20px;
+  margin-left: 10px;
+  transition: background 0.3s;
+}
+.container:hover {
+  background: #ffffff;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.title {
+  font-size: 18px;
+  color: #4a4a4a;
+  letter-spacing: 0;
+  line-height: 22px;
+  height: 55px;
+}
+.tip {
+  font-size: 12px;
+  color: #9b9b9b;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    height: 6rem;
+    width: 3rem;
+    padding: 0.2rem;
+    margin-left: 0.1rem;
+  }
+  .title {
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    height: 0.65rem;
+  }
+  .tip {
+    font-size: 0.24rem;
+    line-height: 0.32rem;
+  }
+  .img {
+    margin-top: 0.5rem;
+    width: 95%;
+  }
+  .line {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.1rem;
+    width: 0.5rem;
+  }
+}

@@ -1,0 +1,240 @@
+.container {
+  width: 100%;
+  overflow-y: hidden;
+  transition: height 1s;
+  min-width: 1200px;
+  opacity: 0.99;
+  color: #ffffff;
+  position: fixed;
+  z-index: 3;
+  background-color: #242a37;
+  left: 0;
+  top: 0;
+}
+.container2 {
+  width: 100%;
+  min-width: 1400px;
+  overflow-y: hidden;
+  transition: height 1s;
+  opacity: 0.9;
+  color: #ffffff;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+}
+.content {
+  width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 1450px) {
+  .content   {
+    width: 900px;
+  }
+}
+.title {
+  display: inline-flex;
+  float: left;
+  margin-right: 10px;
+  text-decoration: none !important;
+  color: #ffffff !important;
+}
+.title img {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.title span {
+  margin-top: 15px;
+  height: 100%;
+  font-size: 32px;
+  display: inline-block;
+}
+.tag {
+  margin-left: 25px;
+  padding-top: 23px;
+  float: left;
+  text-align: center;
+}
+.link {
+  font-size: 18px;
+  text-decoration: none !important;
+  color: #ffffff !important;
+}
+.link:hover {
+  color: #69c1ed;
+}
+.language {
+  padding-top: 25px;
+  margin-right: 50px;
+  float: right;
+}
+.language:hover {
+  cursor: pointer;
+}
+.selected {
+  color: #69c1ed;
+  border-width: 2px;
+  border-bottom: #69c1ed;
+}
+.selected .line {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 18px;
+  width: 100%;
+  cursor: pointer;
+  height: 2px;
+  background-color: #69c1ed;
+}
+.git {
+  display: inline-block;
+  position: absolute;
+  float: left;
+}
+.drop {
+  display: none;
+}
+.cursor {
+  display: none;
+}
+.selector {
+  display: none;
+}
+.mobile_container {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    display: none;
+  }
+  .container2 {
+    display: none;
+  }
+  .mobile_container {
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    position: fixed;
+    z-index: 3;
+    background-color: #242a37;
+    left: 0;
+    top: 0;
+    height: 0.96rem;
+  }
+  .title {
+    margin-left: 0.3rem;
+  }
+  .title img {
+    height: 0.8rem;
+    width: 0.8rem;
+    margin-top: 0.1rem;
+    margin-right: 0.1rem;
+  }
+  .title span {
+    margin-top: 0.2rem;
+    height: 100%;
+    font-size: 0.36rem;
+    display: inline-block;
+  }
+  .language {
+    padding-top: 0.25rem;
+    margin-right: 0.5rem;
+  }
+  .black {
+    display: inline-block;
+    height: 0.45rem;
+    font-size: 0.2rem;
+    width: 0.9rem;
+    border: 1px solid #f5f5f5;
+    border-radius: 1px;
+    color: white;
+    background-color: #000000;
+    transition: background-color 0.3s;
+    text-align: center;
+    line-height: 0.45rem;
+    cursor: pointer;
+  }
+  .blue {
+    display: inline-block;
+    height: 0.45rem;
+    width: 0.9rem;
+    font-size: 0.2rem;
+    background-color: #69c1ed;
+    border: 1px solid #f5f5f5;
+    border-radius: 1px;
+    color: white;
+    transition: background-color 0.3s;
+    text-align: center;
+    line-height: 0.45rem;
+    cursor: pointer;
+  }
+  .link {
+    line-height: 0.86rem;
+    padding-left: 0.4rem;
+    float: none;
+    width: 100%;
+    display: block;
+    font-size: 0.36rem;
+  }
+  .selected {
+    display: none;
+  }
+  .nav {
+    display: inline-block;
+    padding-top: 0.1rem;
+    margin-right: 0.4rem;
+    float: right;
+    color: #ffffff;
+    font-size: 0.5rem;
+  }
+  .menu {
+    width: 100%;
+    display: block;
+    position: fixed;
+    z-index: 5;
+    background-color: #242a37;
+    top: 0.96rem;
+  }
+  .selector {
+    display: block;
+    background-color: #d6d6d6;
+    text-align: center;
+  }
+  .selector div {
+    display: inline-block;
+    line-height: 0.76rem;
+    font-size: 0.24rem;
+    cursor: pointer;
+  }
+
+  .selector .active {
+    border-bottom: 2px solid #69c1ed;
+    color: #69c1ed;
+    cursor: pointer;
+  }
+  .cursor {
+    display: inline;
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    z-index: 3;
+    color: #ffffff !important;
+    background-color: #01a0b5;
+    width: 0.8rem;
+    height: 0.8rem;
+    right: 0.15rem;
+    padding: 0.1rem;
+    bottom: 0.25rem;
+    font-size: 0.18rem;
+    line-height: 0.22rem;
+  }
+  .cursor:hover {
+    background-color: #008597;
+  }
+  .tri {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 0.4rem;
+    height: 0.3rem;
+  }
+}

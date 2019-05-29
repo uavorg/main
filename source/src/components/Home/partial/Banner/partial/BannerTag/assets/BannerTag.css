@@ -1,0 +1,74 @@
+.container {
+  background-size: cover;
+  background-position: center center;
+  padding-top: 130px;
+}
+.center {
+  width: 1200px;
+  margin: 0 auto;
+}
+.text {
+  width: 670px;
+}
+.title {
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 30px;
+}
+.descCon li {
+  margin-top: 6px;
+  color: #fff;
+  line-height: 22px;
+}
+.descCon li p {
+  margin-top: 8px;
+  line-height: 20px;
+  margin-bottom: 0;
+  padding-left: 40px;
+}
+.button {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-top: 1.25rem;
+    background-size: cover;
+  }
+  .center {
+    margin: 0 auto;
+  }
+  .text {
+    width: 6.5rem;
+    margin-left: 0.4rem;
+  }
+  .title {
+    font-size: 0.3rem;
+    color: #ffffff;
+    line-height: 0.4rem;
+    font-weight: 800;
+  }
+  .descCon li {
+    max-width: 4.2rem;
+    font-size: 0.2rem;
+    line-height: 0.3rem;
+    margin-top: 0.1rem;
+  }
+  .button {
+    display: block;
+    text-align: center;
+    text-decoration: none !important;
+    background: #69c1ed;
+    color: #ffffff !important;
+    transition: 0.3s;
+    border-radius: 2px;
+    width: 2rem;
+    margin-left: 0.4rem;
+    margin-top: 0.2rem;
+    padding: 0.1rem 0.2rem;
+    font-size: 0.24rem;
+  }
+  .button:hover {
+    background-color: #59aad2;
+  }
+}

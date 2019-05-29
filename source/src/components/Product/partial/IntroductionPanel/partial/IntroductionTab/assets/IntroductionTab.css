@@ -1,0 +1,19 @@
+.container {
+  position: absolute;
+  vertical-align: top;
+  display: block;
+  text-align: left;
+  height: 680px;
+  padding: 50px;
+  width: 1150px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  transition: opacity 0.5s;
+  color: #4a4a4a;
+}
+.img {
+  margin-top: 10px;
+  width: 1050px;
+  margin-bottom: 30px;
+}

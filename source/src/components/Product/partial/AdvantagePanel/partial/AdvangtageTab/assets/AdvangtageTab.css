@@ -1,0 +1,39 @@
+.container {
+  vertical-align: top;
+  height: 260px;
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+  transition: box-shadow 0.1s;
+  width: 280px;
+  margin: 15px 60px;
+}
+.container:hover {
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.img {
+  height: 100px;
+  margin-bottom: 20px;
+}
+.title {
+  font-size: 18px;
+  color: #9b9b9b;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    height: 2.2rem;
+    padding: 0.2rem;
+    width: 2.8rem;
+    margin: 0.15rem 0.4rem;
+  }
+  .title {
+    font-size: 0.18rem;
+  }
+  .img {
+    height: 0.72rem;
+    margin-bottom: 0.2rem;
+  }
+  .title {
+    font-size: 0.24rem;
+  }
+}

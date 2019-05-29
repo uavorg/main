@@ -1,0 +1,105 @@
+.container {
+  position: relative;
+  vertical-align: top;
+  height: 230px;
+  display: inline-block;
+  text-align: left;
+  padding: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 30px;
+  background: #ffffff no-repeat bottom 10px right 10px;
+  background-size: 90px;
+}
+.container:hover .cover {
+  opacity: 0.79;
+}
+.cover {
+  cursor: pointer;
+  transition: opacity 0.3s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 230px;
+  text-align: center;
+  opacity: 0;
+  z-index: 2;
+  text-decoration: none;
+}
+
+.divider {
+  height: 30px;
+}
+.title {
+  font-size: 20px;
+  line-height: 22px;
+  color: #4a4a4a;
+  margin-bottom: 15px;
+}
+.tip {
+  font-size: 12px;
+  color: #9b9b9b;
+  line-height: 24px;
+}
+.link {
+  width: 100px;
+  line-height: 30px;
+  border: 1px solid;
+  border-radius: 3px;
+  color: #ffffff;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: -15px;
+}
+.next {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  color: #ffffff;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: -15px;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    display: block;
+    height: auto;
+    margin: 0.2rem 0 0;
+    padding: 0.4rem 0.2rem 0.8rem;
+    background: #ffffff no-repeat bottom 0.1rem right 0.1rem;
+  }
+  .tip {
+    color: #9b9b9b;
+    line-height: 0.3rem;
+    width: 4.8rem;
+    font-size: 0.24rem;
+  }
+  .cover {
+    height: 100%;
+  }
+  .title {
+    font-size: 0.24rem;
+    line-height: 0.36rem;
+    margin-bottom: 0.15rem;
+  }
+  .link {
+    width: 2rem;
+    line-height: 0.5rem;
+    font-size: 0.24rem;
+    margin-left: -1rem;
+    margin-top: -0.25rem;
+  }
+  .next {
+    width: 2rem;
+    height: 0.5rem;
+    font-size: 0.24rem;
+    margin-left: -1rem;
+    margin-top: -0.25rem;
+  }
+}

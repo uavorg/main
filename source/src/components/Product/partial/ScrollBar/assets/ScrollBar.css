@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  opacity: 0.9;
+  z-index: 3;
+  background-color: #eff0f2;
+  left: 0;
+  top: 0;
+  text-align: center;
+  min-width: 1200px;
+  position: fixed;
+}
+.content {
+  margin: auto;
+  width: 1200px;
+  border-bottom: 1px solid #d6d6d6;
+}
+.tag {
+  text-decoration: none !important;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #010101;
+  display: inline-block;
+  width: 150px;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    display: none;
+  }
+}

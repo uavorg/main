@@ -1,0 +1,26 @@
+.container {
+  line-height: 0.76rem;
+  text-align: left;
+  padding-left: 0.4rem;
+  font-size: 0.24rem;
+  background-color: #ffffff;
+  border: 1px solid #ece8e8;
+  cursor: pointer;
+}
+.icon {
+  float: right;
+  margin-right: 0.4rem;
+  width: 0.2rem;
+  margin-top: 0.3rem;
+}
+.menu {
+  font-size: 0.18rem;
+  padding: 0.24rem;
+  text-align: left;
+  background: #eff0f2;
+}
+.img {
+  width: 100%;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}

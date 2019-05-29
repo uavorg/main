@@ -1,0 +1,62 @@
+.container {
+  background: #f7f8fa;
+  border-radius: 2px;
+  text-align: center;
+}
+.content {
+  width: 1200px;
+  margin: 0 auto 30px;
+  background: #f7f8fa;
+  padding: 20px;
+}
+.line {
+  margin: 6px auto 20px;
+  width: 50px;
+  height: 2px;
+  background-color: #69c1ed;
+}
+.tab1 {
+  width: 100%;
+}
+.title {
+  font-size: 36px;
+  color: #333333;
+}
+.tip {
+  margin: 0 auto;
+  color: #9b9b9b;
+}
+.tip2 {
+  margin: 0 auto;
+  max-width: 950px;
+  font-size: 14px;
+  color: #9b9b9b;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    font-size: 0.24rem;
+    line-height: 0.36rem;
+    min-height: 2rem;
+  }
+  .content {
+    margin: 0 auto;
+    width: auto;
+  }
+  .title {
+    font-size: 0.48rem;
+  }
+  .line {
+    margin: 0.2rem auto 0.2rem;
+    width: 0.5rem;
+    height: 2px;
+    background-color: #69c1ed;
+  }
+  .tip {
+    margin: 0 auto;
+    min-width: 0;
+    display: inline;
+  }
+  .tip2 {
+    display: none;
+  }
+}

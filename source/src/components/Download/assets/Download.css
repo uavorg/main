@@ -1,0 +1,169 @@
+.container {
+  margin-top: 70px;
+}
+.container2 {
+  border-radius: 2px;
+  text-align: center;
+  padding: 30px 0;
+  background: #f5f5f5;
+  color: #4a4a4a;
+}
+.content {
+  margin: 0 auto;
+}
+.head {
+  font-size: 36px;
+}
+.head2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.head3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.body {
+  width: 1200px;
+  color: #4a4a4a;
+  background: #ffffff;
+  margin: 20px auto 50px;
+  padding: 20px 40px 30px;
+  text-align: left;
+}
+.pad {
+  width: 200px;
+  text-align: center;
+  display: inline-block;
+  color: #4a4a4a;
+  margin-left: -20px;
+  margin-right: 20px;
+}
+.pad3 {
+  width: 250px;
+  text-align: center;
+  display: inline-block;
+  color: #4a4a4a;
+  margin-left: -30px;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+.email {
+  text-align: center;
+  display: inline-block;
+  width: 160px;
+  font-size: 18px;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  line-height: 36px;
+  background-color: #69c1ed;
+  border-radius: 1px;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+.email:hover {
+  background: #59aad2;
+}
+.pad2 {
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding-top: 10px;
+  padding-left: 20px;
+  vertical-align: top;
+  width: 285px;
+  text-align: left;
+  display: inline-block;
+  color: #4a4a4a;
+  margin-right: 15px;
+  padding-bottom: 15px;
+}
+.tip {
+  margin-bottom: 25px;
+  color: #9b9b9b;
+}
+.tip2 {
+  height: 40px;
+  margin-bottom: 10px;
+  color: #9b9b9b;
+}
+.link {
+  color: #69c1ed;
+}
+.link:hover {
+  color: #69c1ed !important;
+}
+.mobile_tip {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-top: 0.96rem;
+  }
+  .container2 {
+    border-radius: 2px;
+    text-align: center;
+    background: #ffffff;
+    padding: 0.3rem 0;
+    font-size: 0.18rem;
+  }
+  .content {
+    margin: 0 auto;
+  }
+  .head {
+    font-size: 0.36rem;
+  }
+  .head2 {
+    font-size: 0.2rem;
+    line-height: 0.38rem;
+  }
+  .head3 {
+    font-size: 0.2rem;
+    line-height: 0.36rem;
+  }
+  .body {
+    width: 6.6rem;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .pad {
+    width: 2.62rem;
+    margin: 0 0.24rem;
+  }
+  .pad2 {
+    width: 3rem;
+    padding: 0;
+    margin: 0 0.2rem;
+  }
+  .pad3 {
+    width: 2.62rem;
+    margin: 0.6rem 0.24rem 0;
+  }
+  .email {
+    width: 2.62rem;
+    font-size: 0.24rem;
+    line-height: 0.46rem;
+    padding: 0;
+    transition: background-color 0.2s;
+    margin-top: 0;
+  }
+
+  .tip {
+    margin-bottom: 0.25rem;
+  }
+  .tip2 {
+    height: 0.5rem;
+    margin-bottom: 0.1rem;
+  }
+  .body2 {
+    text-align: left;
+  }
+  .mobile_tip {
+    display: block;
+    text-align: left;
+    font-size: 0.18rem;
+    color: #f5a623;
+    line-height: 0.4rem;
+  }
+}

@@ -1,0 +1,70 @@
+.container {
+  background: #f7f8fa;
+  border-radius: 2px;
+  text-align: center;
+  height: 920px;
+  overflow: hidden;
+}
+.anchor {
+  height: 60px;
+  margin-top: -60px;
+}
+.content {
+  background: #f7f8fa;
+  width: 1200px;
+  margin: 20px auto 0;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.title {
+  font-size: 36px;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+}
+.title2 {
+  display: table-cell;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tab {
+  height: 55px;
+  text-decoration: none !important;
+  font-size: 16px;
+  display: inline-table;
+  vertical-align: middle;
+  text-align: center;
+  width: 130px;
+  line-height: 20px;
+  margin-bottom: 5px;
+  padding: 5px 5px 18px;
+  transition: color 0.3s;
+}
+.tab:hover {
+  cursor: pointer;
+  color: #69c1ed;
+}
+.selected {
+  height: 55px;
+  color: #69c1ed;
+  font-size: 16px;
+  display: inline-table;
+  vertical-align: middle;
+  text-align: center;
+  width: 130px;
+  text-decoration: none !important;
+  line-height: 20px;
+  padding: 5px 5px 18px;
+  margin-bottom: 3px;
+  border-bottom: 2px solid #69c1ed;
+}
+.selected:hover {
+  cursor: pointer;
+  color: #69c1ed;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    height: auto;
+  }
+}
