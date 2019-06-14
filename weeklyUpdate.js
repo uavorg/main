@@ -1,6 +1,6 @@
 var updateData = {
     href: "https://github.com/uavorg/uavstack/releases/tag/UAVStack_1.3_20190419",
-    update: ["1. 新增 调用链对于用户自定义异步场景的支持",
-	"如：A系统调用B系统，A系统接收请求之后立刻返回给B系统一个状态信息，然后启用一个或多个线程池继续处理的情况。"],
+    update: ["1. 新增 增强Struts 2.x画像的抓取能力：支持Struts配置文件中include含通配符的情况  ",
+	"2. 新增 增强SpringMVC画像及实时数据的抓取能力：支持SpringMVC配置多个URL访问后缀的情况"],
 	fix:[""]
 };
