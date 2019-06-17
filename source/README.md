@@ -23,7 +23,7 @@
 ## 目录结构
 
 ```
-uav-stack/
+source/
   yarn-error.lock
   yarn.lock
   README.md
