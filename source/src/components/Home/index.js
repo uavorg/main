@@ -22,10 +22,6 @@ class Home extends Component {
     const { formatMessage } = this.props.intl;
     return (
       <div>
-        <Helmet>
-          <meta name="Keywords" content="UAVStack,AIOPs,任务机器人，全维监控，应用性能管理，容器） 服务治理，微服务，用户体验。"/>
-          <meta name="Description" content="UAVStack是一套智能化服务技术栈，是研发运维一体化的解决方案。UAV是无人机的缩写，寓意无人机翱翔蓝天，智能透明地完成任务。它包括任务机器人（HIT），全维监控（UAV.Monitor），应用性能管理（UAV.APM），容器化支持（UAV.Container） 服务治理（UAV.ServiceGovern），微服务计算（UAV.MSCP），用户体验管理（UAV.UEM）等。"/>
-        </Helmet>
         <Menu />
         <Head />
         <Cursor />
