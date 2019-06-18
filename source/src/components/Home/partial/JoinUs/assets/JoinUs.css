@@ -1,0 +1,120 @@
+.container {
+  background-size: cover;
+  background: url("./bcg.jpg") center center;
+  border-radius: 2px;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  overflow-y: hidden;
+}
+.content {
+  min-width: 850px;
+  margin: 70px auto 0;
+  padding-top: 30px;
+  padding-bottom: 17px;
+}
+.anchor {
+  margin-top: -70px;
+}
+.line {
+  margin: 10px auto;
+  width: 50px;
+  height: 2px;
+  background-color: #ffffff;
+}
+.title {
+  font-size: 36px;
+}
+.tab {
+  text-align: center;
+  margin: 28px 20px;
+  display: inline-flex;
+  padding: 15px;
+  color: #60beca;
+  background-color: #ffffff;
+  text-decoration: none !important;
+  height: 50px;
+  line-height: 20px;
+}
+.tab:hover {
+  background: #60beca;
+  border-radius: 1px;
+  color: #ffffff;
+}
+.img {
+  width: 20px;
+  display: inline;
+  margin-left: 5px;
+  margin-right: 15px;
+  background: url("./book.png") center center no-repeat;
+  background-size: 20px 20px;
+}
+.img2 {
+  width: 20px;
+  display: inline;
+  margin-left: 5px;
+  margin-right: 15px;
+  background: url("./down.png") center center no-repeat;
+  background-size: 20px 20px;
+}
+.tab:hover .img {
+  background: url("./hbook.png") center center no-repeat;
+  background-size: 20px 20px;
+}
+.tab:hover .img2 {
+  background: url("./hdown.png") center center no-repeat;
+  background-size: 20px 20px;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    font-size: 0.24rem;
+    line-height: 0.36rem;
+  }
+  .content {
+    min-width: 0;
+  }
+  .img {
+    width: 0.2rem;
+    height: 0.2rem;
+    display: inline;
+    margin-left: 0.05rem;
+    margin-right: 0.1rem;
+    background-size: 0.2rem 0.2rem;
+  }
+  .img2 {
+    width: 0.2rem;
+    height: 0.2rem;
+    display: inline;
+    margin-left: 0.05rem;
+    margin-right: 0.1rem;
+    background-size: 0.2rem 0.2rem;
+  }
+  .tab:hover .img {
+    background-size: 0.2rem 0.2rem;
+  }
+  .tab:hover .img2 {
+    background-size: 0.2rem 0.2rem;
+  }
+  .line {
+    margin: 0.2rem auto;
+    width: 0.5rem;
+    height: 2px;
+  }
+  .title {
+    font-size: 0.48rem;
+  }
+  .tab {
+    font-size: 0.16rem;
+    line-height: 0.2rem;
+    margin: 0.3rem 0.2rem;
+    padding: 0.2rem;
+    height: 0.6rem;
+  }
+  .tip {
+    width: 6.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.24rem;
+  }
+}
