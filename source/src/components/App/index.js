@@ -5,7 +5,6 @@ import Document from "../Document";
 import NoMatch from "../NoMatch";
 import Home from "../Home";
 import Product from "../Product";
-import { Helmet } from "react-helmet";
 
 class App extends Component {
   render() {
