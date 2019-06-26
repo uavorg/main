@@ -6,6 +6,7 @@ import css from "./assets/Download.css";
 import { FormattedMessage, injectIntl, intlShape } from "react-intl";
 import MobileHeader from "../shared/MobileHeader";
 import MobileSelector from "../shared/MobileSelector";
+import MobileCursor from "../shared/MobileCursor";
 import { connect } from "react-redux";
 
 class Download extends Component {
@@ -207,6 +208,7 @@ class Download extends Component {
         {downloaddiv}
         {joindiv}
         <ContactUs />
+        <MobileCursor />
       </div>
     );
   }

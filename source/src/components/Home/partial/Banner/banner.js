@@ -13,14 +13,6 @@ import bg5 from "./assets/bg5.jpg";
 import bg6 from "./assets/bg6.jpg";
 import bg7 from "./assets/bg7.jpg";
 import bg8 from "./assets/bg8.jpg";
-import mbg1 from "./assets/mbg1.jpg";
-import mbg2 from "./assets/mbg2.jpg";
-import mbg3 from "./assets/mbg3.jpg";
-import mbg4 from "./assets/mbg4.jpg";
-import mbg5 from "./assets/mbg5.jpg";
-import mbg6 from "./assets/mbg6.jpg";
-import mbg7 from "./assets/mbg7.jpg";
-import mbg8 from "./assets/mbg8.jpg";
 import cx from "classnames";
 
 class Banner extends Component {

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Helmet } from "react-helmet";
 import { injectIntl, intlShape } from "react-intl";
 import Banner from "./partial/Banner/banner";
 import MBanner from "./partial/Banner/mbanner";
@@ -12,19 +11,18 @@ import SupportPanel from "./partial/SupportPanel";
 import JoinUs from "./partial/JoinUs";
 import Contributor from "./partial/Contributor";
 import ContactUs from "../shared/ContactUs";
-import Cursor from "../shared/Cursor";
+import MobileCursor from "../shared/MobileCursor";
 import Menu from "../shared/MobileHeader";
 import "antd/dist/antd.css";
 
 class Home extends Component {
   render() {
     window.scroll(0, 0);
-    const { formatMessage } = this.props.intl;
     return (
       <div>
         <Menu />
         <Head />
-        <Cursor />
+        <MobileCursor />
         <Banner />
         <MBanner />
         <UpdateTab />

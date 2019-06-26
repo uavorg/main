@@ -6,6 +6,7 @@ import css from "./assets/Document.css";
 import { injectIntl, intlShape } from "react-intl";
 import MobileHeader from "../shared/MobileHeader";
 import MobileSelector from "../shared/MobileSelector";
+import MobileCursor from "../shared/MobileCursor";
 import { connect } from "react-redux";
 
 class Document extends Component {
@@ -182,6 +183,7 @@ class Document extends Component {
           </div>
         </div>
         <ContactUs />
+        <MobileCursor />
       </div>
     );
   }

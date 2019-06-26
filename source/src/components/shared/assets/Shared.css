@@ -93,7 +93,7 @@
 .drop {
   display: none;
 }
-.cursor {
+.mcursor {
   display: none;
 }
 .selector {
@@ -211,7 +211,7 @@
     color: #69c1ed;
     cursor: pointer;
   }
-  .cursor {
+  .mcursor {
     display: inline;
     border-radius: 50%;
     text-align: center;
@@ -227,7 +227,7 @@
     font-size: 0.18rem;
     line-height: 0.22rem;
   }
-  .cursor:hover {
+  .mcursor:hover {
     background-color: #008597;
   }
   .tri {

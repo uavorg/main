@@ -9,6 +9,7 @@ import IntroductionPanel from "./partial/IntroductionPanel";
 import Outline from "./partial/Outline";
 import MobileHeader from "../shared/MobileHeader";
 import MobileSelector from "../shared/MobileSelector";
+import MobileCursor from "../shared/MobileCursor";
 import { injectIntl, intlShape } from "react-intl";
 import { connect } from "react-redux";
 
@@ -77,6 +78,7 @@ class Product extends Component {
         <Outline show={!isMobile || this.state.count === 2} />
         <DocumentTab show={!isMobile || this.state.count === 3} />
         <ContactUs />
+        <MobileCursor />
       </div>
     );
   }
