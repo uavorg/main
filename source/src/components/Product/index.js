@@ -12,7 +12,7 @@ import MobileSelector from "../shared/MobileSelector";
 import MobileCursor from "../shared/MobileCursor";
 import { injectIntl, intlShape } from "react-intl";
 import { connect } from "react-redux";
-
+import Cursor from "../shared/Cursor";
 class Product extends Component {
   constructor(props) {
     super(props);
@@ -78,6 +78,7 @@ class Product extends Component {
         <Outline show={!isMobile || this.state.count === 2} />
         <DocumentTab show={!isMobile || this.state.count === 3} />
         <ContactUs />
+        <Cursor/>
         <MobileCursor />
       </div>
     );

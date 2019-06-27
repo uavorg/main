@@ -4,6 +4,7 @@ import Header1 from "../shared/Header1.js";
 import ContactUs from "../shared/ContactUs";
 import css from "./assets/Download.css";
 import { FormattedMessage, injectIntl, intlShape } from "react-intl";
+import Cursor from "../shared/Cursor";
 import MobileHeader from "../shared/MobileHeader";
 import MobileSelector from "../shared/MobileSelector";
 import MobileCursor from "../shared/MobileCursor";
@@ -208,6 +209,7 @@ class Download extends Component {
         {downloaddiv}
         {joindiv}
         <ContactUs />
+        <Cursor/>
         <MobileCursor />
       </div>
     );

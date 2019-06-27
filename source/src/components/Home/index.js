@@ -11,7 +11,7 @@ import SupportPanel from "./partial/SupportPanel";
 import JoinUs from "./partial/JoinUs";
 import Contributor from "./partial/Contributor";
 import ContactUs from "../shared/ContactUs";
-import Index from "../shared/Cursor/index";
+import Cursor from "../shared/Cursor";
 import MobileCursor from "../shared/MobileCursor";
 import Menu from "../shared/MobileHeader";
 
@@ -22,7 +22,7 @@ class Home extends Component {
       <div>
         <Menu />
         <Head />
-        <Index />
+        <Cursor />
         <MobileCursor />
         <Banner />
         <MBanner />
