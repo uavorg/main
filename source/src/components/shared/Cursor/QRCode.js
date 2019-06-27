@@ -39,8 +39,8 @@ class QRCode extends Component {
         </div>
         <div className={css.tab} style={{opacity:this.props.show? 1:0}} >
           <Icon className={css.close}type="close" onClick={this.handleClose} />
-          <p style={{fontSize:18}}>{formatMessage({ id: "cursor_qrcode_title2" })}</p>
           <div className={css.tab2}  >
+            <p style={{fontSize:18}}>{formatMessage({ id: "cursor_qrcode_title2" })}</p>
             <img src={qrcode} alt="download" />
             <div>{formatMessage({ id: "contactUs_tip_1" })}</div>
             <div style={{color:"#FFA500"}}>{formatMessage({ id: "contactUs_tip_2" })}</div>
