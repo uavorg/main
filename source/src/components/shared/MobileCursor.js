@@ -8,7 +8,7 @@ class MobileCursor extends Component {
   render() {
     return (
       <Link to={"/"} className={css.mcursor}>
-        <img src={tri} alt="tri" className={css.tri} />
+        <img src={tri} alt="tri" />
         <FormattedMessage id="top" />
       </Link>
     );

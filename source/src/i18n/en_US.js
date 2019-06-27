@@ -285,6 +285,13 @@
   contactUs_tip_4: " ",
   contactUs_mail: "Email",
 
+  cursor_qrcode_title: "Scan QRCode",
+  cursor_qrcode_title2: "Scan QR Code",
+  cursor_top:"top",
+
+  cursor_qrcode_tip1:"Scan the QR code below to join the user community",
+  cursor_qrcode_tip2:"Note\"Join UAVStack\"",
+
   popup_title: "AllInOne",
   popup_title2:
     "AllInOne is the out of the box installation package for the development and demonstration environments.",

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import css from "./assets/ContactUs.css";
-import qrcode from "./assets/qrcode.jpg";
-import qrcode2 from "./assets/helper.jpg";
+import qrcode from "../assets/qrcode.jpg";
+import qrcode2 from "../assets/helper.jpg";
 import { injectIntl } from "react-intl";
 class ContactUs extends Component {
   render() {

@@ -93,6 +93,59 @@
 .drop {
   display: none;
 }
+.cursor {
+  cursor: pointer;
+  text-align: center;
+  position: fixed;
+  z-index: 3;
+  right: 12px;
+  padding: 1px;
+  bottom: 12px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: white;
+}
+.cursor > img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+}
+.cursor:hover + .jump {
+  opacity: 0.8;
+}
+.jump {
+  cursor: pointer;
+  transition: opacity 0.3s;
+  position: fixed;
+  text-align: center;
+  opacity: 0;
+  text-decoration: none;
+  z-index: 3;
+  right: 80px;
+  padding: 1px;
+  bottom: 12px;
+  width: 180px;
+  height: 180px;
+  background-color: white;
+  line-height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 10px;
+}
+.jump > img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 10px;
+  width: 160px;
+  height: 160px;
+}
 .mcursor {
   display: none;
 }
@@ -211,6 +264,9 @@
     color: #69c1ed;
     cursor: pointer;
   }
+  .cursor {
+    display: none;
+  }
   .mcursor {
     display: inline;
     border-radius: 50%;
@@ -230,7 +286,7 @@
   .mcursor:hover {
     background-color: #008597;
   }
-  .tri {
+  .mcursor > img {
     margin-left: auto;
     margin-right: auto;
     display: block;

@@ -11,9 +11,9 @@ import SupportPanel from "./partial/SupportPanel";
 import JoinUs from "./partial/JoinUs";
 import Contributor from "./partial/Contributor";
 import ContactUs from "../shared/ContactUs";
+import Index from "../shared/Cursor/index";
 import MobileCursor from "../shared/MobileCursor";
 import Menu from "../shared/MobileHeader";
-import "antd/dist/antd.css";
 
 class Home extends Component {
   render() {
@@ -22,6 +22,7 @@ class Home extends Component {
       <div>
         <Menu />
         <Head />
+        <Index />
         <MobileCursor />
         <Banner />
         <MBanner />

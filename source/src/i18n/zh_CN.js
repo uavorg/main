@@ -263,11 +263,18 @@ const zh_CN = {
   contributorTab_6_tip_1: "Staff Contributor & Community Ops Owner",
 
   contactUs_title: "联系我们",
-  contactUs_tip_1: "扫下方二维码进入UAVStack官方公众号",
+  contactUs_tip_1: "扫二维码进入UAVStack官方公众号",
   contactUs_tip_2: "获取更多UAVStack的相关信息",
   contactUs_tip_3: "扫一扫添加小助手",
   contactUs_tip_4: "邀您加入UAVStack官方用户群",
   contactUs_mail: "发送邮件",
+
+  cursor_qrcode_title: "扫码关注",
+  cursor_qrcode_title2: "扫一扫关注",
+  cursor_top:"返回顶部",
+
+  cursor_qrcode_tip1:"扫描二维码进UAVStack官方用户群",
+  cursor_qrcode_tip2:"注明\"UAVStack进群\"",
 
   popup_title: "开发演示",
   popup_title2:

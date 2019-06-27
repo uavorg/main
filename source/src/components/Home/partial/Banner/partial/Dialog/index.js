@@ -7,9 +7,6 @@ import "antd/lib/modal/style/css";
 class Dialog extends Component {
   constructor(props) {
     super(props);
-    this.showModal = this.showModal.bind(this);
-    this.handleOk = this.handleOk.bind(this);
-    this.handleCancel = this.handleCancel.bind(this);
     this.state = {
       visible: false
     };
